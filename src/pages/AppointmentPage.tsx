@@ -118,6 +118,7 @@ export default function AppointmentPage() {
                 💼 LinkedIn
               </a>
             </div>
+          </div>
         </div>
       </div>
     </div>
