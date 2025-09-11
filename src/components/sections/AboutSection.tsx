@@ -22,9 +22,11 @@ export default function AboutSection() {
               
               {/* Profile Image Placeholder */}
               <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
-                <div className="w-full h-full rounded-full bg-gray-300 flex items-center justify-center text-4xl font-bold text-gray-600">
-                  AG
-                </div>
+                <img 
+                  src="https://static.wixstatic.com/media/9d2000_f4e1e2c7b4e546b1974d986cfc8d7203~mv2.png"
+                  alt="Abhik Ghosh"
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
               
               {/* Social Media Links */}
@@ -45,13 +47,43 @@ export default function AboutSection() {
             </div>
           </div>
           
-          {/* Content */}
-          <div className="lg:col-span-2 space-y-6">
+          {/* Cloud Platform Logos */}
+          <div className="lg:col-span-2">
+            <div className="card mb-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center mb-8">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-orange-500 rounded-lg flex items-center justify-center mb-2 mx-auto">
+                    <span className="text-white font-bold text-lg">AWS</span>
+                  </div>
+                  <p className="text-sm text-gray-400">Amazon Web Services</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-blue-500 rounded-lg flex items-center justify-center mb-2 mx-auto">
+                    <span className="text-white font-bold text-lg">Azure</span>
+                  </div>
+                  <p className="text-sm text-gray-400">Microsoft Azure</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-red-500 rounded-lg flex items-center justify-center mb-2 mx-auto">
+                    <span className="text-white font-bold text-lg">GCP</span>
+                  </div>
+                  <p className="text-sm text-gray-400">Google Cloud</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-purple-500 rounded-lg flex items-center justify-center mb-2 mx-auto">
+                    <span className="text-white font-bold text-lg">K8s</span>
+                  </div>
+                  <p className="text-sm text-gray-400">Kubernetes</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
             <div className="card">
               <p className="text-lg text-white/90 leading-relaxed mb-6">
-                As a Cloud Architect at Capgemini, I design and shape the future with innovative cloud solutions, 
-                accelerating Cloud transformation through FinOps, Cyber Security, Automation and AI/ML. 
-                This allows clients to achieve their goals and optimize their performance.
+                With over 5 years of experience in cloud architecture and digital transformation, 
+                I specialize in designing and implementing scalable cloud solutions that drive business success. 
+                My expertise spans across major cloud platforms including AWS, Azure, and GCP.
               </p>
               
               <p className="text-lg text-white/80 leading-relaxed mb-6">

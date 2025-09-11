@@ -9,7 +9,7 @@ const CertificatesPage = lazy(() => import('@/pages/CertificatesPage'))
 
 function App() {
   return (
-    <div className="min-h-screen relative overflow-x-hidden">
+    <div className="min-h-screen relative overflow-x-hidden bg-[#0a192f] bg-pattern">
       <Helmet>
         <title>Abhik Ghosh | Cloud Architect | AI/ML Expert</title>
         <meta 

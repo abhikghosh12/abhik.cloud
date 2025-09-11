@@ -21,9 +21,11 @@ export default function HeroSection() {
               <div className="mb-8 flex justify-center lg:justify-start">
                 <div className="relative">
                   <div className="w-48 h-48 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
-                    <div className="w-full h-full rounded-full bg-gray-300 flex items-center justify-center text-6xl font-bold text-gray-600">
-                      AG
-                    </div>
+                    <img 
+                      src="https://static.wixstatic.com/media/9d2000_f4e1e2c7b4e546b1974d986cfc8d7203~mv2.png"
+                      alt="Abhik Ghosh"
+                      className="w-full h-full rounded-full object-cover"
+                    />
                   </div>
                   {/* Social Media Links */}
                   <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
@@ -49,18 +51,9 @@ export default function HeroSection() {
               <p className="text-xl lg:text-2xl text-gray-300 mb-6">Cloud Architect</p>
               
               {/* Key Skills Tags */}
-              <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-8">
-                {['DevSecOps', 'Artificial Intelligence', 'Machine Learning', 'Cyber Security', 'FinOps', 'Cloud Services', 'Microservices', 'Kubernetes'].map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-blue-600/20 border border-blue-500/30 rounded-full text-sm text-blue-300">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-
-              <p className="text-lg text-gray-400 max-w-2xl leading-relaxed mb-8">
-                As a Cloud Architect at Capgemini, I design and shape the future with innovative cloud solutions, 
-                accelerating Cloud transformation through FinOps, Cyber Security, Automation and AI/ML. 
-                This allows clients to achieve their goals and optimize their performance.
+              <p className="text-lg text-gray-300 max-w-2xl leading-relaxed mb-8">
+                Cloud Architect & Technical Lead at Capgemini with expertise in AWS, Azure, and GCP. 
+                Specialized in DevSecOps, AI/ML, and modern cloud transformation.
               </p>
 
               {/* Enhanced CTA Buttons */}
@@ -76,33 +69,11 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Right side - Cloud Platform Logos */}
-            <div className="flex-1 flex justify-center lg:justify-end">
-              <div className="grid grid-cols-2 gap-8 items-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-orange-500 rounded-lg flex items-center justify-center mb-2">
-                    <span className="text-white font-bold text-lg">AWS</span>
-                  </div>
-                  <p className="text-sm text-gray-400">Amazon Web Services</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-blue-500 rounded-lg flex items-center justify-center mb-2">
-                    <span className="text-white font-bold text-lg">Azure</span>
-                  </div>
-                  <p className="text-sm text-gray-400">Microsoft Azure</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-red-500 rounded-lg flex items-center justify-center mb-2">
-                    <span className="text-white font-bold text-lg">GCP</span>
-                  </div>
-                  <p className="text-sm text-gray-400">Google Cloud</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-purple-500 rounded-lg flex items-center justify-center mb-2">
-                    <span className="text-white font-bold text-lg">K8s</span>
-                  </div>
-                  <p className="text-sm text-gray-400">Kubernetes</p>
-                </div>
+            {/* Animated Background Element */}
+            <div className="flex-1 flex justify-center lg:justify-end relative">
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute top-10 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+                <div className="absolute bottom-10 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
               </div>
             </div>
           </div>
