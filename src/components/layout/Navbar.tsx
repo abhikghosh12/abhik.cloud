@@ -1,113 +1,61 @@
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Home, User, Code, Briefcase, Mail, BookOpen } from 'lucide-react'
+import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { id: 'home', label: 'Home', href: '#home', icon: Home },
-  { id: 'about', label: 'About', href: '#about', icon: User },
-  { id: 'skills', label: 'Skills', href: '#skills', icon: Code },
-  { id: 'experience', label: 'Experience', href: '#experience', icon: Briefcase },
-  { id: 'projects', label: 'Projects', href: '#projects', icon: Code },
-  { id: 'blog', label: 'Blog', href: '#blog', icon: BookOpen },
-  { id: 'certificates', label: 'Certificates', href: '/certificates', icon: Briefcase },
-  { id: 'contact', label: 'Contact', href: '#contact', icon: Mail },
-]
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#blog', label: 'Blog' },
+  { href: '/certificates', label: 'Certificates' },
+  { href: '#contact', label: 'Contact' }
+];
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isVisible, setIsVisible] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
-  const [activeSection, setActiveSection] = useState('home')
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+  const [isScrolled, setIsScrolled] = useState(false);
   
-  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
-
-  // Handle scroll effects
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
-      
-      setIsScrolled(currentScrollY > 50)
-      
-      // Hide navbar when scrolling down, show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false)
-      } else {
-        setIsVisible(true)
-      }
-      
-      setLastScrollY(currentScrollY)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [lastScrollY])
-
-  // Handle active section detection based on current path
-  useEffect(() => {
-    const path = window.location.pathname
-    const currentItem = navItems.find(item => item.href === path)
-    if (currentItem) {
-      setActiveSection(currentItem.id)
-    }
-  }, [])
-
-  const handleNavClick = (href: string, id: string) => {
-    if (href.startsWith('#')) {
-      // Smooth scroll to section
-      const element = document.getElementById(id)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    } else {
-      // Navigate to different page
-      window.location.href = href
-    }
+      setIsScrolled(window.scrollY > 20);
+    };
     
-    setActiveSection(id)
-    
-    if (isMobileMenuOpen) {
-      toggleMobileMenu()
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(href.replace('#', ''));
+      setIsMenuOpen(false);
     }
-  }
-
-
+  };
 
   return (
     <>
-      {/* Desktop & Mobile Navbar */}
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: isVisible ? 0 : -100 }}
-        transition={{ duration: 0.3 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm' 
-            : 'bg-white/90 backdrop-blur-sm'
-        }`}
+      <header 
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+          ${isScrolled ? 'bg-[#0A192F]/90 backdrop-blur shadow-lg' : 'bg-transparent'}
+        `}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo - Left */}
-            <div className="flex items-center">
-              <h1 className={`font-semibold text-lg transition-colors ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              }`}>
-                Abhik <span className="text-blue-600">Ghosh</span>
-              </h1>
+          <nav className="flex items-center justify-between h-20">
+            {/* Name */}
+            <div className="text-[#CCD6F6] font-bold text-xl">
+              Abhik Ghosh
             </div>
 
-            {/* Desktop Navigation - Right */}
-            <div className="hidden md:flex items-center space-x-8">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-6">
               {navItems.map((item) => (
                 <button
-                  key={item.id}
-                  onClick={() => handleNavClick(item.href, item.id)}
-                  className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                    activeSection === item.id
-                      ? 'text-blue-600 border-b-2 border-blue-600 pb-1'
-                      : isScrolled ? 'text-gray-700' : 'text-white/90'
-                  }`}
+                  key={item.href}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-[#8892B0] hover:text-[#64FFDA] transition-colors text-sm font-medium"
                 >
                   {item.label}
                 </button>
@@ -116,90 +64,40 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={toggleMobileMenu}
-              className="md:hidden p-1 rounded text-white/70 hover:text-white ml-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden text-[#64FFDA] p-2 hover:bg-[#233554] rounded-lg transition-colors"
             >
-              {isMobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-          </div>
+          </nav>
         </div>
-      </motion.nav>
+      </header>
 
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
-              onClick={toggleMobileMenu}
-            />
-
-            {/* Mobile Menu */}
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
-              className="fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-white/10 backdrop-blur-xl border-l border-white/20 z-50 md:hidden"
-            >
-              <div className="flex flex-col h-full">
-                {/* Header */}
-                <div className="flex items-center justify-between p-6 border-b border-white/10">
-                  <h2 className="text-white font-bold text-xl">
-                    Menu
-                  </h2>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={toggleMobileMenu}
-                    className="p-2 rounded-lg bg-white/10 text-white/80 hover:text-white"
-                  >
-                    <X className="w-5 h-5" />
-                  </motion.button>
-                </div>
-
-                {/* Navigation Items */}
-                <div className="flex-1 py-6">
-                  {navItems.map((item, index) => {
-                    const ItemIcon = item.icon
-                    return (
-                      <motion.button
-                        key={item.id}
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        whileHover={{ x: 10 }}
-                        onClick={() => handleNavClick(item.href, item.id)}
-                        className={`flex items-center space-x-3 w-full px-6 py-4 text-left transition-all duration-200 ${
-                          activeSection === item.id
-                            ? 'text-blue-400 bg-white/10 border-r-2 border-blue-400'
-                            : 'text-white/80 hover:text-white hover:bg-white/5'
-                        }`}
-                      >
-                        <ItemIcon className="w-5 h-5" />
-                        <span className="font-medium">{item.label}</span>
-                      </motion.button>
-                    )
-                  })}
-                </div>
-
-                {/* Footer */}
-                <div className="p-6 border-t border-white/10">
-                  <p className="text-white/60 text-sm text-center">
-                    © 2025 Abhik Ghosh
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-
-
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 md:hidden">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          
+          {/* Menu */}
+          <nav className="absolute right-0 top-0 bottom-0 w-72 bg-[#112240] py-20 px-8">
+            <div className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-[#CCD6F6] text-left hover:text-[#64FFDA] transition-colors"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </nav>
+        </div>
+      )}
     </>
-  )
+  );
 }
