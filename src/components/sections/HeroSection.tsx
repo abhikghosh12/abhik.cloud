@@ -28,37 +28,7 @@ export default function HeroSection() {
             </p>
           </div>
           
-          {/* Skills Grid */}
-          <div className="max-w-6xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8 text-gray-200">Expertise & Technologies</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-              {skills.map((skill, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <span className="text-sm font-medium">{skill}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">5+</div>
-              <div className="text-gray-400">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-400">Projects Completed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">3</div>
-              <div className="text-gray-400">Cloud Platforms</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">100%</div>
-              <div className="text-gray-400">Client Satisfaction</div>
-            </div>
-          </div>
+
           
           {/* Contact CTA */}
           <div className="text-center">

@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import Navbar from '@/components/layout/Navbar'
 import LoadingSpinner from '@/components/ui/LoadingSpinner'
@@ -8,6 +9,12 @@ import ErrorBoundary from '@/components/common/ErrorBoundary'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('@/pages/HomePage'))
+const AboutPage = lazy(() => import('@/pages/AboutPage'))
+const SkillsPage = lazy(() => import('@/pages/SkillsPage'))
+const ExperiencePage = lazy(() => import('@/pages/ExperiencePage'))
+const ProjectsPage = lazy(() => import('@/pages/ProjectsPage'))
+const ContactPage = lazy(() => import('@/pages/ContactPage'))
+const CertificatesPage = lazy(() => import('@/pages/CertificatesPage'))
 
 function App() {
   return (
@@ -57,7 +64,15 @@ function App() {
         {/* Main Content */}
         <main>
           <Suspense fallback={<LoadingSpinner />}>
-            <HomePage />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/skills" element={<SkillsPage />} />
+              <Route path="/experience" element={<ExperiencePage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/certificates" element={<CertificatesPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
           </Suspense>
         </main>
       </div>
