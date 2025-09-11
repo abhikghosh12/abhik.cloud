@@ -10,28 +10,85 @@ export default function AboutSection() {
     <section id="about" className="section bg-white/5 backdrop-blur-sm">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="heading-2 text-white mb-6">About Me</h2>
+          <h2 className="heading-2 text-white mb-6">ABOUT ME</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-6">
-            <div className="card">
-              <p className="text-lg text-white/90 leading-relaxed mb-6">
-                I'm a passionate Cloud Architect with 5+ years of experience in designing and implementing 
-                scalable cloud solutions. Currently working at Capgemini, I specialize in DevSecOps, 
-                AI/ML, and cloud transformation across AWS, Azure, and GCP platforms.
-              </p>
-              <p className="text-lg text-white/80 leading-relaxed">
-                My expertise spans from infrastructure automation to machine learning deployment, 
-                helping organizations modernize their technology stack and accelerate digital transformation.
-              </p>
+        <div className="grid lg:grid-cols-3 gap-12 items-start">
+          {/* Personal Profile Section */}
+          <div className="lg:col-span-1">
+            <div className="card text-center">
+              <h3 className="text-2xl font-bold text-white mb-6">Personal Profile</h3>
+              
+              {/* Profile Image Placeholder */}
+              <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+                <div className="w-full h-full rounded-full bg-gray-300 flex items-center justify-center text-4xl font-bold text-gray-600">
+                  AG
+                </div>
+              </div>
+              
+              {/* Social Media Links */}
+              <div className="flex justify-center gap-4 mb-6">
+                <a href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
+                   className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                  <span className="text-white text-sm font-bold">in</span>
+                </a>
+                <a href="https://www.xing.com/profile/Abhik_Ghosh" 
+                   className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors">
+                  <span className="text-white text-sm font-bold">X</span>
+                </a>
+                <a href="https://www.credly.com/users/abhik-ghosh.941f4a38" 
+                   className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                  <span className="text-white text-sm font-bold">C</span>
+                </a>
+              </div>
             </div>
           </div>
           
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-6">
+          {/* Content */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="card">
+              <p className="text-lg text-white/90 leading-relaxed mb-6">
+                As a Cloud Architect at Capgemini, I design and shape the future with innovative cloud solutions, 
+                accelerating Cloud transformation through FinOps, Cyber Security, Automation and AI/ML. 
+                This allows clients to achieve their goals and optimize their performance.
+              </p>
+              
+              <p className="text-lg text-white/80 leading-relaxed mb-6">
+                With several years of experience in Operation, Incident Management, Software Development, 
+                Cloud Services/Hyperscalar (AWS, Azure, GCP), Kubernetes, Containerization, Microservices, 
+                DevSecOps, Backend, and Machine Learning, I'm ready to tackle your most complex challenges. 
+                My certifications in AWS, Azure, GCP, Terraform, GenAI, Machine learning and Kubernetes 
+                underscore my expertise.
+              </p>
+              
+              <p className="text-lg text-white/80 leading-relaxed mb-6">
+                Previously, I was involved in building digital infrastructure for Uniklinikum Augsburg, 
+                a large academic hospital in Germany. I leveraged my expertise in AWS, Azure, DevSecOps, 
+                microservices, and web development to create scalable, secure, and efficient systems that 
+                support clinical research and data integration.
+              </p>
+              
+              <p className="text-lg text-white/80 leading-relaxed mb-8">
+                I also worked on IoT and ML projects for the automation and energy sectors, using technologies 
+                such as Python, Django, Node.js, TensorFlow, and Grafana. I am passionate about learning new 
+                skills and exploring new domains, and I am always eager to collaborate with diverse teams and stakeholders.
+              </p>
+              
+              {/* CTA Button */}
+              <div className="text-center">
+                <a href="/certificates" 
+                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-bold transition-all duration-300 hover:scale-105 shadow-2xl text-white inline-block">
+                  Schedule an appointment
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Stats Section */}
+        <div className="mt-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <div key={index} className="card text-center">
                 <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">
