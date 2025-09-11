@@ -164,7 +164,7 @@ export default function ExperienceSection() {
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Projects:</h4>
                     <ul className="space-y-1">
-                      {exp.projects.map((project, pIndex) => (
+                      {(exp.projects as string[]).map((project: string, pIndex: number) => (
                         <li key={pIndex} className="text-gray-300">
                           <span className="text-blue-400 mr-2">•</span>
                           {project}
