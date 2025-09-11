@@ -88,22 +88,19 @@ export default function Navbar() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-10">
             {/* Logo - Left */}
-            <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded flex items-center justify-center">
-                <span className="text-white font-bold text-xs">AG</span>
-              </div>
+            <div className="flex items-center">
               <h1 className="text-white font-medium text-sm">
                 Abhik <span className="text-blue-400">Ghosh</span>
               </h1>
             </div>
 
             {/* Desktop Navigation - Right */}
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="flex items-center space-x-1">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.href, item.id)}
-                  className={`px-2 py-1 rounded text-xs font-medium transition-colors ${
+                  className={`px-2 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap ${
                     activeSection === item.id
                       ? 'text-blue-400 bg-white/10'
                       : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -114,10 +111,10 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Mobile Menu Button - Right */}
+            {/* Mobile Menu Button */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden p-1 rounded text-white/70 hover:text-white"
+              className="md:hidden p-1 rounded text-white/70 hover:text-white ml-2"
             >
               {isMobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
             </button>
