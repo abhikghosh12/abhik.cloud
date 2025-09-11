@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Home, User, Code, Briefcase, Mail, Sun, Moon, Monitor } from 'lucide-react'
-import { useAppStore } from '@/stores/appStore'
-import { cn } from '@/utils/cn'
+import { Menu, X, Home, User, Code, Briefcase, Mail } from 'lucide-react'
 
 const navItems = [
   { id: 'home', label: 'Home', href: '/', icon: Home },
@@ -14,24 +12,15 @@ const navItems = [
   { id: 'contact', label: 'Contact', href: '/contact', icon: Mail },
 ]
 
-const themeOptions = [
-  { value: 'light', label: 'Light', icon: Sun },
-  { value: 'dark', label: 'Dark', icon: Moon },
-  { value: 'system', label: 'System', icon: Monitor },
-]
-
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
-  const [showThemeMenu, setShowThemeMenu] = useState(false)
   
-  const { 
-    theme, 
-    setTheme, 
-    isMobileMenuOpen, 
-    toggleMobileMenu, 
-    setCurrentSection 
-  } = useAppStore()
+  const [theme, setTheme] = useState('dark')
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [currentSection, setCurrentSection] = useState('home')
+  
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
 
   // Handle scroll effects
   useEffect(() => {
@@ -80,12 +69,7 @@ export default function Navbar() {
     }
   }
 
-  const getCurrentThemeIcon = () => {
-    const themeOption = themeOptions.find(option => option.value === theme)
-    return themeOption?.icon || Monitor
-  }
 
-  const ThemeIcon = getCurrentThemeIcon()
 
   return (
     <>
@@ -93,12 +77,11 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? 'bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-lg' 
             : 'bg-transparent'
-        )}
+        }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -108,12 +91,12 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-2"
             >
-              <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">AG</span>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-white font-heading font-bold text-xl">
-                  Abhik <span className="text-primary-400">Ghosh</span>
+                <h1 className="text-white font-bold text-xl">
+                  Abhik <span className="text-blue-400">Ghosh</span>
                 </h1>
               </div>
             </motion.div>
@@ -126,18 +109,17 @@ export default function Navbar() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleNavClick(item.href, item.id)}
-                  className={cn(
-                    'relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+                  className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     activeSection === item.id
-                      ? 'text-primary-400 bg-white/10'
+                      ? 'text-blue-400 bg-white/10'
                       : 'text-white/80 hover:text-white hover:bg-white/5'
-                  )}
+                  }`}
                 >
                   {item.label}
                   {activeSection === item.id && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-white/10 rounded-lg border border-primary-400/30"
+                      className="absolute inset-0 bg-white/10 rounded-lg border border-blue-400/30"
                       transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                     />
                   )}
@@ -147,51 +129,7 @@ export default function Navbar() {
 
             {/* Theme Selector & Mobile Menu Button */}
             <div className="flex items-center space-x-2">
-              {/* Theme Selector */}
-              <div className="relative">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setShowThemeMenu(!showThemeMenu)}
-                  className="p-2 rounded-lg bg-white/10 text-white/80 hover:text-white hover:bg-white/20 transition-colors"
-                >
-                  <ThemeIcon className="w-5 h-5" />
-                </motion.button>
 
-                <AnimatePresence>
-                  {showThemeMenu && (
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.95, y: -10 }}
-                      animate={{ opacity: 1, scale: 1, y: 0 }}
-                      exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                      className="absolute right-0 top-12 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-xl py-2 min-w-[120px]"
-                    >
-                      {themeOptions.map((option) => {
-                        const OptionIcon = option.icon
-                        return (
-                          <motion.button
-                            key={option.value}
-                            whileHover={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-                            onClick={() => {
-                              setTheme(option.value as any)
-                              setShowThemeMenu(false)
-                            }}
-                            className={cn(
-                              'flex items-center space-x-2 w-full px-3 py-2 text-sm transition-colors',
-                              theme === option.value 
-                                ? 'text-primary-400' 
-                                : 'text-white/80 hover:text-white'
-                            )}
-                          >
-                            <OptionIcon className="w-4 h-4" />
-                            <span>{option.label}</span>
-                          </motion.button>
-                        )
-                      })}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
 
               {/* Mobile Menu Button */}
               <motion.button
@@ -260,12 +198,11 @@ export default function Navbar() {
                         transition={{ delay: index * 0.1 }}
                         whileHover={{ x: 10 }}
                         onClick={() => handleNavClick(item.href, item.id)}
-                        className={cn(
-                          'flex items-center space-x-3 w-full px-6 py-4 text-left transition-all duration-200',
+                        className={`flex items-center space-x-3 w-full px-6 py-4 text-left transition-all duration-200 ${
                           activeSection === item.id
-                            ? 'text-primary-400 bg-white/10 border-r-2 border-primary-400'
+                            ? 'text-blue-400 bg-white/10 border-r-2 border-blue-400'
                             : 'text-white/80 hover:text-white hover:bg-white/5'
-                        )}
+                        }`}
                       >
                         <ItemIcon className="w-5 h-5" />
                         <span className="font-medium">{item.label}</span>
@@ -286,13 +223,7 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* Click outside handler for theme menu */}
-      {showThemeMenu && (
-        <div
-          className="fixed inset-0 z-30"
-          onClick={() => setShowThemeMenu(false)}
-        />
-      )}
+
     </>
   )
 }

@@ -6,14 +6,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import App from './App.tsx'
 import './index.css'
 
-// PWA registration
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    import('./utils/pwa').then(({ registerSW }) => {
-      registerSW()
-    })
-  })
-}
+
 
 // Create a client
 const queryClient = new QueryClient({
