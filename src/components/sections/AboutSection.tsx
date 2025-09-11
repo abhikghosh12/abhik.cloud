@@ -1,115 +1,124 @@
-export default function AboutSection() {
-  const platforms = [
-    { name: 'AWS', label: 'Amazon Web Services', color: 'bg-[#FF9900]' },
-    { name: 'Azure', label: 'Microsoft Azure', color: 'bg-[#0078D4]' },
-    { name: 'GCP', label: 'Google Cloud', color: 'bg-[#4285F4]' },
-    { name: 'K8s', label: 'Kubernetes', color: 'bg-[#326CE5]' }
-  ];
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-  const achievements = [
-    { number: '5+', label: 'Years Experience' },
-    { number: '50+', label: 'Projects Completed' },
-    { number: '3', label: 'Cloud Platforms' },
-    { number: '100%', label: 'Client Satisfaction' }
+const AboutSection: React.FC = () => {
+  const socialLinks = [
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/abhik-ghosh-m-sc-61539425/',
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      ),
+      className: 'linkedin'
+    },
+    {
+      name: 'Xing',
+      url: 'https://www.xing.com/profile/Abhik_Ghosh?sc_o=mxb_p',
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.284.52 4.56 8.668 4.56 8.668.183.328.397.595.957.595h4.283c.609 0 .776-.407.617-.771 0 0-4.52-8.585-4.56-8.688 0 0 7.644-13.632 7.693-13.73.164-.403-.056-.75-.573-.75h-4.348zm-9.367 6.463c-.523 0-.79.398-.602.778 0 0 2.25 4.05 2.25 4.05L8.109 15.36c-.187.38.056.747.603.747h4.348c.548 0 .774-.406.611-.771 0 0-2.268-4.048-2.284-4.08L15.685 7.24c.187-.38-.056-.777-.603-.777H9.821z"/>
+        </svg>
+      ),
+      className: 'xing'
+    },
+    {
+      name: 'Credly',
+      url: 'https://www.credly.com/users/abhik-ghosh.941f4a38',
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6s-4.298 9.6-9.6 9.6S2.4 17.302 2.4 12 6.698 2.4 12 2.4zm0 3.6c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"/>
+        </svg>
+      ),
+      className: 'credly'
+    }
   ];
 
   return (
-    <section id="about" className="py-20 bg-[#0A192F]">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="flex items-center gap-4 mb-12">
-          <h2 className="text-[#CCD6F6] text-3xl font-bold">
-            About Me
-          </h2>
-          <div className="flex-1 h-px bg-[#233554]"></div>
+    <section className="about-section section relative">
+      {/* Pink Gradient Side Panels */}
+      <div className="absolute left-0 top-0 w-64 h-full bg-gradient-to-r from-[#E91E63] to-transparent"></div>
+      <div className="absolute right-0 top-0 w-64 h-full bg-gradient-to-l from-[#E91E63] to-transparent"></div>
+      
+      <div className="container relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">ABOUT ME</h2>
+          <p className="text-lg text-gray-600">Personal Profile</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Left Content */}
-          <div>
-            <div className="prose prose-invert max-w-none">
-              <p className="text-[#8892B0] mb-4">
-                With over 5 years of experience in cloud architecture and digital transformation, 
-                I specialize in designing and implementing scalable cloud solutions that drive business success. 
-                My expertise spans across major cloud platforms including AWS, Azure, and GCP.
-              </p>
-              
-              <p className="text-[#8892B0] mb-4">
-                At Capgemini, I leverage my expertise in DevSecOps, AI/ML, and cloud transformation to help 
-                organizations modernize their technology stack. My certifications in AWS, Azure, GCP, 
-                Terraform, GenAI, and Kubernetes underscore my commitment to staying at the forefront 
-                of cloud technologies.
-              </p>
-              
-              <p className="text-[#8892B0] mb-8">
-                Previously, I contributed to building digital infrastructure for Uniklinikum Augsburg, 
-                where I implemented scalable, secure systems supporting clinical research and data integration. 
-                I also worked on IoT and ML projects in the automation and energy sectors.
-              </p>
-            </div>
-
-            {/* Achievements */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-              {achievements.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-[#64FFDA] mb-2">
-                    {item.number}
-                  </div>
-                  <div className="text-[#8892B0] text-sm">
-                    {item.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Content */}
-          <div className="space-y-8">
-            {/* Platform Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              {platforms.map((platform, index) => (
-                <div key={index} className="group">
-                  <div className={`relative rounded-lg overflow-hidden ${platform.color} aspect-square`}>
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                      <div className="text-3xl font-bold mb-2">{platform.name}</div>
-                      <div className="text-sm opacity-80">{platform.label}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Tech Stack */}
-            <div className="bg-[#112240] rounded-lg p-6">
-              <h3 className="text-[#CCD6F6] text-xl font-bold mb-4">Tech Stack</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  'Python', 'Docker', 'Terraform', 'DevSecOps', 'CI/CD', 'GitLab',
-                  'Machine Learning', 'Microservices', 'Node.js', 'React'
-                ].map((tech, index) => (
-                  <span 
-                    key={index}
-                    className="px-3 py-1 bg-[#233554] text-[#64FFDA] rounded-full text-sm hover:bg-[#64FFDA]/10 transition-colors cursor-default"
+        <div className="max-w-4xl mx-auto">
+          {/* Profile Image and Social Links */}
+          <div className="text-center mb-12">
+            <div className="inline-block relative">
+              <img 
+                src="/api/placeholder/300/300" 
+                alt="Abhik Ghosh" 
+                className="profile-image mx-auto mb-6"
+              />
+              {/* Social Icons */}
+              <div className="flex justify-center space-x-4 mb-8">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`social-icon ${social.className}`}
+                    title={social.name}
                   >
-                    {tech}
-                  </span>
+                    {social.icon}
+                  </a>
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Call to Action */}
-            <div className="text-center">
-              <a 
-                href="/certificates"
-                className="inline-block px-8 py-4 border-2 border-[#64FFDA] text-[#64FFDA] rounded-md hover:bg-[#64FFDA]/10 transition-all duration-300"
-              >
-                View My Certificates
-              </a>
+          {/* About Text */}
+          <div className="bg-white bg-opacity-90 rounded-lg p-8 shadow-lg">
+            <div className="prose prose-lg max-w-none text-gray-800">
+              <p className="mb-6">
+                As a Cloud Architect at Capgemini, I design and shape the future with innovative cloud solutions, 
+                accelerating Cloud transformation through FinOps, Cyber Security, Automation and AI/ML. This 
+                allows clients to achieve their goals and optimize their performance.
+              </p>
+
+              <p className="mb-6">
+                With several years of experience in Operation, Incident Management, Software Development, 
+                Cloud Services/Hyperscalar (AWS, Azure, GCP), Kubernetes, Containerization, Microservices, 
+                DevSecOps, Backend, and Machine Learning, I'm ready to tackle your most complex challenges. 
+                My certifications in AWS, Azure, GCP, Terraform, GenAI, Machine learning and Kubernetes 
+                underscore my expertise.
+              </p>
+
+              <p className="mb-8">
+                Previously, I was involved in building digital infrastructure for Uniklinikum Augsburg, a large 
+                academic hospital in Germany. I leveraged my expertise in AWS, Azure, DevSecOps, microservices, 
+                and web development to create scalable, secure, and efficient systems that support clinical 
+                research and data integration. I also worked on IoT and ML projects for the automation and 
+                energy sectors, using technologies such as Python, Django, Node.js, TensorFlow, and Grafana. 
+                I am passionate about learning new skills and exploring new domains, and I am always eager to 
+                collaborate with diverse teams and stakeholders.
+              </p>
+
+              <p className="mb-8">
+                Curious to see how I can transform your business? Explore my work at my website and let's connect!
+              </p>
+
+              <div className="text-center">
+                <Link
+                  to="/appointment"
+                  className="btn-secondary inline-block"
+                >
+                  Schedule an appointment
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default AboutSection;

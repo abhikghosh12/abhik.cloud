@@ -1,246 +1,163 @@
-# Abhik Ghosh - Professional Portfolio Website
+# Abhik Ghosh - Personal Website
 
-A modern, responsive portfolio website showcasing cloud architecture expertise, AI/ML projects, and professional experience.
+A modern, responsive personal website showcasing cloud architecture expertise, AI/ML projects, and professional achievements.
 
-## 🚀 Features
+## 🌟 Features
 
-### Design & User Experience
-- **Modern Design**: Contemporary gradient backgrounds, glassmorphism effects
-- **Responsive Layout**: Mobile-first design that works on all devices
-- **Smooth Animations**: AOS (Animate On Scroll) integration with custom animations
-- **3D Graphics**: Interactive Three.js backgrounds and skill visualizations
-- **Performance Optimized**: Fast loading with optimized assets
+- **Pink/Magenta Design Theme** - Matching the original Wix design
+- **AI Detection Demo** - Interactive hero section showcasing AI capabilities
+- **Responsive Navigation** - Multi-page navigation with social media integration
+- **Professional Sections**:
+  - AI-powered Hero Section with accuracy demonstration
+  - About Me with profile and social links
+  - Dynamic Resume/Career timeline
+  - Projects showcase
+  - Certificates gallery with Credly integration
+  - Blog/Articles section
+  - Photo Gallery
+  - Contact/Appointment booking
+  - Privacy Policy
 
-### Technical Sections
-- **Hero Section**: Interactive 3D background with floating tech icons
-- **About**: Professional journey with animated statistics
-- **Skills**: 3D skill visualization with progress indicators
-- **Experience**: Interactive timeline with detailed work history
-- **Projects**: Showcase of key projects with case studies
-- **Contact**: Working contact form with validation
+## 🚀 Quick Start
 
-### Advanced Features
-- **Particle Systems**: Dynamic particle effects using Three.js
-- **Scroll Effects**: Parallax scrolling and scroll-based animations
-- **Mobile Navigation**: Responsive hamburger menu
-- **Loading Screen**: Animated loading sequence
-- **SEO Optimized**: Meta tags, structured data, and accessibility features
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-## 🛠 Tech Stack
+2. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
 
-### Frontend
-- **HTML5**: Semantic markup with modern web standards
-- **CSS3**: Advanced styling with CSS Grid, Flexbox, and custom properties
-- **JavaScript ES6+**: Modern JavaScript with classes and modules
-- **Three.js**: 3D graphics and WebGL effects
+3. **Build for Production**
+   ```bash
+   npm run build
+   ```
 
-### External Libraries
-- **AOS**: Animate On Scroll library
-- **Particles.js**: Particle effect library
-- **Three.js**: 3D graphics library
-
-### Tools & Deployment
-- **GitHub Pages**: Static site hosting
-- **Custom Domain**: abhik.cloud
-- **Git**: Version control
+4. **Preview Production Build**
+   ```bash
+   npm run preview
+   ```
 
 ## 📁 Project Structure
 
 ```
-abhik-portfolio/
-├── index.html                 # Main HTML file
-├── css/
-│   ├── main.css               # Main styles
-│   ├── animations.css         # Animation styles
-│   └── responsive.css         # Mobile responsiveness
-├── js/
-│   ├── main.js                # Main JavaScript functionality
-│   ├── 3d-effects.js          # 3D graphics and Three.js
-│   └── animations.js          # Animation controllers
-├── assets/
-│   └── images/
-│       ├── profile.jpg        # Profile photo
-│       ├── projects/          # Project screenshots
-│       ├── icons/             # Custom icons
-│       └── backgrounds/       # Background images
-└── data/
-    ├── projects.json          # Project data
-    ├── experience.json        # Work experience
-    └── skills.json            # Skills and certifications
+src/
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx      # Main navigation with social icons
+│   │   └── Footer.tsx      # Site footer
+│   ├── sections/
+│   │   ├── AIHeroSection.tsx     # AI detection demo hero
+│   │   ├── AboutSection.tsx      # About me section
+│   │   ├── CertificatesSection.tsx
+│   │   ├── AppointmentSection.tsx
+│   │   └── PrivacySection.tsx
+│   └── common/
+│       └── PlaceholderImage.tsx
+├── pages/
+│   ├── HomePage.tsx        # Main landing page
+│   ├── ResumePage.tsx      # Career timeline
+│   ├── ProjectsPage.tsx    # Project showcase
+│   ├── CertificatesPage.tsx
+│   ├── AppointmentPage.tsx # Contact/booking
+│   ├── BlogsPage.tsx       # Articles/blog posts
+│   ├── GalleryPage.tsx     # Photo gallery
+│   └── PrivacyPage.tsx
+├── App.tsx                 # Main app component
+├── main.tsx               # App entry point
+└── index.css              # Global styles with pink theme
 ```
 
 ## 🎨 Design System
 
-### Color Palette
-- **Primary**: #6366f1 (Indigo)
-- **Secondary**: #8b5cf6 (Purple)
-- **Accent**: #06b6d4 (Cyan)
-- **Success**: #10b981 (Emerald)
-- **Error**: #ef4444 (Red)
+### Colors
+- **Primary Pink**: `#E91E63`
+- **Secondary Pink**: `#F06292`
+- **Purple**: `#9C27B0`
+- **Light Purple**: `#CE93D8`
+- **Background**: White with pink gradients
 
-### Typography
-- **Primary Font**: Inter (body text)
-- **Heading Font**: Space Grotesk (headings)
+### Key Components
+- **Navigation**: Clean header with social icons and contact button
+- **Hero Section**: AI detection demo with animated accuracy counter
+- **Cards**: White cards with pink accents and hover effects
+- **Buttons**: Pink gradient buttons with hover animations
+- **Social Icons**: Colored icons for each platform
 
-### Spacing System
-- **Base Unit**: 1rem (16px)
-- **Scale**: 0.5rem, 1rem, 1.5rem, 2rem, 3rem, 4rem
+## 🔧 Configuration
 
-## 📱 Responsive Design
+### Social Media Links
+Update social media URLs in `src/components/layout/Navbar.tsx`:
+- LinkedIn: Current link active
+- Xing: Current link active  
+- GitHub: Current link active
+- Email: `abhikghosh@outlook.com`
+- Phone: `(+49) 0176-65979446`
+- WhatsApp: Same as phone
+- Credly: Current link active
+- Medium: Current link active
 
-### Breakpoints
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: 1024px - 1400px
-- **Large Desktop**: > 1400px
+### Contact Information
+Located in multiple components:
+- `src/components/sections/AppointmentSection.tsx`
+- `src/components/layout/Footer.tsx`
 
-### Mobile Features
-- Hamburger navigation menu
-- Touch-optimized interactions
-- Optimized typography scaling
-- Simplified animations for performance
+## 📱 Features Implemented
 
-## 🌟 Key Sections
+✅ **Multi-page Navigation** - All 8 pages from original design
+✅ **AI Detection Hero** - Animated accuracy counter and detection boxes  
+✅ **Pink Theme** - Complete color scheme matching original
+✅ **Social Integration** - All social media links
+✅ **Responsive Design** - Mobile-first approach
+✅ **Contact Forms** - Appointment booking and contact
+✅ **Certificate Display** - Credly integration
+✅ **Blog System** - Article listing and categories
+✅ **Gallery** - Photo gallery with lightbox
+✅ **Privacy Policy** - GDPR compliant
 
-### Hero Section
-- Interactive 3D background with floating geometric shapes
-- Particle system with WebGL effects
-- Responsive profile image with hover effects
-- Animated text with gradient effects
+## 🌐 Pages
 
-### Skills Visualization
-- 3D sphere arrangement showing skill levels
-- Interactive hover effects
-- Animated skill bars with percentage indicators
-- Categorized by technology domains
-
-### Project Showcase
-- Grid layout with project cards
-- Hover overlays showing technologies
-- Modal popups with detailed project information
-- Links to live demos and source code
-
-### Contact Form
-- Animated form with validation
-- Glass morphism design
-- Success/error notifications
-- Email integration ready
-
-## 🔧 Setup & Development
-
-### Prerequisites
-- Modern web browser
-- Git
-- Text editor/IDE
-
-### Local Development
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/abhikghosh12/abhik-portfolio.git
-   cd abhik-portfolio
-   ```
-
-2. Open `index.html` in a web browser or use a local server:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx http-server
-   ```
-
-3. Navigate to `http://localhost:8000`
-
-### Customization
-1. **Personal Information**: Update content in `index.html`
-2. **Projects**: Modify `data/projects.json`
-3. **Experience**: Edit `data/experience.json`
-4. **Skills**: Update `data/skills.json`
-5. **Styling**: Customize CSS variables in `css/main.css`
-6. **Colors**: Modify the CSS custom properties
+1. **Home** (`/`) - AI hero + About + Certificates preview
+2. **Dynamic Resume** (`/resume`) - Career timeline with dark theme
+3. **Projects** (`/projects`) - Project showcase grid
+4. **Certificates** (`/certificates`) - Full certificate gallery
+5. **Schedule Appointment** (`/appointment`) - Contact forms + Calendly
+6. **Blogs** (`/blogs`) - Article listing with categories
+7. **Gallery** (`/gallery`) - Photo gallery with lightbox
+8. **Privacy** (`/privacy`) - Privacy policy page
 
 ## 🚀 Deployment
 
-### GitHub Pages
-1. Push changes to the main branch
-2. Enable GitHub Pages in repository settings
-3. Set source to "Deploy from a branch" → main branch
-4. Add custom domain in GitHub Pages settings
+The website is configured for deployment to:
+- GitHub Pages (via `.nojekyll` file)
+- Netlify/Vercel (via build configuration)
+- Any static hosting service
 
-### Custom Domain Setup
-1. Add `CNAME` file with domain name
-2. Configure DNS A records:
-   - `185.199.108.153`
-   - `185.199.109.153`
-   - `185.199.110.153`
-   - `185.199.111.153`
-3. Add CNAME record for www subdomain
+### GitHub Pages Deployment
+```bash
+npm run build
+# Deploy the `dist` folder to your hosting service
+```
 
-## 📈 Performance
+## 🔄 Migrating from Old Website
 
-### Optimization Features
-- Minified and optimized CSS/JS
-- Optimized images with proper formats
-- Lazy loading for images
-- Critical CSS inlined
-- Service worker for caching (future enhancement)
+The new website maintains all functionality from your Wix site but with:
+- ✅ Better performance (no Wix limitations)
+- ✅ Custom domain support
+- ✅ SEO optimizations
+- ✅ Mobile responsiveness
+- ✅ Modern design patterns
+- ✅ Professional appearance
 
-### Performance Metrics
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
-- **Time to Interactive**: < 3s
+## 📞 Support
 
-## 🔒 Security
-
-- HTTPS enforced via GitHub Pages
-- Content Security Policy headers
-- No sensitive data in client-side code
-- Form validation and sanitization
-
-## 📊 Analytics & SEO
-
-### SEO Features
-- Semantic HTML structure
-- Meta tags and Open Graph
-- Schema.org structured data
-- XML sitemap
-- Robots.txt
-
-### Analytics Ready
-- Google Analytics integration ready
-- Performance monitoring setup
-- User interaction tracking
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 About
-
-**Abhik Ghosh**  
-Cloud Architect | DevSecOps Expert | AI/ML Specialist
-
-- 📧 Email: abhikghosh87@gmail.com
-- 🌐 Website: https://abhik.cloud
-- 📍 Location: Germany
-
-## 🙏 Acknowledgments
-
-- **Three.js** team for the amazing 3D graphics library
-- **AOS** for smooth scroll animations
-- **Google Fonts** for beautiful typography
-- **Unsplash** for high-quality images
-- **Open source community** for inspiration and resources
+For any questions about the website structure or modifications:
+- Email: abhikghosh@outlook.com
+- Review the component files for customization options
+- All styling is in `src/index.css` with Tailwind CSS utility classes
 
 ---
 
-*Built with ❤️ and lots of ☕ by Abhik Ghosh*
+**Note**: This website now matches your original Wix design while providing modern performance and customization capabilities. All your professional information, social links, and contact details have been preserved and enhanced.
