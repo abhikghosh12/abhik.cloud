@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 h-12 transition-all duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       } ${
         isScrolled 
@@ -55,23 +55,23 @@ const Navbar: React.FC = () => {
           : 'bg-white shadow-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-12">
+      <div className="max-w-7xl mx-auto px-4 h-full">
+        <div className="flex justify-between items-center h-full">
           
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0">
             <Link to="/" className="text-lg font-bold text-gradient">
               Abhik Ghosh
             </Link>
           </div>
 
-          {/* Center Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          {/* Center Navigation - Only show on desktop */}
+          <div className="hidden lg:flex items-center space-x-4 flex-1 justify-center">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-xs font-medium transition-colors px-3 py-1 rounded ${
+                className={`text-xs font-medium transition-colors px-2 py-1 rounded whitespace-nowrap ${
                   isActivePath(item.path) 
                     ? 'bg-[#E91E63] text-white' 
                     : 'text-gray-700 hover:text-[#E91E63] hover:bg-pink-50'
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Right Side - Compact Layout */}
-          <div className="hidden lg:flex items-center space-x-2">
+          <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
             
             {/* Compact Social Icons */}
             <div className="flex items-center space-x-1">
@@ -139,19 +139,19 @@ const Navbar: React.FC = () => {
             {/* Contact Button */}
             <Link
               to="/appointment"
-              className="bg-[#E91E63] text-white px-4 py-1 rounded-full text-xs font-medium hover:bg-[#AD1457] transition-colors"
+              className="bg-[#E91E63] text-white px-3 py-1 rounded-full text-xs font-medium hover:bg-[#AD1457] transition-colors whitespace-nowrap"
             >
               Contact me!
             </Link>
 
             {/* Language Flags */}
-            <div className="flex items-center space-x-1">
-              <span className="flex items-center space-x-1 text-xs">
-                <span className="text-blue-600">🇺🇸</span>
+            <div className="flex items-center space-x-1 text-xs">
+              <span className="flex items-center space-x-1">
+                <span>🇺🇸</span>
                 <span>EN</span>
               </span>
-              <span className="flex items-center space-x-1 text-xs">
-                <span className="text-red-600">🇩🇪</span>
+              <span className="flex items-center space-x-1">
+                <span>🇩🇪</span>
                 <span>DE</span>
               </span>
             </div>
@@ -161,7 +161,7 @@ const Navbar: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-[#E91E63]"
+              className="text-gray-600 hover:text-[#E91E63] w-6 h-6 flex items-center justify-center"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isOpen ? (
@@ -176,8 +176,8 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t bg-white/95 backdrop-blur-md">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg">
+            <div className="px-4 py-2 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -192,6 +192,17 @@ const Navbar: React.FC = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Contact Button */}
+              <div className="pt-2">
+                <Link
+                  to="/appointment"
+                  className="block bg-[#E91E63] text-white px-3 py-2 rounded text-center text-sm font-medium hover:bg-[#AD1457] transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact me!
+                </Link>
+              </div>
             </div>
           </div>
         )}

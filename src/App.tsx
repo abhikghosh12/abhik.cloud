@@ -16,7 +16,7 @@ const PrivacyPage = lazy(() => import('@/pages/PrivacyPage'))
 
 function App() {
   return (
-    <div className="min-h-screen relative overflow-x-hidden bg-white">
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Abhik Ghosh | Cloud Architect | AI/ML Expert</title>
         <meta 
@@ -30,7 +30,7 @@ function App() {
 
       <Navbar />
       
-      <main>
+      <main className="main-content">
         <Suspense fallback={
           <div className="flex items-center justify-center min-h-screen">
             <div className="spinner"></div>

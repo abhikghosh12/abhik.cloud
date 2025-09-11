@@ -29,7 +29,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 48px; /* Account for fixed navbar */
+  margin: 0;
+  padding: 0;
+}
+
+/* Main content offset for fixed navbar */
+.main-content {
+  margin-top: 48px;
 }
 
 /* Typography */
