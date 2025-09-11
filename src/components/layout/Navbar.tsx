@@ -81,57 +81,31 @@ export default function Navbar() {
         transition={{ duration: 0.3 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-black/30 backdrop-blur-md border-b border-white/5' 
-            : 'bg-transparent'
+            ? 'bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm' 
+            : 'bg-white/90 backdrop-blur-sm'
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-10">
-            {/* Logo & Social - Left */}
-            <div className="flex items-center space-x-4">
-              <h1 className="text-white font-medium text-sm">
-                Abhik <span className="text-blue-400">Ghosh</span>
+          <div className="flex items-center justify-between h-16">
+            {/* Logo - Left */}
+            <div className="flex items-center">
+              <h1 className={`font-semibold text-lg transition-colors ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}>
+                Abhik <span className="text-blue-600">Ghosh</span>
               </h1>
-              
-              {/* Social Links */}
-              <div className="hidden lg:flex items-center space-x-3">
-                <a href="https://www.linkedin.com/in/abhik-ghosh-msc/" className="text-white/60 hover:text-blue-400 text-xs">
-                  LinkedIn
-                </a>
-                <a href="#" className="text-white/60 hover:text-blue-400 text-xs">
-                  Xing
-                </a>
-                <a href="tel:+4917665979446" className="text-white/60 hover:text-green-400 text-xs">
-                  Mobile
-                </a>
-                <a href="#" className="text-white/60 hover:text-green-400 text-xs">
-                  WhatsApp
-                </a>
-                <a href="mailto:abhikghosh@outlook.com" className="text-white/60 hover:text-red-400 text-xs">
-                  Email
-                </a>
-                <a href="#" className="text-white/60 hover:text-yellow-400 text-xs">
-                  Credly
-                </a>
-                <a href="#" className="text-white/60 hover:text-purple-400 text-xs">
-                  Medium
-                </a>
-                <a href="https://github.com/abhikghosh12" className="text-white/60 hover:text-gray-400 text-xs">
-                  Github
-                </a>
-              </div>
             </div>
 
             {/* Desktop Navigation - Right */}
-            <div className="flex items-center space-x-1">
+            <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.href, item.id)}
-                  className={`px-2 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap ${
+                  className={`text-sm font-medium transition-colors hover:text-blue-600 ${
                     activeSection === item.id
-                      ? 'text-blue-400 bg-white/10'
-                      : 'text-white/70 hover:text-white hover:bg-white/5'
+                      ? 'text-blue-600 border-b-2 border-blue-600 pb-1'
+                      : isScrolled ? 'text-gray-700' : 'text-white/90'
                   }`}
                 >
                   {item.label}
