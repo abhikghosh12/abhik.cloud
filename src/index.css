@@ -29,6 +29,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 48px; /* Account for fixed navbar */
 }
 
 /* Typography */
@@ -75,79 +76,6 @@ body {
 .btn-secondary {
   @apply px-8 py-4 bg-[#E91E63] text-white rounded-full 
   hover:bg-[#AD1457] transition-all duration-300 font-medium;
-}
-
-/* Pink Theme Colors */
-.bg-primary-pink {
-  background-color: var(--primary-pink);
-}
-
-.bg-secondary-pink {
-  background-color: var(--secondary-pink);
-}
-
-.bg-light-pink {
-  background-color: var(--light-pink);
-}
-
-.bg-purple {
-  background-color: var(--purple);
-}
-
-.bg-light-purple {
-  background-color: var(--light-purple);
-}
-
-.text-primary-pink {
-  color: var(--primary-pink);
-}
-
-.text-white {
-  color: var(--white);
-}
-
-/* Social Icons Styling */
-.social-icon {
-  @apply w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110;
-  flex-shrink: 0;
-}
-
-.social-icon svg {
-  @apply w-4 h-4;
-  max-width: 16px;
-  max-height: 16px;
-}
-
-.social-icon.linkedin {
-  @apply bg-[#0077B5] text-white;
-}
-
-.social-icon.xing {
-  @apply bg-[#006567] text-white;
-}
-
-.social-icon.phone {
-  @apply bg-[#4CAF50] text-white;
-}
-
-.social-icon.whatsapp {
-  @apply bg-[#25D366] text-white;
-}
-
-.social-icon.email {
-  @apply bg-[#EA4335] text-white;
-}
-
-.social-icon.credly {
-  @apply bg-[#FF6B00] text-white;
-}
-
-.social-icon.medium {
-  @apply bg-[#000000] text-white;
-}
-
-.social-icon.github {
-  @apply bg-[#333333] text-white;
 }
 
 /* Navigation Styles */
@@ -206,6 +134,60 @@ body {
   @apply bg-[#9C27B0] text-white px-3 py-1 rounded-full text-xs font-medium;
 }
 
+/* Language Selector */
+.language-selector {
+  @apply flex items-center space-x-2;
+}
+
+.language-flag {
+  @apply w-6 h-4 object-cover rounded;
+}
+
+/* Footer Styles */
+.footer {
+  @apply bg-gray-900 text-white py-8;
+}
+
+/* Pink Theme Colors */
+.bg-primary-pink {
+  background-color: var(--primary-pink);
+}
+
+.bg-secondary-pink {
+  background-color: var(--secondary-pink);
+}
+
+.bg-light-pink {
+  background-color: var(--light-pink);
+}
+
+.bg-purple {
+  background-color: var(--purple);
+}
+
+.bg-light-purple {
+  background-color: var(--light-purple);
+}
+
+.text-primary-pink {
+  color: var(--primary-pink);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .heading-1 {
+    @apply text-4xl;
+  }
+  
+  .heading-2 {
+    @apply text-2xl;
+  }
+}
+
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 8px;
@@ -256,31 +238,6 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Language Selector */
-.language-selector {
-  @apply flex items-center space-x-2;
-}
-
-.language-flag {
-  @apply w-6 h-4 object-cover rounded;
-}
-
-/* Footer Styles */
-.footer {
-  @apply bg-gray-900 text-white py-8;
-}
-
-/* Responsive Typography */
-@media (max-width: 768px) {
-  .heading-1 {
-    @apply text-4xl;
-  }
-  
-  .heading-2 {
-    @apply text-2xl;
   }
 }
 
