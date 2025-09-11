@@ -16,9 +16,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
   
-  const [theme, setTheme] = useState('dark')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [currentSection, setCurrentSection] = useState('home')
   
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
 
