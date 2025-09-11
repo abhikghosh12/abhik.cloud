@@ -1,10 +1,4 @@
 export default function HeroSection() {
-  const skills = [
-    'Cloud Architect', 'DevSecOps', 'Artificial Intelligence', 'Machine Learning',
-    'Cyber Security', 'FinOps', 'Cloud Services', 'Microservices', 'Kubernetes',
-    'Azure', 'AWS', 'GCP', 'Terraform', 'GitLab/GitHub', 'Jenkins', 'Ansible',
-    'Docker/Podman', 'Python'
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">

@@ -124,14 +124,14 @@ export default function ExperienceSection() {
                 </div>
                 
                 {/* Projects for Capgemini */}
-                {exp.projects && Array.isArray(exp.projects) && exp.projects.length > 0 && exp.projects[0].customer && (
+                {exp.projects && Array.isArray(exp.projects) && exp.projects.length > 0 && typeof exp.projects[0] === 'object' && 'customer' in exp.projects[0] && (
                   <div className="mb-6">
-                    {exp.projects.map((project, pIndex) => (
+                    {(exp.projects as any[]).map((project: any, pIndex: number) => (
                       <div key={pIndex} className="mb-6 bg-gray-800/50 p-4 rounded">
                         <h4 className="font-bold text-green-400 mb-2">Customer: {project.customer}</h4>
                         <h5 className="font-semibold text-white mb-3">{project.title}</h5>
                         <ul className="space-y-1">
-                          {project.tasks.map((task, tIndex) => (
+                          {project.tasks.map((task: string, tIndex: number) => (
                             <li key={tIndex} className="flex items-start text-gray-300">
                               <span className="text-blue-400 mr-2">▪</span>
                               {task}
@@ -178,7 +178,7 @@ export default function ExperienceSection() {
                 {exp.projects && typeof exp.projects === 'string' && (
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Projects:</h4>
-                    <p className="text-gray-300">{exp.projects}</p>
+                    <p className="text-gray-300">{exp.projects as string}</p>
                   </div>
                 )}
                 
