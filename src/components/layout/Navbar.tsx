@@ -129,19 +129,21 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Social Icons and Contact Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-2">
             {/* Social Icons */}
-            <div className="flex items-center space-x-2">
-              {socialLinks.map((social) => (
+            <div className="flex items-center space-x-1">
+              {socialLinks.slice(0, 6).map((social) => (
                 <a
                   key={social.name}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`social-icon ${social.className}`}
+                  className={`social-icon ${social.className} w-8 h-8`}
                   title={social.name}
                 >
-                  {social.icon}
+                  <div className="w-4 h-4">
+                    {social.icon}
+                  </div>
                 </a>
               ))}
             </div>
@@ -149,13 +151,13 @@ const Navbar: React.FC = () => {
             {/* Contact Button */}
             <Link
               to="/appointment"
-              className="btn-secondary btn-animate"
+              className="btn-secondary btn-animate ml-4"
             >
               Contact me!
             </Link>
 
             {/* Language Selector */}
-            <div className="language-selector">
+            <div className="language-selector ml-4">
               <img
                 src="https://flagcdn.com/w20/us.png"
                 alt="EN"

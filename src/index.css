@@ -108,7 +108,14 @@ body {
 
 /* Social Icons Styling */
 .social-icon {
-  @apply w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110;
+  @apply w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110;
+  flex-shrink: 0;
+}
+
+.social-icon svg {
+  @apply w-4 h-4;
+  max-width: 16px;
+  max-height: 16px;
 }
 
 .social-icon.linkedin {
