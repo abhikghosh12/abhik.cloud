@@ -1,0 +1,257 @@
+{
+  "skillCategories": [
+    {
+      "id": "cloud-platforms",
+      "name": "Cloud Platforms",
+      "icon": "☁️",
+      "description": "Enterprise cloud platforms and services",
+      "skills": [
+        {
+          "name": "AWS",
+          "level": 95,
+          "experience": "5+ years",
+          "certifications": ["AWS Solutions Architect", "AWS DevOps Engineer"],
+          "projects": 25
+        },
+        {
+          "name": "Azure",
+          "level": 90,
+          "experience": "4+ years",
+          "certifications": ["Azure Solutions Architect", "Azure DevOps Engineer"],
+          "projects": 18
+        },
+        {
+          "name": "Google Cloud Platform",
+          "level": 85,
+          "experience": "3+ years",
+          "certifications": ["GCP Professional Cloud Architect"],
+          "projects": 12
+        },
+        {
+          "name": "FinOps",
+          "level": 88,
+          "experience": "3+ years",
+          "certifications": ["FinOps Certified Practitioner"],
+          "projects": 8
+        }
+      ]
+    },
+    {
+      "id": "devsecops",
+      "name": "DevSecOps",
+      "icon": "🔧",
+      "description": "Development, Security, and Operations practices",
+      "skills": [
+        {
+          "name": "Terraform",
+          "level": 92,
+          "experience": "4+ years",
+          "certifications": ["HashiCorp Certified: Terraform Associate"],
+          "projects": 20
+        },
+        {
+          "name": "GitLab/GitHub",
+          "level": 88,
+          "experience": "5+ years",
+          "certifications": [],
+          "projects": 30
+        },
+        {
+          "name": "Jenkins",
+          "level": 85,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 15
+        },
+        {
+          "name": "Ansible",
+          "level": 80,
+          "experience": "3+ years",
+          "certifications": [],
+          "projects": 12
+        }
+      ]
+    },
+    {
+      "id": "containerization",
+      "name": "Containerization",
+      "icon": "🐳",
+      "description": "Container orchestration and management",
+      "skills": [
+        {
+          "name": "Docker",
+          "level": 90,
+          "experience": "5+ years",
+          "certifications": ["Docker Certified Associate"],
+          "projects": 25
+        },
+        {
+          "name": "Kubernetes",
+          "level": 88,
+          "experience": "4+ years",
+          "certifications": ["CKA - Certified Kubernetes Administrator"],
+          "projects": 18
+        },
+        {
+          "name": "Microservices",
+          "level": 85,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 15
+        },
+        {
+          "name": "Podman",
+          "level": 82,
+          "experience": "2+ years",
+          "certifications": [],
+          "projects": 8
+        }
+      ]
+    },
+    {
+      "id": "ai-ml",
+      "name": "AI/ML & Development",
+      "icon": "🤖",
+      "description": "Artificial Intelligence and Machine Learning",
+      "skills": [
+        {
+          "name": "Python",
+          "level": 88,
+          "experience": "6+ years",
+          "certifications": [],
+          "projects": 30
+        },
+        {
+          "name": "Machine Learning",
+          "level": 85,
+          "experience": "4+ years",
+          "certifications": ["Google ML Engineer", "AWS ML Specialty"],
+          "projects": 15
+        },
+        {
+          "name": "TensorFlow",
+          "level": 80,
+          "experience": "3+ years",
+          "certifications": ["TensorFlow Developer Certificate"],
+          "projects": 10
+        },
+        {
+          "name": "GenAI",
+          "level": 90,
+          "experience": "2+ years",
+          "certifications": [],
+          "projects": 8
+        }
+      ]
+    },
+    {
+      "id": "security-ops",
+      "name": "Security & Operations",
+      "icon": "🔒",
+      "description": "Cybersecurity and operational practices",
+      "skills": [
+        {
+          "name": "Cyber Security",
+          "level": 92,
+          "experience": "5+ years",
+          "certifications": ["CISSP", "AWS Security Specialty"],
+          "projects": 20
+        },
+        {
+          "name": "Incident Management",
+          "level": 90,
+          "experience": "5+ years",
+          "certifications": ["ITIL v4"],
+          "projects": 25
+        },
+        {
+          "name": "Monitoring",
+          "level": 85,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 18
+        },
+        {
+          "name": "Grafana",
+          "level": 82,
+          "experience": "3+ years",
+          "certifications": [],
+          "projects": 12
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture & Design",
+      "icon": "🏗️",
+      "description": "System architecture and design patterns",
+      "skills": [
+        {
+          "name": "Solution Architecture",
+          "level": 95,
+          "experience": "6+ years",
+          "certifications": ["TOGAF 9 Certified"],
+          "projects": 35
+        },
+        {
+          "name": "System Design",
+          "level": 92,
+          "experience": "6+ years",
+          "certifications": [],
+          "projects": 30
+        },
+        {
+          "name": "Scalability",
+          "level": 88,
+          "experience": "5+ years",
+          "certifications": [],
+          "projects": 25
+        },
+        {
+          "name": "Performance Optimization",
+          "level": 85,
+          "experience": "5+ years",
+          "certifications": [],
+          "projects": 20
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Visual Studio Code",
+    "IntelliJ IDEA",
+    "Postman",
+    "Jira",
+    "Confluence",
+    "Slack",
+    "Discord",
+    "Figma",
+    "Draw.io"
+  ],
+  "databases": [
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "DynamoDB",
+    "InfluxDB",
+    "Elasticsearch"
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "German",
+      "level": "Professional"
+    },
+    {
+      "name": "Hindi",
+      "level": "Native"
+    },
+    {
+      "name": "Bengali",
+      "level": "Native"
+    }
+  ]
+}

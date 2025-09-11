@@ -1,0 +1,250 @@
+{
+  "experience": [
+    {
+      "id": "capgemini-cloud-architect",
+      "title": "Cloud Architect",
+      "company": "Capgemini",
+      "location": "Germany",
+      "type": "Full-time",
+      "startDate": "2022-01",
+      "endDate": null,
+      "current": true,
+      "duration": "3+ years",
+      "description": "Leading cloud transformation initiatives through FinOps, Cyber Security, Automation and AI/ML. Designing innovative cloud solutions that help clients achieve their goals and optimize performance across AWS, Azure, and GCP platforms.",
+      "responsibilities": [
+        "Design and implement enterprise-scale cloud architectures",
+        "Lead cloud migration projects for Fortune 500 companies",
+        "Optimize cloud costs through FinOps practices",
+        "Implement DevSecOps pipelines and security best practices",
+        "Mentor junior architects and engineers",
+        "Conduct cloud readiness assessments and strategy workshops"
+      ],
+      "achievements": [
+        "Successfully migrated 15+ enterprise applications to cloud",
+        "Achieved 30% cost reduction through FinOps implementation",
+        "Led a team of 12+ engineers across multiple projects",
+        "Obtained 8 new cloud certifications during tenure"
+      ],
+      "technologies": [
+        "AWS", "Azure", "GCP", "Terraform", "Kubernetes", "Docker", 
+        "Jenkins", "GitLab", "Ansible", "Python", "AI/ML"
+      ]
+    },
+    {
+      "id": "uniklinikum-digital-engineer",
+      "title": "Digital Infrastructure Engineer",
+      "company": "Uniklinikum Augsburg",
+      "location": "Augsburg, Germany",
+      "type": "Full-time",
+      "startDate": "2020-03",
+      "endDate": "2022-01",
+      "current": false,
+      "duration": "1 year 10 months",
+      "description": "Built digital infrastructure for a large academic hospital in Germany. Leveraged expertise in AWS, Azure, DevSecOps, microservices, and web development to create scalable, secure, and efficient systems supporting clinical research and data integration.",
+      "responsibilities": [
+        "Developed and maintained hospital's digital infrastructure",
+        "Implemented microservices architecture for clinical systems",
+        "Ensured HIPAA and GDPR compliance for patient data",
+        "Built data integration pipelines for research purposes",
+        "Collaborated with medical researchers and IT teams",
+        "Managed cloud infrastructure on AWS and Azure"
+      ],
+      "achievements": [
+        "Improved system reliability by 40%",
+        "Reduced data processing time by 60%",
+        "Successfully integrated 5+ clinical research systems",
+        "Implemented zero-downtime deployment processes"
+      ],
+      "technologies": [
+        "AWS", "Azure", "Docker", "Kubernetes", "Node.js", 
+        "PostgreSQL", "Redis", "Microservices", "DevSecOps"
+      ]
+    },
+    {
+      "id": "iot-ml-engineer",
+      "title": "IoT & ML Engineer",
+      "company": "Automation & Energy Sectors (Freelance)",
+      "location": "Germany",
+      "type": "Contract/Freelance",
+      "startDate": "2019-06",
+      "endDate": "2020-03",
+      "current": false,
+      "duration": "9 months",
+      "description": "Worked on IoT and ML projects for automation and energy sectors, using technologies such as Python, Django, Node.js, TensorFlow, and Grafana. Focused on creating intelligent systems for industrial automation and energy optimization.",
+      "responsibilities": [
+        "Developed IoT solutions for industrial automation",
+        "Implemented machine learning models for energy optimization",
+        "Built real-time monitoring dashboards using Grafana",
+        "Created data pipelines for sensor data processing",
+        "Collaborated with hardware engineers and domain experts",
+        "Optimized system performance and energy consumption"
+      ],
+      "achievements": [
+        "Achieved 25% energy savings through ML optimization",
+        "Deployed IoT solutions across 3 industrial facilities",
+        "Reduced manual monitoring tasks by 80%",
+        "Implemented predictive maintenance algorithms"
+      ],
+      "technologies": [
+        "Python", "Django", "Node.js", "TensorFlow", "Grafana", 
+        "InfluxDB", "MQTT", "IoT", "Machine Learning"
+      ]
+    },
+    {
+      "id": "software-engineer",
+      "title": "Software Engineer",
+      "company": "Tech Startup",
+      "location": "Germany",
+      "type": "Full-time",
+      "startDate": "2018-01",
+      "endDate": "2019-06",
+      "current": false,
+      "duration": "1 year 5 months",
+      "description": "Full-stack software development with focus on backend systems, API development, and database design. Worked in an agile environment developing scalable web applications.",
+      "responsibilities": [
+        "Developed RESTful APIs and backend services",
+        "Designed and optimized database schemas",
+        "Implemented frontend components using React",
+        "Participated in agile development processes",
+        "Conducted code reviews and maintained code quality",
+        "Collaborated with UX/UI designers and product managers"
+      ],
+      "achievements": [
+        "Improved API response times by 45%",
+        "Successfully launched 2 major product features",
+        "Reduced technical debt through refactoring initiatives",
+        "Mentored 2 junior developers"
+      ],
+      "technologies": [
+        "Python", "Django", "React", "PostgreSQL", "Redis", 
+        "Docker", "AWS", "JavaScript", "REST APIs"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "masters-computer-science",
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "institution": "Technical University",
+      "location": "Germany",
+      "startDate": "2016-09",
+      "endDate": "2018-08",
+      "gpa": "1.8/1.0 (German Scale)",
+      "description": "Specialized in Distributed Systems, Cloud Computing, and Machine Learning. Thesis on 'Scalable Microservices Architecture for Healthcare Systems'.",
+      "coursework": [
+        "Distributed Systems",
+        "Cloud Computing",
+        "Machine Learning",
+        "Software Architecture",
+        "Database Systems",
+        "Network Security"
+      ]
+    },
+    {
+      "id": "bachelors-engineering",
+      "degree": "Bachelor of Engineering",
+      "field": "Information Technology",
+      "institution": "University of Technology",
+      "location": "India",
+      "startDate": "2012-08",
+      "endDate": "2016-06",
+      "gpa": "8.5/10",
+      "description": "Strong foundation in computer science fundamentals, programming, and system design. Active in coding competitions and technical societies.",
+      "coursework": [
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "Computer Networks",
+        "Database Management",
+        "Software Engineering",
+        "Web Technologies"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect - Professional",
+      "issuer": "Amazon Web Services",
+      "date": "2023-06",
+      "validUntil": "2026-06",
+      "credentialId": "AWS-SAP-2023-001",
+      "verificationUrl": "#"
+    },
+    {
+      "name": "Microsoft Azure Solutions Architect Expert",
+      "issuer": "Microsoft",
+      "date": "2023-03",
+      "validUntil": "2025-03",
+      "credentialId": "AZURE-SAE-2023-001",
+      "verificationUrl": "#"
+    },
+    {
+      "name": "Google Cloud Professional Cloud Architect",
+      "issuer": "Google Cloud",
+      "date": "2022-12",
+      "validUntil": "2024-12",
+      "credentialId": "GCP-PCA-2022-001",
+      "verificationUrl": "#"
+    },
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "issuer": "Cloud Native Computing Foundation",
+      "date": "2022-09",
+      "validUntil": "2025-09",
+      "credentialId": "CKA-2022-001",
+      "verificationUrl": "#"
+    },
+    {
+      "name": "HashiCorp Certified: Terraform Associate",
+      "issuer": "HashiCorp",
+      "date": "2022-05",
+      "validUntil": "2024-05",
+      "credentialId": "HC-TA-2022-001",
+      "verificationUrl": "#"
+    },
+    {
+      "name": "AWS Certified DevOps Engineer - Professional",
+      "issuer": "Amazon Web Services",
+      "date": "2021-11",
+      "validUntil": "2024-11",
+      "credentialId": "AWS-DOE-2021-001",
+      "verificationUrl": "#"
+    },
+    {
+      "name": "CISSP - Certified Information Systems Security Professional",
+      "issuer": "(ISC)²",
+      "date": "2021-08",
+      "validUntil": "2024-08",
+      "credentialId": "CISSP-2021-001",
+      "verificationUrl": "#"
+    },
+    {
+      "name": "Docker Certified Associate",
+      "issuer": "Docker",
+      "date": "2021-03",
+      "validUntil": "2024-03",
+      "credentialId": "DCA-2021-001",
+      "verificationUrl": "#"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Cloud Excellence Award",
+      "issuer": "Capgemini",
+      "date": "2023-12",
+      "description": "Recognized for exceptional cloud architecture design and successful client delivery."
+    },
+    {
+      "title": "Innovation in Healthcare IT",
+      "issuer": "Uniklinikum Augsburg",
+      "date": "2021-09",
+      "description": "Awarded for innovative digital infrastructure solutions in healthcare."
+    },
+    {
+      "title": "Best Technical Solution",
+      "issuer": "Industry Conference",
+      "date": "2020-11",
+      "description": "Best technical solution for IoT-based energy management system."
+    }
+  ]
+}

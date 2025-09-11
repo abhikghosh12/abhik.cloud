@@ -1,0 +1,119 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Multi-Agent AI System",
+      "description": "Advanced AI system with multiple intelligent agents working collaboratively to solve complex business problems and automate decision-making processes.",
+      "image": "./assets/images/projects/project1.jpg",
+      "technologies": ["AI/ML", "Python", "TensorFlow", "Docker", "AWS"],
+      "category": "AI/ML",
+      "status": "completed",
+      "featured": true,
+      "links": {
+        "demo": "#",
+        "github": "#",
+        "case_study": "#"
+      },
+      "details": {
+        "duration": "6 months",
+        "team_size": "4 people",
+        "impact": "40% improvement in decision-making speed"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Scalable Cloud Infrastructure",
+      "description": "Enterprise-grade cloud infrastructure deployed on AWS with automated scaling, monitoring, and security best practices for healthcare applications.",
+      "image": "./assets/images/projects/project2.jpg",
+      "technologies": ["AWS", "Terraform", "Kubernetes", "Docker", "Jenkins"],
+      "category": "Cloud Architecture",
+      "status": "completed",
+      "featured": true,
+      "links": {
+        "demo": "#",
+        "github": "#",
+        "case_study": "#"
+      },
+      "details": {
+        "duration": "8 months",
+        "team_size": "6 people",
+        "impact": "99.9% uptime achieved"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Automated DevSecOps Pipeline",
+      "description": "Complete CI/CD pipeline with integrated security scanning, automated testing, and deployment across multiple cloud environments.",
+      "image": "./assets/images/projects/project3.jpg",
+      "technologies": ["DevSecOps", "Jenkins", "Docker", "GitLab", "Ansible"],
+      "category": "DevSecOps",
+      "status": "completed",
+      "featured": true,
+      "links": {
+        "demo": "#",
+        "github": "#",
+        "case_study": "#"
+      },
+      "details": {
+        "duration": "4 months",
+        "team_size": "3 people",
+        "impact": "70% reduction in deployment time"
+      }
+    },
+    {
+      "id": 4,
+      "title": "IoT Energy Management System",
+      "description": "Smart energy management system using IoT sensors and machine learning to optimize energy consumption in industrial facilities.",
+      "image": "./assets/images/projects/project4.jpg",
+      "technologies": ["IoT", "Python", "TensorFlow", "Grafana", "InfluxDB"],
+      "category": "IoT",
+      "status": "completed",
+      "featured": false,
+      "links": {
+        "demo": "#",
+        "github": "#"
+      },
+      "details": {
+        "duration": "5 months",
+        "team_size": "5 people",
+        "impact": "25% energy savings"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Hospital Digital Infrastructure",
+      "description": "Comprehensive digital infrastructure for Uniklinikum Augsburg supporting clinical research and data integration.",
+      "image": "./assets/images/projects/project5.jpg",
+      "technologies": ["Azure", "Microservices", "Node.js", "PostgreSQL", "Redis"],
+      "category": "Healthcare",
+      "status": "completed",
+      "featured": false,
+      "links": {
+        "case_study": "#"
+      },
+      "details": {
+        "duration": "12 months",
+        "team_size": "8 people",
+        "impact": "Improved patient data accessibility"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Financial Data Analytics Platform",
+      "description": "Real-time financial data analytics platform with machine learning-powered insights and automated reporting.",
+      "image": "./assets/images/projects/project6.jpg",
+      "technologies": ["Python", "Apache Spark", "Kafka", "PostgreSQL", "React"],
+      "category": "FinTech",
+      "status": "in_progress",
+      "featured": false,
+      "links": {
+        "demo": "#"
+      },
+      "details": {
+        "duration": "ongoing",
+        "team_size": "6 people",
+        "impact": "Real-time financial insights"
+      }
+    }
+  ]
+}
