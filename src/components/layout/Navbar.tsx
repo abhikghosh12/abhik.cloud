@@ -14,7 +14,7 @@ const navItems = [
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+
   const [isScrolled, setIsScrolled] = useState(false);
   
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function Navbar() {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(href.replace('#', ''));
+
       setIsMenuOpen(false);
     }
   };
