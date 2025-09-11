@@ -30,37 +30,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Handle active section detection
+  // Handle active section detection based on current path
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map(item => {
-        const targetId = item.href.replace('#', '')
-        return document.getElementById(targetId)
-      })
-      const scrollPosition = window.scrollY + 100
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i]
-        if (section && section.offsetTop <= scrollPosition) {
-          const sectionId = navItems[i].id
-          if (sectionId !== activeSection) {
-            setActiveSection(sectionId)
-            setCurrentSection(sectionId)
-          }
-          break
-        }
-      }
+    const path = window.location.pathname
+    const currentItem = navItems.find(item => item.href === path)
+    if (currentItem) {
+      setActiveSection(currentItem.id)
     }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [activeSection, setCurrentSection])
+  }, [])
 
   const handleNavClick = (href: string, id: string) => {
     window.location.href = href
-    
     setActiveSection(id)
-    setCurrentSection(id)
     
     if (isMobileMenuOpen) {
       toggleMobileMenu()
@@ -171,7 +152,7 @@ export default function Navbar() {
               <div className="flex flex-col h-full">
                 {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-white/10">
-                  <h2 className="text-white font-heading font-bold text-xl">
+                  <h2 className="text-white font-bold text-xl">
                     Menu
                   </h2>
                   <motion.button
