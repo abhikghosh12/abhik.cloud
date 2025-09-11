@@ -1,555 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhik Ghosh | Cloud Architect | AI/ML Expert</title>
-    <meta name="description" content="Cloud Architect at Capgemini specializing in DevSecOps, AI/ML, and cloud transformation">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
-    
-    <!-- Fonts -->
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/animations.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Abhik Ghosh - Cloud Architect at Capgemini specializing in DevSecOps, AI/ML, and cloud transformation. Expert in AWS, Azure, GCP with 5+ years experience.">
+    <meta name="keywords" content="Cloud Architect, DevSecOps, AI/ML, AWS, Azure, GCP, Kubernetes, Docker, Terraform, Python, Machine Learning">
+    <meta name="author" content="Abhik Ghosh">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
     
-    <!-- External Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    
-    <!-- Meta Tags for Social Media -->
-    <meta property="og:title" content="Abhik Ghosh - Cloud Architect">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abhik.cloud/">
+    <meta property="og:title" content="Abhik Ghosh | Cloud Architect | AI/ML Expert">
     <meta property="og:description" content="Cloud Architect specializing in DevSecOps, AI/ML, and cloud transformation">
-    <meta property="og:image" content="./assets/images/profile.jpg">
-    <meta property="og:url" content="https://abhik.cloud">
-    <meta name="twitter:card" content="summary_large_image">
-</head>
-<body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loader">
-            <div class="loader-inner">
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                </div>
-            </div>
-        </div>
-        <p class="loading-text">Loading Experience...</p>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <span class="logo-text">Abhik</span>
-                <span class="logo-accent">Ghosh</span>
-            </a>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <!-- 3D Background Canvas -->
-        <canvas id="hero-canvas" class="hero-canvas"></canvas>
-        
-        <!-- Particle System -->
-        <div id="particles-js" class="particles"></div>
-        
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text" data-aos="fade-up" data-aos-delay="200">
-                    <h1 class="hero-title">
-                        <span class="title-line">Hello, I'm</span>
-                        <span class="title-main">Abhik Ghosh</span>
-                        <span class="title-subtitle">Cloud Architect & AI/ML Expert</span>
-                    </h1>
-                    <p class="hero-description">
-                        Designing the future with innovative cloud solutions, accelerating transformation 
-                        through FinOps, Cyber Security, Automation and AI/ML.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            <span>View My Work</span>
-                            <i class="btn-icon">→</i>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <span>Let's Talk</span>
-                            <i class="btn-icon">💬</i>
-                        </a>
-                    </div>
-                    
-                    <!-- Social Links -->
-                    <div class="social-links">
-                        <a href="mailto:abhikghosh87@gmail.com" class="social-link" aria-label="Email">
-                            <i class="social-icon">✉</i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <i class="social-icon">💼</i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="GitHub">
-                            <i class="social-icon">🐱</i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
-                    <div class="profile-container">
-                        <img src="./assets/images/profile.jpg" alt="Abhik Ghosh" class="profile-image">
-                        <div class="profile-ring"></div>
-                        <div class="floating-elements">
-                            <div class="floating-icon" data-tech="aws">☁️</div>
-                            <div class="floating-icon" data-tech="ai">🤖</div>
-                            <div class="floating-icon" data-tech="security">🔒</div>
-                            <div class="floating-icon" data-tech="devops">⚙️</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="scroll-wheel"></div>
-                </div>
-                <p>Scroll to explore</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Passionate about transforming businesses through innovative cloud solutions</p>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <div class="about-card">
-                        <h3>Professional Journey</h3>
-                        <p>
-                            As a Cloud Architect at Capgemini, I design and shape the future with innovative cloud solutions, 
-                            accelerating Cloud transformation through FinOps, Cyber Security, Automation and AI/ML. 
-                            This allows clients to achieve their goals and optimize their performance.
-                        </p>
-                        <p>
-                            With several years of experience in Operation, Incident Management, Software Development, 
-                            Cloud Services/Hyperscalar (AWS, Azure, GCP), Kubernetes, Containerization, Microservices, 
-                            DevSecOps, Backend, and Machine Learning, I'm ready to tackle your most complex challenges.
-                        </p>
-                        <p>
-                            Previously, I was involved in building digital infrastructure for Uniklinikum Augsburg, a large 
-                            academic hospital in Germany. I leveraged my expertise in AWS, Azure, DevSecOps, microservices, 
-                            and web development to create scalable, secure, and efficient systems that support clinical 
-                            research and data integration.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="about-stats" data-aos="fade-left">
-                    <div class="stat-grid">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="5">0</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="50">0</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="15">0</div>
-                            <div class="stat-label">Certifications</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="100">0</div>
-                            <div class="stat-label">Client Satisfaction</div>
-                            <span class="stat-suffix">%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Technical Expertise</h2>
-                <p class="section-subtitle">Comprehensive skill set across cloud platforms, DevSecOps, and emerging technologies</p>
-            </div>
-            
-            <!-- 3D Skills Visualization -->
-            <div class="skills-3d-container" data-aos="fade-up">
-                <canvas id="skills-canvas" class="skills-canvas"></canvas>
-                <div class="skills-legend">
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: #FF6B6B;"></div>
-                        <span>Cloud Platforms</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: #4ECDC4;"></div>
-                        <span>DevSecOps</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: #45B7D1;"></div>
-                        <span>AI/ML</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: #96CEB4;"></div>
-                        <span>Security</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Skills Grid -->
-            <div class="skills-grid">
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                    <div class="skill-icon">☁️</div>
-                    <h3 class="skill-title">Cloud Platforms</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="95">AWS</div>
-                        <div class="skill-item" data-level="90">Azure</div>
-                        <div class="skill-item" data-level="85">GCP</div>
-                        <div class="skill-item" data-level="88">FinOps</div>
-                    </div>
-                </div>
-                
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                    <div class="skill-icon">🔧</div>
-                    <h3 class="skill-title">DevSecOps</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="92">Terraform</div>
-                        <div class="skill-item" data-level="88">GitLab/GitHub</div>
-                        <div class="skill-item" data-level="85">Jenkins</div>
-                        <div class="skill-item" data-level="80">Ansible</div>
-                    </div>
-                </div>
-                
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                    <div class="skill-icon">🐳</div>
-                    <h3 class="skill-title">Containerization</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="90">Docker</div>
-                        <div class="skill-item" data-level="88">Kubernetes</div>
-                        <div class="skill-item" data-level="85">Microservices</div>
-                        <div class="skill-item" data-level="82">Podman</div>
-                    </div>
-                </div>
-                
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                    <div class="skill-icon">🤖</div>
-                    <h3 class="skill-title">AI/ML & Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="88">Python</div>
-                        <div class="skill-item" data-level="85">Machine Learning</div>
-                        <div class="skill-item" data-level="80">TensorFlow</div>
-                        <div class="skill-item" data-level="90">GenAI</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Professional Experience</h2>
-                <p class="section-subtitle">Journey through innovative projects and transformative solutions</p>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Cloud Architect</h3>
-                        <h4 class="timeline-company">Capgemini</h4>
-                        <p class="timeline-date">2022 - Present</p>
-                        <p class="timeline-description">
-                            Leading cloud transformation initiatives through FinOps, Cyber Security, Automation and AI/ML. 
-                            Designing innovative cloud solutions that help clients achieve their goals and optimize performance 
-                            across AWS, Azure, and GCP platforms.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Digital Infrastructure Engineer</h3>
-                        <h4 class="timeline-company">Uniklinikum Augsburg</h4>
-                        <p class="timeline-date">2020 - 2022</p>
-                        <p class="timeline-description">
-                            Built digital infrastructure for a large academic hospital in Germany. Leveraged expertise in 
-                            AWS, Azure, DevSecOps, microservices, and web development to create scalable, secure, and 
-                            efficient systems supporting clinical research and data integration.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">IoT & ML Engineer</h3>
-                        <h4 class="timeline-company">Automation & Energy Sectors</h4>
-                        <p class="timeline-date">2019 - 2020</p>
-                        <p class="timeline-description">
-                            Worked on IoT and ML projects for automation and energy sectors, using technologies such as 
-                            Python, Django, Node.js, TensorFlow, and Grafana. Focused on creating intelligent systems 
-                            for industrial automation and energy optimization.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Showcasing innovative solutions and technical expertise</p>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image">
-                        <img src="./assets/images/projects/project1.jpg" alt="Multi-Agent AI System">
-                        <div class="project-overlay">
-                            <div class="project-tech">
-                                <span class="tech-tag">AI/ML</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">TensorFlow</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Multi-Agent AI System</h3>
-                        <p class="project-description">
-                            Advanced AI system with multiple intelligent agents working collaboratively 
-                            to solve complex business problems and automate decision-making processes.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Details</a>
-                            <a href="#" class="project-link">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-image">
-                        <img src="./assets/images/projects/project2.jpg" alt="Cloud Infrastructure">
-                        <div class="project-overlay">
-                            <div class="project-tech">
-                                <span class="tech-tag">AWS</span>
-                                <span class="tech-tag">Terraform</span>
-                                <span class="tech-tag">Kubernetes</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Scalable Cloud Infrastructure</h3>
-                        <p class="project-description">
-                            Enterprise-grade cloud infrastructure deployed on AWS with automated scaling, 
-                            monitoring, and security best practices for healthcare applications.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Details</a>
-                            <a href="#" class="project-link">Case Study</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-image">
-                        <img src="./assets/images/projects/project3.jpg" alt="DevSecOps Pipeline">
-                        <div class="project-overlay">
-                            <div class="project-tech">
-                                <span class="tech-tag">DevSecOps</span>
-                                <span class="tech-tag">Jenkins</span>
-                                <span class="tech-tag">Docker</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Automated DevSecOps Pipeline</h3>
-                        <p class="project-description">
-                            Complete CI/CD pipeline with integrated security scanning, automated testing, 
-                            and deployment across multiple cloud environments.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Details</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="section-subtitle">Ready to transform your business with innovative cloud solutions?</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right">
-                    <h3>Get In Touch</h3>
-                    <p>
-                        Whether you're looking to modernize your infrastructure, implement AI/ML solutions, 
-                        or accelerate your cloud transformation journey, I'm here to help.
-                    </p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">💼</div>
-                            <div>
-                                <strong>Professional</strong><br>
-                                Cloud Architect at Capgemini
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">🎯</div>
-                            <div>
-                                <strong>Expertise</strong><br>
-                                Cloud Transformation & AI/ML
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <strong>Location</strong><br>
-                                Germany
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
-                            <div>
-                                <strong>Email</strong><br>
-                                abhikghosh87@gmail.com
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form-container" data-aos="fade-left">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">
-                            <span>Send Message</span>
-                            <i class="btn-icon">→</i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Abhik Ghosh</h3>
-                    <p>Cloud Architect & AI/ML Expert</p>
-                    <div class="social-links">
-                        <a href="mailto:abhikghosh87@gmail.com" class="social-link">✉</a>
-                        <a href="#" class="social-link">💼</a>
-                        <a href="#" class="social-link">🐱</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li>Cloud Architecture</li>
-                        <li>DevSecOps Implementation</li>
-                        <li>AI/ML Solutions</li>
-                        <li>Digital Transformation</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Technologies</h4>
-                    <ul>
-                        <li>AWS, Azure, GCP</li>
-                        <li>Kubernetes, Docker</li>
-                        <li>Terraform, Ansible</li>
-                        <li>Python, TensorFlow</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Abhik Ghosh. All rights reserved.</p>
-                <p>Designed with passion for innovation</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <meta property="og:image" content="https://abhik.cloud/og-image.jpg">
     
-    <!-- Custom JavaScript -->
-    <script src="./js/main.js"></script>
-    <script src="./js/3d-effects.js"></script>
-    <script src="./js/animations.js"></script>
-    <script src="./js/particles.js"></script>
-</body>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://abhik.cloud/">
+    <meta property="twitter:title" content="Abhik Ghosh | Cloud Architect | AI/ML Expert">
+    <meta property="twitter:description" content="Cloud Architect specializing in DevSecOps, AI/ML, and cloud transformation">
+    <meta property="twitter:image" content="https://abhik.cloud/og-image.jpg">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Abhik Ghosh">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://abhik.cloud/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abhik Ghosh",
+      "jobTitle": "Cloud Architect",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Capgemini"
+      },
+      "url": "https://abhik.cloud",
+      "sameAs": [
+        "https://linkedin.com/in/abhikghosh",
+        "https://github.com/abhikghosh12"
+      ],
+      "knowsAbout": [
+        "Cloud Architecture",
+        "DevSecOps", 
+        "AI/ML",
+        "AWS",
+        "Azure",
+        "Google Cloud Platform",
+        "Kubernetes",
+        "Docker",
+        "Terraform",
+        "Python",
+        "Machine Learning"
+      ],
+      "description": "Cloud Architect specializing in DevSecOps, AI/ML, and cloud transformation with expertise in AWS, Azure, and GCP."
+    }
+    </script>
+    
+    <title>Abhik Ghosh | Cloud Architect | AI/ML Expert</title>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding: 2rem; text-align: center; background: #1e1b4b; color: white; font-family: system-ui;">
+        <h1>JavaScript Required</h1>
+        <p>This website requires JavaScript to function properly. Please enable JavaScript in your browser settings.</p>
+      </div>
+    </noscript>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
