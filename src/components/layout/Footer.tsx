@@ -13,9 +13,9 @@ export default function Footer() {
               <span className="sr-only">Email</span>
               📧
             </a>
-            <a href="https://linkedin.com/in/abhikghosh" className="text-white/60 hover:text-primary-400 transition-colors duration-200">
+            <a href="https://www.linkedin.com/in/abhik-ghosh-msc/" className="text-white/60 hover:text-primary-400 transition-colors duration-200">
               <span className="sr-only">LinkedIn</span>
-              🔗
+              💼
             </a>
             <a href="https://github.com/abhikghosh12" className="text-white/60 hover:text-primary-400 transition-colors duration-200">
               <span className="sr-only">GitHub</span>

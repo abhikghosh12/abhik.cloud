@@ -63,16 +63,7 @@ function App() {
         {/* Main Content */}
         <main>
           <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/resume" element={<ResumePage />} />
-              <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/certificates" element={<HomePage />} />
-              <Route path="/appointment" element={<AppointmentPage />} />
-              <Route path="/blog" element={<HomePage />} />
-              <Route path="/project/:id" element={<ProjectPage />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
+            <HomePage />
           </Suspense>
         </main>
       </div>

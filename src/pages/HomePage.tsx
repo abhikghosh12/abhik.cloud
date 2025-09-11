@@ -78,12 +78,24 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main>
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <ContactSection />
+        <section id="home">
+          <HeroSection />
+        </section>
+        <section id="about">
+          <AboutSection />
+        </section>
+        <section id="skills">
+          <SkillsSection />
+        </section>
+        <section id="experience">
+          <ExperienceSection />
+        </section>
+        <section id="projects">
+          <ProjectsSection />
+        </section>
+        <section id="contact">
+          <ContactSection />
+        </section>
       </main>
 
       <Footer />

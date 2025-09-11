@@ -7,6 +7,12 @@ export default function ContactSection() {
       link: 'mailto:abhikghosh87@gmail.com'
     },
     {
+      icon: '💼',
+      label: 'LinkedIn',
+      value: 'abhik-ghosh-msc',
+      link: 'https://www.linkedin.com/in/abhik-ghosh-msc/'
+    },
+    {
       icon: '🌐',
       label: 'Website',
       value: 'abhik.cloud',

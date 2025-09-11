@@ -78,6 +78,15 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <noscript>
       <div style="padding: 2rem; text-align: center; background: #1e1b4b; color: white; font-family: system-ui;">
         <h1>JavaScript Required</h1>

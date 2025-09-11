@@ -5,12 +5,12 @@ import { useAppStore } from '@/stores/appStore'
 import { cn } from '@/utils/cn'
 
 const navItems = [
-  { id: 'home', label: 'Home', href: '/', icon: Home },
-  { id: 'resume', label: 'Dynamic Resume', href: '/resume', icon: User },
-  { id: 'projects', label: 'Projects', href: '/projects', icon: Code },
-  { id: 'certificates', label: 'Certificates', href: '/certificates', icon: Briefcase },
-  { id: 'appointment', label: 'Schedule Appointment', href: '/appointment', icon: Mail },
-  { id: 'blog', label: 'Blog Posts', href: '/blog', icon: Briefcase },
+  { id: 'home', label: 'Home', href: '#home', icon: Home },
+  { id: 'about', label: 'About', href: '#about', icon: User },
+  { id: 'skills', label: 'Skills', href: '#skills', icon: Code },
+  { id: 'experience', label: 'Experience', href: '#experience', icon: Briefcase },
+  { id: 'projects', label: 'Projects', href: '#projects', icon: Mail },
+  { id: 'contact', label: 'Contact', href: '#contact', icon: Briefcase },
 ]
 
 const themeOptions = [
@@ -69,8 +69,12 @@ export default function Navbar() {
   }, [activeSection, setCurrentSection])
 
   const handleNavClick = (href: string, id: string) => {
-    // Navigate to different pages
-    window.location.href = href
+    const targetId = href.replace('#', '')
+    const element = document.getElementById(targetId)
+    
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
     
     setActiveSection(id)
     setCurrentSection(id)
