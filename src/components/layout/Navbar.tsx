@@ -81,17 +81,45 @@ export default function Navbar() {
         transition={{ duration: 0.3 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-black/90 backdrop-blur-sm border-b border-white/10' 
-            : 'bg-black/20'
+            ? 'bg-black/30 backdrop-blur-md border-b border-white/5' 
+            : 'bg-transparent'
         }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-10">
-            {/* Logo - Left */}
-            <div className="flex items-center">
+            {/* Logo & Social - Left */}
+            <div className="flex items-center space-x-4">
               <h1 className="text-white font-medium text-sm">
                 Abhik <span className="text-blue-400">Ghosh</span>
               </h1>
+              
+              {/* Social Links */}
+              <div className="hidden lg:flex items-center space-x-3">
+                <a href="https://www.linkedin.com/in/abhik-ghosh-msc/" className="text-white/60 hover:text-blue-400 text-xs">
+                  LinkedIn
+                </a>
+                <a href="#" className="text-white/60 hover:text-blue-400 text-xs">
+                  Xing
+                </a>
+                <a href="tel:+4917665979446" className="text-white/60 hover:text-green-400 text-xs">
+                  Mobile
+                </a>
+                <a href="#" className="text-white/60 hover:text-green-400 text-xs">
+                  WhatsApp
+                </a>
+                <a href="mailto:abhikghosh@outlook.com" className="text-white/60 hover:text-red-400 text-xs">
+                  Email
+                </a>
+                <a href="#" className="text-white/60 hover:text-yellow-400 text-xs">
+                  Credly
+                </a>
+                <a href="#" className="text-white/60 hover:text-purple-400 text-xs">
+                  Medium
+                </a>
+                <a href="https://github.com/abhikghosh12" className="text-white/60 hover:text-gray-400 text-xs">
+                  Github
+                </a>
+              </div>
             </div>
 
             {/* Desktop Navigation - Right */}
