@@ -9,6 +9,9 @@ import ErrorBoundary from '@/components/common/ErrorBoundary'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('@/pages/HomePage'))
+const ResumePage = lazy(() => import('@/pages/ResumePage'))
+const ProjectsPage = lazy(() => import('@/pages/ProjectsPage'))
+const AppointmentPage = lazy(() => import('@/pages/AppointmentPage'))
 const ProjectPage = lazy(() => import('@/pages/ProjectPage'))
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'))
 
@@ -62,6 +65,11 @@ function App() {
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/resume" element={<ResumePage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/certificates" element={<HomePage />} />
+              <Route path="/appointment" element={<AppointmentPage />} />
+              <Route path="/blog" element={<HomePage />} />
               <Route path="/project/:id" element={<ProjectPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>

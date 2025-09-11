@@ -1,7 +1,7 @@
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #0a0a0a;
   font-family: 'Inter', system-ui, sans-serif;
-  color: white;
+  color: #ffffff;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -18,20 +18,20 @@ section {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1rem;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
   padding: 2rem;
   margin: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  background: #000000;
+  border-bottom: 1px solid #333;
   z-index: 1000;
   padding: 1rem 0;
 }

@@ -1,42 +1,71 @@
 export default function HeroSection() {
+  const skills = [
+    'DevSecOps', 'Artificial Intelligence', 'Machine learning', 'Cyber security',
+    'FinOps', 'Cloud services', 'Microsevices', 'Kubernetes', 'Azure', 'AWS',
+    'GCP', 'Terraform', 'GitLab/GitHub', 'Jenkins', 'Ansible', 'Docker/Podman', 'Python'
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/abhikghosh', icon: '💼' },
+    { name: 'Xing', url: '#', icon: '🔗' },
+    { name: 'Mobile', url: 'tel:+4917665979446', icon: '📱' },
+    { name: 'WhatsApp', url: '#', icon: '💬' },
+    { name: 'Email', url: 'mailto:abhikghosh@outlook.com', icon: '📧' },
+    { name: 'Credly', url: '#', icon: '🏆' },
+    { name: 'Medium', url: '#', icon: '📝' },
+    { name: 'GitHub', url: 'https://github.com/abhikghosh12', icon: '💻' }
+  ];
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-secondary-900 to-accent-900"></div>
-      <div className="absolute inset-0 bg-black/20"></div>
-      
-      {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-        <div className="animate-fade-in-up">
-          <h1 className="heading-1 mb-6">
-            <span className="block">Abhik</span>
-            <span className="text-gradient">Ghosh</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 font-medium">
-            Cloud Architect | DevSecOps Expert | AI/ML Specialist
-          </p>
-          <p className="text-lg md:text-xl mb-12 text-white/80 max-w-2xl mx-auto leading-relaxed">
-            Building scalable cloud solutions and driving digital transformation across AWS, Azure, and GCP platforms
-          </p>
+    <div className="min-h-screen bg-black text-white">
+      {/* Header with social links */}
+      <div className="bg-gray-900 py-4">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            {socialLinks.map((link, index) => (
+              <a key={index} href={link.url} className="flex items-center gap-1 text-gray-300 hover:text-white transition-colors">
+                <span>{link.icon}</span>
+                <span>{link.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Main content */}
+      <div className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-6xl font-bold mb-2">ABHIK GHOSH</h1>
+            
+            {/* Language Toggle */}
+            <div className="mb-8">
+              <span className="text-sm text-gray-400 mr-4">English</span>
+              <span className="bg-blue-600 px-3 py-1 rounded text-sm mr-2">EN</span>
+              <span className="text-sm text-gray-400 mr-4">German</span>
+              <span className="bg-gray-700 px-3 py-1 rounded text-sm">DE</span>
+            </div>
+          </div>
           
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#projects" className="btn btn-primary">
-              View My Work
-            </a>
-            <a href="#contact" className="btn btn-outline">
-              Get In Touch
+          {/* Skills Grid */}
+          <div className="max-w-6xl mx-auto mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+              {skills.map((skill, index) => (
+                <div key={index} className="bg-gray-800 border border-gray-600 rounded p-3 text-center hover:bg-gray-700 transition-colors">
+                  <span className="text-sm">{skill}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Contact CTA */}
+          <div className="text-center">
+            <a href="/appointment" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-bold text-lg transition-colors inline-block">
+              Contact me !
             </a>
           </div>
         </div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 }

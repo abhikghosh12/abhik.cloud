@@ -1,0 +1,179 @@
+# Scraped Content from abhikghosh87.wixsite.com/website
+
+## Home Page
+
+Based on the content provided, here is a summary of the information from the website:
+
+Name:
+ABHIK GHOSH
+
+Title:
+CLOUD ARCHITECT
+
+Skills & Expertise:
+*   DevSecOps
+*   Artificial Intelligence
+*   Machine learning
+*   Cyber security
+*   FinOps
+*   Cloud services
+*   Microsevices
+*   Kubernetes
+*   Azure
+*   AWS
+*   GCP
+*   Terraform
+*   GitLab/GitHub
+*   Jenkins
+*   Ansible
+*   Docker/Podman
+*   Python
+
+Personal Profile Summary:
+As a Cloud Architect at Capgemini, Abhik Ghosh designs cloud solutions focusing on FinOps, Cyber Security, Automation, and AI/ML. He has extensive experience in Operations, Incident Management, Software Development, Cloud Services (AWS, Azure, GCP), Kubernetes, DevSecOps, and Machine Learning. He holds certifications in AWS, Azure, GCP, Terraform, GenAI, Machine Learning, and Kubernetes.
+
+Previously, he built digital infrastructure for Uniklinikum Augsburg in Germany using AWS, Azure, and microservices. He has also worked on IoT and ML projects for the automation and energy sectors using Python, Django, Node.js, TensorFlow, and Grafana.
+
+Recent Blog Post:
+*   Title: MULTI-AGENT AI MODELS: THE NEXT GAME CHANGER
+*   Author: Abhik Ghosh
+*   Date: Aug 9, 2024
+*   Reading Time: 3 min
+
+Website Navigation:
+*   Home
+*   Dynamic resume
+*   Projects
+*   Certificates
+*   Schedule an Appointment
+*   Blogs Post
+*   gallery
+*   Privacy
+
+---
+
+## About Me (Dynamic Resume)
+
+Here is the scraped content from the page, organized for clarity.
+
+### ABHIK GHOSH
+
+---
+
+### CAREER
+
+**2021–Present: Capgemini (Full-time)**
+*   Role: Cloud Architect
+*   Customer: Automotive
+    *   Project: AWS-Cloud-Migration from Kubernetes-Platform (GO2Cloud)
+        *   Migration of Global Ordering Platform to AWS EKS.
+        *   Automation of Deployments (IaC) with Ansible, Terraform, Jenkins, ArgoCD, Gitlab CI/CD.
+        *   Monitoring and Alerting: Grafana, Loki, Prometheus, Dynatrace.
+*   Project: Setup & development of a Data platform
+    *   Customer: Public sector
+        *   Container Platform: Development of components like Harbor, Gitea, Fleet, MinIo, Longhorn, Policy engine, Trivy, Rancher, Kubernetes, RedHat, Openshift, VMWARE.
+        *   Automation: IaC with Ansible, Terraform, Gitlab CI/CD, Argo CD, Fleet, Bitbucket.
+        *   Observability: Grafana, Prometheus, Dynatrace, ELK stack.
+    *   Customer: Automotive
+        *   Hyperscaler/Public Cloud: AWS CDK, EKS, Cloud Migration.
+        *   Private Cloud: Openstack.
+*   Skills: Openshift, AWS, Rancher, Kubernetes, Podman Harbor, Gitea, Gitlab CI/CD, Terraform, Fleet, Linux, DevOps, IaC.
+*   Experience in GenAI and ML
+    *   Developed and deployed conversational GenAI agents on cloud platforms.
+    *   Trained models for natural language understanding and personalized interactions.
+    *   Skills: Azure AI, Microsoft Co-pilot, AWS SageMaker, Amazon Bedrock and LangChain, Google Cloud Vertex AI, TensorFlow, Jupyter, Python.
+
+**2020–2021: Research Associate (Full-time)**
+*   Institution: Augsburg University, Augsburg, Germany (Fakultät für Angewandte Informatik)
+*   Projects: DIFUTURE – Data Integration for Future Medicine
+*   Responsibilities: ETL process and data management, System Admin (Linux and Windows), Scrum development.
+*   Key Skills:
+    *   Python: NumPy, Pandas, matplotlib, scikit-learn, OpenCV.
+    *   Databases: SQL, PostgreSQL, influxdb.
+    *   DevOps: CI/CD, Bash, Docker, GitLab, GitHub, Ansible, Terraform, Heroku, Dokku.
+    *   Machine Learning: TensorFlow, Keras, Data wrangling.
+    *   Cloud Computing: Azure, Openstack, AWS, Docker, Kubernetes, RANCHER, HELM, Docker Swarm.
+    *   IoT & Web Services: REST API, MQTT, HTTP, JSON, TCP/IP.
+    *   Languages: Python, C/C++, HTML, Javascript, XML.
+    *   Building Automation: OPC UA, SCADA, IEC 60870, Modbus, BACnet and DCS.
+
+**2018–2020: Research Associate/Software Developer (Full-time)**
+*   Institution: RWTH Aachen University, Aachen, Germany (E.ON Energy Research Center)
+*   Projects: National 5G Energy Hub, OpenMUC.
+*   Responsibilities: Cloud computing and services (Openstack and Fiware), System Admin (Linux and Windows), Scrum development.
+
+**2016–2017: Student Assistant**
+*   Institution: Fraunhofer IFF, Magdeburg, Germany
+*   Master Thesis: Development of an Energy Management System for demand response programs within smart DC houses.
+
+**2010–2014: Energy (System engineer) (Full-time)**
+*   Company: JSW Energy, Ratnagiri, India
+*   Responsibilities:
+    *   Distributed Control System (DCS) Operation.
+    *   Air conditioning (HVAC) system management.
+    *   Client-server interfaces and protocols: BACnet, MODBUS, IEC 60870, Ethernet TCP/IP.
+    *   SCADA trend, data quality, and alarm analysis.
+
+---
+
+### EDUCATION
+
+**2014–2016: Master of Science in Electrical Engineering and Information Technology**
+*   University: Otto-von-Guericke-Universität, Magdeburg, Germany
+*   Specialization: Energy and Automation & Control.
+*   Project: Demand Response for heating and cooling purposes in smart houses.
+*   Conference: "Comparison of power system simulation software PSS-NETOMAC with open source calculation tool Matpower," IEEE Germany Student Conference, 2016.
+
+**2005–2009: Bachelor of Engineering in Electrical and Electronics Engineering**
+*   University: Visveswaraiah Technological University, Belgaum, India
+*   Bachelor Thesis: Design and development of a simulator for fuel injection calibrating parameters.
+
+---
+
+### MORE RESEARCH
+
+*   [https://www.researchgate.net/profile/Abhik_Ghosh5/publications](https://www.researchgate.net/profile/Abhik_Ghosh5/publications)
+
+---
+
+## Projects
+
+Based on the content provided, here are the projects listed on the page:
+
+1. OBJECT-DETECTION-TENSORFLOW
+*   Description: The Tensorflow framework is being used for object detection models. Object detection models can be used in various industries. Python is being used to write the code. Please refer github repositories for further details.
+
+2. DJANGO REST API
+*   Description: It uses django rest framework to build API. Here lets Build, run and test the app. It creats a nested serializer and uses HTTP REST methods to do all CRUD functions.
+
+3. TIME SERIES DATA CLASSIFIER
+*   Description: Phasor measurement unit (PMU) is a device which use to measure the magnitude and phase angle of a phasor e.g. Voltage or current. The ML algorithms of LTSM CONVOLUTION NETWORK is used to classify the data. Anamoly detection models are developed based on this classifier.
+
+---
+
+## Downloads (Certificates)
+
+Based on the content provided, here is the list of available downloads:
+
+*   Curriculum vitae
+*   Cover letter
+*   M.Sc. Certificates
+*   Reference letter
+*   Certificates Kubernetes
+*   Certificates AWS
+*   Certificates Terraform
+*   Certificates Azure
+*   Excellance Award
+*   All Downloads
+
+---
+
+## Contact (Schedule an Appointment)
+
+Here is the contact information from the page:
+
+*   Name: Abhik Ghosh
+*   Address: Morellstraße 6, 86159 Augsburg
+*   Skype ID: abhik.tukai
+*   Email: abhikghosh@outlook.com
+*   Mobile: (+49) 017665979446
