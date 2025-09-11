@@ -81,72 +81,46 @@ export default function Navbar() {
         transition={{ duration: 0.3 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-black/80 backdrop-blur-lg border-b border-white/10 shadow-lg' 
-            : 'bg-transparent'
+            ? 'bg-black/90 backdrop-blur-sm border-b border-white/10' 
+            : 'bg-black/20'
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-12 md:h-14">
-            {/* Logo */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2"
-            >
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">AG</span>
+          <div className="flex items-center justify-between h-10">
+            {/* Logo - Left */}
+            <div className="flex items-center space-x-2">
+              <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded flex items-center justify-center">
+                <span className="text-white font-bold text-xs">AG</span>
               </div>
-              <div className="hidden sm:block">
-                <h1 className="text-white font-bold text-lg">
-                  Abhik <span className="text-blue-400">Ghosh</span>
-                </h1>
-              </div>
-            </motion.div>
+              <h1 className="text-white font-medium text-sm">
+                Abhik <span className="text-blue-400">Ghosh</span>
+              </h1>
+            </div>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Right */}
             <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item) => (
-                <motion.button
+                <button
                   key={item.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   onClick={() => handleNavClick(item.href, item.id)}
-                  className={`relative px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
+                  className={`px-2 py-1 rounded text-xs font-medium transition-colors ${
                     activeSection === item.id
                       ? 'text-blue-400 bg-white/10'
-                      : 'text-white/80 hover:text-white hover:bg-white/5'
+                      : 'text-white/70 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {item.label}
-                  {activeSection === item.id && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute inset-0 bg-white/10 rounded-lg border border-blue-400/30"
-                      transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                    />
-                  )}
-                </motion.button>
+                </button>
               ))}
             </div>
 
-            {/* Theme Selector & Mobile Menu Button */}
-            <div className="flex items-center space-x-2">
-
-
-              {/* Mobile Menu Button */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={toggleMobileMenu}
-                className="md:hidden p-2 rounded-lg bg-white/10 text-white/80 hover:text-white hover:bg-white/20 transition-colors"
-              >
-                {isMobileMenuOpen ? (
-                  <X className="w-6 h-6" />
-                ) : (
-                  <Menu className="w-6 h-6" />
-                )}
-              </motion.button>
-            </div>
+            {/* Mobile Menu Button - Right */}
+            <button
+              onClick={toggleMobileMenu}
+              className="md:hidden p-1 rounded text-white/70 hover:text-white"
+            >
+              {isMobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+            </button>
           </div>
         </div>
       </motion.nav>

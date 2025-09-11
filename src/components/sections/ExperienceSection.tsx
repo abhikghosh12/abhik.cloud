@@ -1,3 +1,9 @@
+interface Project {
+  customer: string;
+  title: string;
+  tasks: string[];
+}
+
 export default function ExperienceSection() {
   const experiences = [
     {
@@ -126,7 +132,7 @@ export default function ExperienceSection() {
                 {/* Projects for Capgemini */}
                 {exp.projects && Array.isArray(exp.projects) && exp.projects.length > 0 && typeof exp.projects[0] === 'object' && 'customer' in exp.projects[0] && (
                   <div className="mb-6">
-                    {(exp.projects as any[]).map((project: any, pIndex: number) => (
+                    {(exp.projects as Project[]).map((project: Project, pIndex: number) => (
                       <div key={pIndex} className="mb-6 bg-gray-800/50 p-4 rounded">
                         <h4 className="font-bold text-green-400 mb-2">Customer: {project.customer}</h4>
                         <h5 className="font-semibold text-white mb-3">{project.title}</h5>
