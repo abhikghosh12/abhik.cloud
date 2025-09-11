@@ -5,15 +5,13 @@ interface PlaceholderImageProps {
   height?: string | number;
   text?: string;
   className?: string;
-  alt?: string;
 }
 
 const PlaceholderImage: React.FC<PlaceholderImageProps> = ({
   width = 400,
   height = 300,
   text = 'Image',
-  className = '',
-  alt = 'Placeholder'
+  className = ''
 }) => {
   return (
     <div
