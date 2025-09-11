@@ -29,7 +29,6 @@ export default function Navbar() {
     setTheme, 
     isMobileMenuOpen, 
     toggleMobileMenu, 
-    currentSection, 
     setCurrentSection 
   } = useAppStore()
 
@@ -66,7 +65,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [activeSection, setCurrentSection])
 
-  const handleNavClick = (href: string, id: string) => {
+  const handleNavClick = (_href: string, id: string) => {
     const element = document.getElementById(id)
     if (element) {
       const offsetTop = element.offsetTop - 80
