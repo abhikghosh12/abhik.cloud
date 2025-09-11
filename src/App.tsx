@@ -5,11 +5,6 @@ import Navbar from '@/components/layout/Navbar'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('@/pages/HomePage'))
-const AboutPage = lazy(() => import('@/pages/AboutPage'))
-const SkillsPage = lazy(() => import('@/pages/SkillsPage'))
-const ExperiencePage = lazy(() => import('@/pages/ExperiencePage'))
-const ProjectsPage = lazy(() => import('@/pages/ProjectsPage'))
-const ContactPage = lazy(() => import('@/pages/ContactPage'))
 const CertificatesPage = lazy(() => import('@/pages/CertificatesPage'))
 
 function App() {
@@ -32,12 +27,7 @@ function App() {
         <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div></div>}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/skills" element={<SkillsPage />} />
-            <Route path="/experience" element={<ExperiencePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/certificates" element={<CertificatesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </Suspense>
       </main>

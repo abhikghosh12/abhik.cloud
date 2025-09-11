@@ -3,19 +3,20 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Home, User, Code, Briefcase, Mail } from 'lucide-react'
 
 const navItems = [
-  { id: 'home', label: 'Home', href: '/', icon: Home },
-  { id: 'about', label: 'About', href: '/about', icon: User },
-  { id: 'skills', label: 'Skills', href: '/skills', icon: Code },
-  { id: 'experience', label: 'Experience', href: '/experience', icon: Briefcase },
-  { id: 'projects', label: 'Projects', href: '/projects', icon: Code },
+  { id: 'home', label: 'Home', href: '#home', icon: Home },
+  { id: 'about', label: 'About', href: '#about', icon: User },
+  { id: 'skills', label: 'Skills', href: '#skills', icon: Code },
+  { id: 'experience', label: 'Experience', href: '#experience', icon: Briefcase },
+  { id: 'projects', label: 'Projects', href: '#projects', icon: Code },
   { id: 'certificates', label: 'Certificates', href: '/certificates', icon: Briefcase },
-  { id: 'contact', label: 'Contact', href: '/contact', icon: Mail },
+  { id: 'contact', label: 'Contact', href: '#contact', icon: Mail },
 ]
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
   const [activeSection, setActiveSection] = useState('home')
-  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -23,12 +24,23 @@ export default function Navbar() {
   // Handle scroll effects
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      const currentScrollY = window.scrollY
+      
+      setIsScrolled(currentScrollY > 50)
+      
+      // Hide navbar when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false)
+      } else {
+        setIsVisible(true)
+      }
+      
+      setLastScrollY(currentScrollY)
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [lastScrollY])
 
   // Handle active section detection based on current path
   useEffect(() => {
@@ -40,7 +52,17 @@ export default function Navbar() {
   }, [])
 
   const handleNavClick = (href: string, id: string) => {
-    window.location.href = href
+    if (href.startsWith('#')) {
+      // Smooth scroll to section
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      // Navigate to different page
+      window.location.href = href
+    }
+    
     setActiveSection(id)
     
     if (isMobileMenuOpen) {
@@ -55,26 +77,27 @@ export default function Navbar() {
       {/* Desktop & Mobile Navbar */}
       <motion.nav
         initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        animate={{ y: isVisible ? 0 : -100 }}
+        transition={{ duration: 0.3 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-lg' 
+            ? 'bg-black/80 backdrop-blur-lg border-b border-white/10 shadow-lg' 
             : 'bg-transparent'
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-12 md:h-14">
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-2"
             >
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">AG</span>
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">AG</span>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-white font-bold text-xl">
+                <h1 className="text-white font-bold text-lg">
                   Abhik <span className="text-blue-400">Ghosh</span>
                 </h1>
               </div>
@@ -88,7 +111,7 @@ export default function Navbar() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleNavClick(item.href, item.id)}
-                  className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  className={`relative px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
                     activeSection === item.id
                       ? 'text-blue-400 bg-white/10'
                       : 'text-white/80 hover:text-white hover:bg-white/5'
