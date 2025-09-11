@@ -45,7 +45,10 @@ export default function Navbar() {
   // Handle active section detection
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map(item => document.getElementById(item.id.replace('#', '')))
+      const sections = navItems.map(item => {
+        const targetId = item.href.replace('#', '')
+        return document.getElementById(targetId)
+      })
       const scrollPosition = window.scrollY + 100
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -65,8 +68,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [activeSection, setCurrentSection])
 
-  const handleNavClick = (_href: string, id: string) => {
-    const element = document.getElementById(id)
+  const handleNavClick = (href: string, id: string) => {
+    // Remove # from href to get the actual id
+    const targetId = href.replace('#', '')
+    const element = document.getElementById(targetId)
+    
     if (element) {
       const offsetTop = element.offsetTop - 80
       window.scrollTo({
@@ -74,6 +80,7 @@ export default function Navbar() {
         behavior: 'smooth'
       })
     }
+    
     setActiveSection(id)
     setCurrentSection(id)
     
