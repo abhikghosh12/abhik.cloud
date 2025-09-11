@@ -1,5 +1,4 @@
 import { Suspense, lazy } from 'react'
-import { Routes, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import Navbar from '@/components/layout/Navbar'
 import LoadingSpinner from '@/components/ui/LoadingSpinner'
@@ -9,11 +8,6 @@ import ErrorBoundary from '@/components/common/ErrorBoundary'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('@/pages/HomePage'))
-const ResumePage = lazy(() => import('@/pages/ResumePage'))
-const ProjectsPage = lazy(() => import('@/pages/ProjectsPage'))
-const AppointmentPage = lazy(() => import('@/pages/AppointmentPage'))
-const ProjectPage = lazy(() => import('@/pages/ProjectPage'))
-const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'))
 
 function App() {
   return (
