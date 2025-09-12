@@ -1,0 +1,27 @@
+{
+  "title": "Abhik Ghosh",
+  "description": "Cloud Architect at Capgemini specializing in DevSecOps, AI/ML, and cloud transformation. Passionate about building scalable, secure, and innovative cloud solutions.",
+  "contact": {
+    "email": "abhikghosh@outlook.com",
+    "phone": "+4917665979446",
+    "address": "Augsburg, Germany"
+  },
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/abhik-ghosh"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/abhik-ghosh-cloud"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/AbhikGhoshML"
+    },
+    {
+      "name": "Credly",
+      "url": "https://www.credly.com/users/abhik-ghosh.941f4a38"
+    }
+  ]
+}
