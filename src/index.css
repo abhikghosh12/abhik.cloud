@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 /* Color Variables - Pink/Magenta Theme */
 :root {
@@ -23,7 +23,8 @@
 
 /* Base Styles */
 body {
-  @apply bg-white text-gray-800;
+  background-color: #ffffff;
+  color: #1f2937;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -95,12 +96,18 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-  @apply min-h-screen flex items-center justify-center relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   background: linear-gradient(135deg, #E91E63 0%, #9C27B0 100%);
 }
 
 .hero-content {
-  @apply text-center text-white z-10;
+  text-align: center;
+  color: #ffffff;
+  z-index: 10;
 }
 
 /* AI Detection Demo Styles */
@@ -119,6 +126,7 @@ body {
 /* About Section Styles */
 .about-section {
   background: linear-gradient(135deg, #CE93D8 0%, #F8BBD9 100%);
+  color: #1f2937;
 }
 
 .profile-image {
@@ -132,7 +140,8 @@ body {
 
 /* Contact Section */
 .contact-section {
-  @apply bg-gradient-to-br from-[#E91E63] to-[#9C27B0] text-white;
+  background: linear-gradient(to bottom right, #E91E63, #9C27B0);
+  color: #ffffff;
 }
 
 /* Certificate Section */
