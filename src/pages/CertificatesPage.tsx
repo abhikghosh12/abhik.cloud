@@ -8,7 +8,7 @@ const CertificatesPage: React.FC = () => {
       size: '2.1 MB',
       icon: '📄',
       description: 'Complete professional resume with detailed experience',
-      downloadUrl: '#'
+      downloadUrl: '/Certificates/cv.pdf'
     },
     {
       name: 'Cover letter',
@@ -16,7 +16,7 @@ const CertificatesPage: React.FC = () => {
       size: '1.2 MB',
       icon: '📝',
       description: 'Professional cover letter template',
-      downloadUrl: '#'
+      downloadUrl: '/Certificates/cover-letter.pdf'
     },
     {
       name: 'M.Sc. Certificates',
@@ -24,7 +24,7 @@ const CertificatesPage: React.FC = () => {
       size: '3.5 MB',
       icon: '🎓',
       description: 'Master of Science degree certificates',
-      downloadUrl: '#'
+      downloadUrl: '/Certificates/msc-certificates.pdf'
     },
     {
       name: 'Reference letter',
@@ -32,7 +32,7 @@ const CertificatesPage: React.FC = () => {
       size: '2.8 MB',
       icon: '📋',
       description: 'Professional reference letters from employers',
-      downloadUrl: '#'
+      downloadUrl: '/Certificates/reference-letter.pdf'
     },
     {
       name: 'Certificates Kubernetes',
@@ -40,7 +40,7 @@ const CertificatesPage: React.FC = () => {
       size: '2.2 MB',
       icon: '☸️',
       description: 'Kubernetes certification documents',
-      downloadUrl: '#'
+      downloadUrl: '/Certificates/kubernetes-certificates.pdf'
     },
     {
       name: 'Certificates AWS',
@@ -48,7 +48,7 @@ const CertificatesPage: React.FC = () => {
       size: '3.1 MB',
       icon: '☁️',
       description: 'Amazon Web Services certification documents',
-      downloadUrl: '#'
+      downloadUrl: '/Certificates/aws-certificates.pdf'
     },
     {
       name: 'Certificates Terraform',
@@ -56,7 +56,7 @@ const CertificatesPage: React.FC = () => {
       size: '1.8 MB',
       icon: '🏗️',
       description: 'Terraform Infrastructure as Code certifications',
-      downloadUrl: '#'
+      downloadUrl: '/Certificates/terraform-certificates.pdf'
     },
     {
       name: 'Certificates Azure',
@@ -64,7 +64,7 @@ const CertificatesPage: React.FC = () => {
       size: '2.5 MB',
       icon: '🔷',
       description: 'Microsoft Azure certification documents',
-      downloadUrl: '#'
+      downloadUrl: '/Certificates/azure-certificates.pdf'
     },
     {
       name: 'Excellance Award',
@@ -72,7 +72,7 @@ const CertificatesPage: React.FC = () => {
       size: '1.5 MB',
       icon: '🏆',
       description: 'Professional excellence and achievement awards',
-      downloadUrl: '#'
+      downloadUrl: '/Certificates/excellence-award.pdf'
     }
   ];
 
@@ -280,6 +280,7 @@ const CertificatesPage: React.FC = () => {
                       <span className="text-xs text-gray-500">{doc.type} • {doc.size}</span>
                       <a
                         href={doc.downloadUrl}
+                        download
                         className="inline-flex items-center px-3 py-1 bg-[#E91E63] text-white text-sm rounded-full hover:bg-[#AD1457] transition-colors"
                       >
                         <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

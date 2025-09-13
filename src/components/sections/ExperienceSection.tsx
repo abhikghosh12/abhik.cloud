@@ -1,5 +1,3 @@
-import experienceData from '../../data/experience.json';
-
 interface Project {
   customer: string;
   title: string;
@@ -30,7 +28,78 @@ interface Experience {
 }
 
 export default function ExperienceSection() {
-  const experiences = experienceData.experience;
+  const experiences: Experience[] = [
+    {
+      id: "capgemini-cloud-architect",
+      title: "Cloud Architect",
+      company: "Capgemini",
+      location: "Germany",
+      type: "Fulltime",
+      duration: "2021 - Present",
+      description: "Leading cloud transformation initiatives across automotive and public sector clients, specializing in AWS cloud migration, container platforms, and GenAI/ML solutions.",
+      projects: [
+        {
+          customer: "Automotive",
+          title: "AWS Cloud Migration from Kubernetes Platform (GO2Cloud)",
+          achievements: [
+            "Migration of Global Ordering Platform to AWS EKS",
+            "Automation of Deployments (IaC) with Ansible, Terraform, Jenkins, ArgoCD, GitLab CI/CD",
+            "Monitoring and Alerting: Grafana, Loki, Prometheus, Dynatrace"
+          ]
+        },
+        {
+          customer: "Public Sector",
+          title: "Setup & Development of Data Platform - Container Platform",
+          achievements: [
+            "Development of platform components: Harbor, Gitea, Fleet, MinIO, Longhorn, Policy engine, Trivy, Rancher, Kubernetes, RedHat OpenShift, VMware",
+            "Automation of deployments (IaC) with Ansible, Terraform, GitLab CI/CD, Argo CD, Fleet, Bitbucket",
+            "Observability: Grafana, Prometheus, Dynatrace, ELK stack"
+          ]
+        }
+      ],
+      genai_experience: {
+        title: "Experience in GenAI and ML",
+        achievements: [
+          "Developed and deployed conversational GenAI agents on cloud platforms",
+          "Trained models for natural language understanding and personalized interactions"
+        ],
+        technologies: ["Azure AI", "Microsoft Copilot", "AWS SageMaker", "Amazon Bedrock", "LangChain", "Google Cloud Vertex AI", "TensorFlow", "Jupyter", "Python"]
+      },
+      technologies: ["OpenShift", "AWS", "Rancher", "Kubernetes", "Podman", "Harbor", "Gitea", "GitLab CI/CD", "Terraform", "Fleet", "Linux", "DevOps", "IaC"]
+    },
+    {
+      id: "augsburg-university-research",
+      title: "Research Associate",
+      company: "Augsburg University",
+      location: "Augsburg, Germany",
+      type: "Fulltime",
+      department: "Fakultät für Angewandte Informatik",
+      duration: "2020 - 2021",
+      description: "Research in data integration for future medicine with focus on ETL processes, system administration, and Scrum development.",
+      key_skills: {
+        python: "NumPy, Pandas, matplotlib, scikit-learn, OpenCV",
+        databases: "SQL, PostgreSQL, InfluxDB",
+        devops: "CI/CD, Bash, Docker, GitLab, GitHub, Ansible, Terraform, Heroku, Dokku",
+        ml: "TensorFlow, Keras, Data wrangling",
+        cloud: "Azure, OpenStack, AWS, Docker, Kubernetes, Rancher, Helm, Docker Swarm"
+      }
+    },
+    {
+      id: "jsw-energy-engineer",
+      title: "Energy System Engineer",
+      company: "JSW Energy",
+      location: "Ratnagiri, India",
+      type: "Fulltime",
+      duration: "2010 - 2014",
+      description: "Distributed Control System (DCS) operation and maintenance in power generation facility.",
+      achievements: [
+        "Distributed Control System (DCS) Operation in Boiler base, Turbine base and CCS mode",
+        "Air conditioning system (Klimaanlagen) & HVAC system",
+        "Client-server interfaces, protocols: BACnet, MODBUS, IEC 60870, Ethernet TCP/IP",
+        "SCADA-Trend, Data quality and Alarm analysis"
+      ]
+    }
+  ];
 
   return (
     <section id="experience" className="section bg-white/5 backdrop-blur-sm">
@@ -42,7 +111,7 @@ export default function ExperienceSection() {
         
         <div className="max-w-6xl mx-auto">
           <div className="space-y-8">
-            {experiences.map((exp, index) => (
+            {experiences.map((exp: Experience) => (
               <div key={exp.id} className="bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div>
@@ -61,12 +130,12 @@ export default function ExperienceSection() {
                 {/* Projects */}
                 {exp.projects && (
                   <div className="mb-6">
-                    {exp.projects.map((project, pIndex) => (
+                    {exp.projects.map((project: Project, pIndex: number) => (
                       <div key={pIndex} className="mb-6 bg-gray-800/50 p-4 rounded">
                         <h4 className="font-bold text-green-400 mb-2">Customer: {project.customer}</h4>
                         <h5 className="font-semibold text-white mb-3">{project.title}</h5>
                         <ul className="space-y-1">
-                          {project.achievements.map((achievement, aIndex) => (
+                          {project.achievements.map((achievement: string, aIndex: number) => (
                             <li key={aIndex} className="flex items-start text-gray-300">
                               <span className="text-blue-400 mr-2">▪</span>
                               {achievement}
@@ -83,7 +152,7 @@ export default function ExperienceSection() {
                   <div className="mb-6 bg-purple-900/30 p-4 rounded">
                     <h4 className="font-bold text-purple-400 mb-3">{exp.genai_experience.title}</h4>
                     <ul className="space-y-1 mb-3">
-                      {exp.genai_experience.achievements.map((achievement, aIndex) => (
+                      {exp.genai_experience.achievements.map((achievement: string, aIndex: number) => (
                         <li key={aIndex} className="flex items-start text-gray-300">
                           <span className="text-purple-400 mr-2">▪</span>
                           {achievement}
@@ -99,7 +168,7 @@ export default function ExperienceSection() {
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Key Skills:</h4>
                     <div className="grid md:grid-cols-2 gap-2">
-                      {Object.entries(exp.key_skills).map(([category, skills]) => (
+                      {Object.entries(exp.key_skills).map(([category, skills]: [string, string]) => (
                         <div key={category} className="text-gray-300 text-sm">
                           <span className="text-green-400 mr-2">▪</span>
                           <strong className="capitalize">{category}:</strong> {skills}
@@ -122,7 +191,7 @@ export default function ExperienceSection() {
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Key Achievements:</h4>
                     <ul className="space-y-1">
-                      {exp.achievements.map((achievement, aIndex) => (
+                      {exp.achievements.map((achievement: string, aIndex: number) => (
                         <li key={aIndex} className="flex items-start text-gray-300">
                           <span className="text-blue-400 mr-2">▪</span>
                           {achievement}
