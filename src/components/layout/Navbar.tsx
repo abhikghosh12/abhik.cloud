@@ -37,48 +37,53 @@ const Navbar: React.FC = () => {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         
-        {/* Left: Name + Social Icons */}
-        <div className="flex flex-col">
-          <Link to="/" className="text-3xl font-black text-gradient leading-none" style={{ fontFamily: 'cursive' }}>
+        {/* Left: Name + Icons stacked */}
+        <div className="flex flex-col items-start leading-tight">
+          <Link 
+            to="/" 
+            className="text-3xl font-black text-gradient" 
+            style={{ fontFamily: 'cursive' }}
+          >
             Abhik Ghosh
           </Link>
-          <div className="flex mt-1">
+
+          <div className="flex mt-0.5">
             <a href="https://www.linkedin.com/in/abhik-ghosh-m-sc-61539425/" target="_blank" rel="noopener noreferrer"
-               className="w-5 h-5 bg-[#0077B5] rounded flex items-center justify-center">
-              <span className="text-white text-xs">in</span>
+               className="w-4 h-4 bg-[#0077B5] rounded flex items-center justify-center">
+              <span className="text-white text-[10px]">in</span>
             </a>
             <a href="https://www.xing.com/profile/Abhik_Ghosh?sc_o=mxb_p" target="_blank" rel="noopener noreferrer"
-               className="w-5 h-5 bg-[#006567] rounded flex items-center justify-center">
-              <span className="text-white text-xs">X</span>
+               className="w-4 h-4 bg-[#006567] rounded flex items-center justify-center">
+              <span className="text-white text-[10px]">X</span>
             </a>
-            <a href="tel:+4917665979446" className="w-5 h-5 bg-[#4CAF50] rounded flex items-center justify-center">
-              <span className="text-white text-xs">📞</span>
+            <a href="tel:+4917665979446" className="w-4 h-4 bg-[#4CAF50] rounded flex items-center justify-center">
+              <span className="text-white text-[10px]">📞</span>
             </a>
             <a href="https://wa.me/4917665979446" target="_blank" rel="noopener noreferrer"
-               className="w-5 h-5 bg-[#25D366] rounded flex items-center justify-center">
-              <span className="text-white text-xs">💬</span>
+               className="w-4 h-4 bg-[#25D366] rounded flex items-center justify-center">
+              <span className="text-white text-[10px]">💬</span>
             </a>
-            <a href="mailto:abhikghosh@outlook.com" className="w-5 h-5 bg-[#EA4335] rounded flex items-center justify-center">
-              <span className="text-white text-xs">@</span>
+            <a href="mailto:abhikghosh@outlook.com" className="w-4 h-4 bg-[#EA4335] rounded flex items-center justify-center">
+              <span className="text-white text-[10px]">@</span>
             </a>
             <a href="https://www.credly.com/users/abhik-ghosh.941f4a38" target="_blank" rel="noopener noreferrer"
-               className="w-5 h-5 bg-[#FF6B00] rounded flex items-center justify-center">
-              <span className="text-white text-xs">C</span>
+               className="w-4 h-4 bg-[#FF6B00] rounded flex items-center justify-center">
+              <span className="text-white text-[10px]">C</span>
             </a>
             <a href="https://medium.com/@abhikghosh_46536" target="_blank" rel="noopener noreferrer"
-               className="w-5 h-5 bg-[#000000] rounded flex items-center justify-center">
-              <span className="text-white text-xs">M</span>
+               className="w-4 h-4 bg-black rounded flex items-center justify-center">
+              <span className="text-white text-[10px]">M</span>
             </a>
             <a href="https://github.com/abhikghosh12" target="_blank" rel="noopener noreferrer"
-               className="w-5 h-5 bg-[#333333] rounded flex items-center justify-center">
-              <span className="text-white text-xs">Git</span>
+               className="w-4 h-4 bg-[#333333] rounded flex items-center justify-center">
+              <span className="text-white text-[10px]">Git</span>
             </a>
           </div>
         </div>
 
-        {/* Right: Navigation */}
+        {/* Right: Nav Items */}
         <div className="hidden lg:flex">
           {navItems.map((item) => (
             <Link
@@ -95,7 +100,7 @@ const Navbar: React.FC = () => {
           ))}
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Button */}
         <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
