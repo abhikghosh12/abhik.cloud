@@ -1,5 +1,5 @@
 import React from 'react';
-import OptimizedHeroSection from '@/components/sections/OptimizedHeroSection';
+import AboutMeSection from '@/components/sections/OptimizedHeroSection';
 import ValuePropositionSection from '@/components/sections/ValuePropositionSection';
 import TechnicalExpertiseSection from '@/components/sections/TechnicalExpertiseSection';
 import CertificationShowcase from '@/components/sections/CertificationShowcase';
@@ -11,8 +11,8 @@ import OptimizedContactSection from '@/components/sections/OptimizedContactSecti
 const OptimizedHomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-pink-50">
-      {/* Hero Section - Professional introduction */}
-      <OptimizedHeroSection />
+      {/* About Me Section - Professional introduction */}
+      <AboutMeSection />
       
       {/* Value Proposition - What I offer */}
       <ValuePropositionSection />

@@ -6,7 +6,34 @@ const AppointmentPage: React.FC = () => {
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-r from-[#E91E63] to-[#9C27B0] text-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">Book an Appointment</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6">Abhik Ghosh</h1>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <a href="https://www.linkedin.com/in/abhik-ghosh-cloud" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-200 transition-colors">
+              <i className="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.xing.com/profile/Abhik_Ghosh" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-200 transition-colors">
+              <i className="fab fa-xing fa-2x"></i>
+            </a>
+            <a href="tel:+4917665979446" className="text-white hover:text-pink-200 transition-colors">
+              <i className="fas fa-mobile-alt fa-2x"></i>
+            </a>
+            <a href="https://wa.me/4917665979446" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-200 transition-colors">
+              <i className="fab fa-whatsapp fa-2x"></i>
+            </a>
+            <a href="mailto:abhikghosh@outlook.com" className="text-white hover:text-pink-200 transition-colors">
+              <i className="fas fa-envelope fa-2x"></i>
+            </a>
+            <a href="https://www.credly.com/users/abhik-ghosh" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-200 transition-colors">
+              <i className="fas fa-certificate fa-2x"></i>
+            </a>
+            <a href="https://medium.com/@abhikghosh" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-200 transition-colors">
+              <i className="fab fa-medium fa-2x"></i>
+            </a>
+            <a href="https://github.com/abhik-ghosh" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-200 transition-colors">
+              <i className="fab fa-github fa-2x"></i>
+            </a>
+          </div>
+          <h2 className="text-3xl font-bold mb-4">Book an Appointment</h2>
           <p className="text-xl text-pink-100 mb-8">
             Schedule a consultation to discuss your cloud architecture needs
           </p>

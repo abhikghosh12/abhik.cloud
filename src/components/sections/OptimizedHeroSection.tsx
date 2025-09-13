@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const OptimizedHeroSection: React.FC = () => {
+const AboutMeSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#E91E63] via-[#9C27B0] to-[#673AB7]">
       {/* Background overlay */}
@@ -31,12 +31,42 @@ const OptimizedHeroSection: React.FC = () => {
                 </span>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-pink-100 leading-relaxed">
-                Providing solutions for <span className="text-yellow-300 font-semibold">IoT infrastructure</span>, 
-                <span className="text-yellow-300 font-semibold"> machine learning</span>, and 
-                <span className="text-yellow-300 font-semibold"> data analytics</span>. 
-                Specializing in AWS, Azure, and GCP platforms.
-              </p>
+              <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-pink-200">ABOUT ME</h2>
+                <h3 className="text-lg font-semibold text-pink-100">Personal Profile</h3>
+                
+                <div className="flex gap-4 mb-4">
+                  <a href="https://www.linkedin.com/in/abhik-ghosh-cloud" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 transition-colors">
+                    <i className="fab fa-linkedin fa-lg"></i>
+                  </a>
+                  <a href="https://www.xing.com/profile/Abhik_Ghosh" target="_blank" rel="noopener noreferrer" className="text-green-300 hover:text-green-200 transition-colors">
+                    <i className="fab fa-xing fa-lg"></i>
+                  </a>
+                  <a href="https://www.credly.com/users/abhik-ghosh" target="_blank" rel="noopener noreferrer" className="text-orange-300 hover:text-orange-200 transition-colors">
+                    <i className="fas fa-certificate fa-lg"></i>
+                  </a>
+                </div>
+                
+                <p className="text-lg text-pink-100 leading-relaxed">
+                  As a Cloud Architect at Capgemini, I design and shape the future with innovative cloud solutions, accelerating Cloud transformation through FinOps, Cyber Security, Automation and AI/ML. This allows clients to achieve their goals and optimize their performance.
+                </p>
+                
+                <p className="text-lg text-pink-100 leading-relaxed">
+                  With several years of experience in Operation, Incident Management, Software Development, Cloud Services/Hyperscalar (AWS, Azure, GCP), Kubernetes, Containerization, Microservices, DevSecOps, Backend, and Machine Learning, I'm ready to tackle your most complex challenges. My certifications in AWS, Azure, GCP, Terraform, GenAI, Machine learning and Kubernetes underscore my expertise.
+                </p>
+                
+                <p className="text-lg text-pink-100 leading-relaxed">
+                  Previously, I was involved in building digital infrastructure for Uniklinikum Augsburg, a large academic hospital in Germany. I leveraged my expertise in AWS, Azure, DevSecOps, microservices, and web development to create scalable, secure, and efficient systems that support clinical research and data integration. I also worked on IoT and ML projects for the automation and energy sectors, using technologies such as Python, Django, Node.js, TensorFlow, and Grafana.
+                </p>
+                
+                <p className="text-lg text-pink-100 leading-relaxed">
+                  I am passionate about learning new skills and exploring new domains, and I am always eager to collaborate with diverse teams and stakeholders.
+                </p>
+                
+                <p className="text-lg text-yellow-300 font-semibold">
+                  Curious to see how I can transform your business? Explore my work at my website and let's connect!
+                </p>
+              </div>
               
               <div className="flex flex-wrap gap-4 text-sm">
                 <div className="flex items-center bg-white bg-opacity-10 backdrop-blur px-3 py-2 rounded-full">
@@ -55,7 +85,7 @@ const OptimizedHeroSection: React.FC = () => {
             </div>
 
             {/* Call to action buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link 
                 to="/appointment"
                 className="inline-flex items-center justify-center bg-white text-[#E91E63] hover:bg-pink-50 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
@@ -104,9 +134,11 @@ const OptimizedHeroSection: React.FC = () => {
           {/* Professional image and certifications */}
           <div className="text-center lg:text-right">
             <div className="relative inline-block mb-8">
-              <div className="w-80 h-80 mx-auto bg-gradient-to-br from-pink-200 to-purple-200 rounded-full flex items-center justify-center text-6xl font-bold text-[#E91E63] shadow-2xl">
-                AG
-              </div>
+              <img 
+                src="/images/profile/profile.png" 
+                alt="Abhik Ghosh" 
+                className="w-80 h-80 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/20"
+              />
               <div className="absolute -bottom-4 -right-4 bg-green-500 text-white p-3 rounded-full shadow-lg">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -140,4 +172,4 @@ const OptimizedHeroSection: React.FC = () => {
   );
 };
 
-export default OptimizedHeroSection;
+export default AboutMeSection;

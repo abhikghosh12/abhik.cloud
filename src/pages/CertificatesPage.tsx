@@ -3,7 +3,7 @@ import React from 'react';
 const CertificatesPage: React.FC = () => {
   const documents = [
     {
-      name: 'Curriculum Vitae',
+      name: 'Curriculum vitae',
       type: 'PDF',
       size: '2.1 MB',
       icon: '📄',
@@ -11,7 +11,7 @@ const CertificatesPage: React.FC = () => {
       downloadUrl: '#'
     },
     {
-      name: 'Cover Letter',
+      name: 'Cover letter',
       type: 'PDF',
       size: '1.2 MB',
       icon: '📝',
@@ -27,7 +27,7 @@ const CertificatesPage: React.FC = () => {
       downloadUrl: '#'
     },
     {
-      name: 'Reference Letters',
+      name: 'Reference letter',
       type: 'PDF',
       size: '2.8 MB',
       icon: '📋',
@@ -35,7 +35,39 @@ const CertificatesPage: React.FC = () => {
       downloadUrl: '#'
     },
     {
-      name: 'Excellence Award',
+      name: 'Certificates Kubernetes',
+      type: 'PDF',
+      size: '2.2 MB',
+      icon: '☸️',
+      description: 'Kubernetes certification documents',
+      downloadUrl: '#'
+    },
+    {
+      name: 'Certificates AWS',
+      type: 'PDF',
+      size: '3.1 MB',
+      icon: '☁️',
+      description: 'Amazon Web Services certification documents',
+      downloadUrl: '#'
+    },
+    {
+      name: 'Certificates Terraform',
+      type: 'PDF',
+      size: '1.8 MB',
+      icon: '🏗️',
+      description: 'Terraform Infrastructure as Code certifications',
+      downloadUrl: '#'
+    },
+    {
+      name: 'Certificates Azure',
+      type: 'PDF',
+      size: '2.5 MB',
+      icon: '🔷',
+      description: 'Microsoft Azure certification documents',
+      downloadUrl: '#'
+    },
+    {
+      name: 'Excellance Award',
       type: 'PDF',
       size: '1.5 MB',
       icon: '🏆',
@@ -182,7 +214,37 @@ const CertificatesPage: React.FC = () => {
     <div className="min-h-screen bg-white">
       <div className="container py-20">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Certificates</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Abhik Ghosh</h1>
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
+            <a href="https://www.linkedin.com/in/abhik-ghosh-cloud" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 transition-colors">
+              <i className="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.xing.com/profile/Abhik_Ghosh" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
+              <i className="fab fa-xing fa-2x"></i>
+            </a>
+            <a href="tel:+4917665979446" className="text-purple-600 hover:text-purple-700 transition-colors">
+              <i className="fas fa-mobile-alt fa-2x"></i>
+            </a>
+            <a href="https://wa.me/4917665979446" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-600 transition-colors">
+              <i className="fab fa-whatsapp fa-2x"></i>
+            </a>
+            <a href="mailto:abhikghosh@outlook.com" className="text-red-500 hover:text-red-600 transition-colors">
+              <i className="fas fa-envelope fa-2x"></i>
+            </a>
+            <a href="https://www.credly.com/users/abhik-ghosh" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600 transition-colors">
+              <i className="fas fa-certificate fa-2x"></i>
+            </a>
+            <a href="https://medium.com/@abhikghosh" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 transition-colors">
+              <i className="fab fa-medium fa-2x"></i>
+            </a>
+            <a href="https://github.com/abhik-ghosh" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-gray-900 transition-colors">
+              <i className="fab fa-github fa-2x"></i>
+            </a>
+          </div>
+          <div className="flex justify-center gap-4 mb-6">
+            <span className="bg-gray-100 px-4 py-2 rounded-lg text-gray-700">English (EN)</span>
+            <span className="bg-gray-100 px-4 py-2 rounded-lg text-gray-700">German (DE)</span>
+          </div>
           <p className="text-lg text-gray-600">Professional Certifications and Digital Badges</p>
         </div>
 
@@ -369,9 +431,9 @@ const CertificatesPage: React.FC = () => {
           <p className="text-gray-600 mb-6">
             Need verification of my credentials or want to discuss my expertise?
           </p>
-          <button className="btn-secondary">
+          <a href="/appointment" className="bg-gradient-to-r from-[#E91E63] to-[#9C27B0] text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
             Contact me!
-          </button>
+          </a>
         </div>
       </div>
     </div>
