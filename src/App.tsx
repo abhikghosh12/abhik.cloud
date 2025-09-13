@@ -5,15 +5,12 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('@/pages/HomePage'))
-const OptimizedHomePage = lazy(() => import('@/pages/OptimizedHomePage'))
+const HomePage = lazy(() => import('@/pages/OptimizedHomePage'))
 const ResumePage = lazy(() => import('@/pages/ResumePage'))
 const ProjectsPage = lazy(() => import('@/pages/ProjectsPage'))
 const CertificatesPage = lazy(() => import('@/pages/CertificatesPage'))
 const AppointmentPage = lazy(() => import('@/pages/AppointmentPage'))
 const BlogsPage = lazy(() => import('@/pages/BlogsPage'))
-const GalleryPage = lazy(() => import('@/pages/GalleryPage'))
-const PrivacyPage = lazy(() => import('@/pages/PrivacyPage'))
 
 function App() {
   return (
@@ -38,15 +35,12 @@ function App() {
           </div>
         }>
           <Routes>
-            <Route path="/" element={<OptimizedHomePage />} />
-            <Route path="/original" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/resume" element={<ResumePage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/certificates" element={<CertificatesPage />} />
             <Route path="/appointment" element={<AppointmentPage />} />
             <Route path="/blogs" element={<BlogsPage />} />
-            <Route path="/gallery" element={<GalleryPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
           </Routes>
         </Suspense>
       </main>

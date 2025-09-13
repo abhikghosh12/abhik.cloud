@@ -1,34 +1,30 @@
 import React from 'react';
 import OptimizedHeroSection from '@/components/sections/OptimizedHeroSection';
 import ValuePropositionSection from '@/components/sections/ValuePropositionSection';
-import CertificationShowcase from '@/components/sections/CertificationShowcase';
-import ClientTestimonialsSection from '@/components/sections/ClientTestimonialsSection';
 import TechnicalExpertiseSection from '@/components/sections/TechnicalExpertiseSection';
+import CertificationShowcase from '@/components/sections/CertificationShowcase';
+import ExperienceSection from '@/components/sections/ExperienceSection';
 import OptimizedContactSection from '@/components/sections/OptimizedContactSection';
-import SocialProofSection from '@/components/sections/SocialProofSection';
 
 const OptimizedHomePage: React.FC = () => {
   return (
-    <div>
-      {/* Phase 1: Foundation - Value proposition above the fold */}
+    <div className="min-h-screen">
+      {/* Hero Section - First impression */}
       <OptimizedHeroSection />
       
-      {/* Strategic certification display with visual badges */}
-      <CertificationShowcase />
-      
-      {/* Social proof positioning */}
-      <SocialProofSection />
-      
-      {/* Value proposition framework */}
+      {/* Value Proposition - What I offer */}
       <ValuePropositionSection />
       
-      {/* Technical expertise presentation */}
+      {/* Technical Skills - Core competencies */}
       <TechnicalExpertiseSection />
       
-      {/* Client testimonials with quantified results */}
-      <ClientTestimonialsSection />
+      {/* Certifications - Credibility */}
+      <CertificationShowcase />
       
-      {/* Optimized contact form (4 fields maximum) */}
+      {/* Experience - Professional background */}
+      <ExperienceSection />
+      
+      {/* Contact - Call to action */}
       <OptimizedContactSection />
     </div>
   );
