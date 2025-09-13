@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutMeSection from '@/components/sections/OptimizedHeroSection';
+import AboutMeSection from '@/components/sections/AboutMeSection';
 import ValuePropositionSection from '@/components/sections/ValuePropositionSection';
 import TechnicalExpertiseSection from '@/components/sections/TechnicalExpertiseSection';
 import CertificationShowcase from '@/components/sections/CertificationShowcase';

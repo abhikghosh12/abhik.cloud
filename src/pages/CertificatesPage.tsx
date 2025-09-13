@@ -8,7 +8,7 @@ const CertificatesPage: React.FC = () => {
       size: '2.1 MB',
       icon: '📄',
       description: 'Complete professional resume with detailed experience',
-      downloadUrl: '/Certificates/cv.pdf'
+      downloadUrl: '/Certificates/EN_Ghosh_Abhik.pdf'
     },
     {
       name: 'Cover letter',
@@ -16,7 +16,7 @@ const CertificatesPage: React.FC = () => {
       size: '1.2 MB',
       icon: '📝',
       description: 'Professional cover letter template',
-      downloadUrl: '/Certificates/cover-letter.pdf'
+      downloadUrl: '/Certificates/50477187_EN_Ghosh_Abhik_Short.pdf'
     },
     {
       name: 'M.Sc. Certificates',
@@ -24,7 +24,7 @@ const CertificatesPage: React.FC = () => {
       size: '3.5 MB',
       icon: '🎓',
       description: 'Master of Science degree certificates',
-      downloadUrl: '/Certificates/msc-certificates.pdf'
+      downloadUrl: '/Certificates/1690817489161.pdf'
     },
     {
       name: 'Reference letter',
@@ -32,7 +32,7 @@ const CertificatesPage: React.FC = () => {
       size: '2.8 MB',
       icon: '📋',
       description: 'Professional reference letters from employers',
-      downloadUrl: '/Certificates/reference-letter.pdf'
+      downloadUrl: '/Certificates/Lebenslauf_Ghosh_Abhik.pdf'
     },
     {
       name: 'Certificates Kubernetes',
@@ -40,7 +40,7 @@ const CertificatesPage: React.FC = () => {
       size: '2.2 MB',
       icon: '☸️',
       description: 'Kubernetes certification documents',
-      downloadUrl: '/Certificates/kubernetes-certificates.pdf'
+      downloadUrl: '/Certificates/Certified Kubernetes Administrator (CKA).pdf'
     },
     {
       name: 'Certificates AWS',
@@ -48,7 +48,7 @@ const CertificatesPage: React.FC = () => {
       size: '3.1 MB',
       icon: '☁️',
       description: 'Amazon Web Services certification documents',
-      downloadUrl: '/Certificates/aws-certificates.pdf'
+      downloadUrl: '/Certificates/AWS certified Solution Architect- Associate.pdf'
     },
     {
       name: 'Certificates Terraform',
@@ -56,7 +56,7 @@ const CertificatesPage: React.FC = () => {
       size: '1.8 MB',
       icon: '🏗️',
       description: 'Terraform Infrastructure as Code certifications',
-      downloadUrl: '/Certificates/terraform-certificates.pdf'
+      downloadUrl: '/Certificates/Terraform Associate.pdf'
     },
     {
       name: 'Certificates Azure',
@@ -64,7 +64,7 @@ const CertificatesPage: React.FC = () => {
       size: '2.5 MB',
       icon: '🔷',
       description: 'Microsoft Azure certification documents',
-      downloadUrl: '/Certificates/azure-certificates.pdf'
+      downloadUrl: '/Certificates/Exam AZ-900  Microsoft Azure Fundamentals.pdf'
     },
     {
       name: 'Excellance Award',
@@ -72,7 +72,7 @@ const CertificatesPage: React.FC = () => {
       size: '1.5 MB',
       icon: '🏆',
       description: 'Professional excellence and achievement awards',
-      downloadUrl: '/Certificates/excellence-award.pdf'
+      downloadUrl: '/Certificates/AWS Certified Cloud Practitioner.pdf'
     }
   ];
 
