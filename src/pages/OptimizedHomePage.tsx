@@ -4,12 +4,14 @@ import ValuePropositionSection from '@/components/sections/ValuePropositionSecti
 import TechnicalExpertiseSection from '@/components/sections/TechnicalExpertiseSection';
 import CertificationShowcase from '@/components/sections/CertificationShowcase';
 import ExperienceSection from '@/components/sections/ExperienceSection';
+import ProjectsSection from '@/components/sections/ProjectsSection';
+import BlogSection from '@/components/sections/BlogSection';
 import OptimizedContactSection from '@/components/sections/OptimizedContactSection';
 
 const OptimizedHomePage: React.FC = () => {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section - First impression */}
+    <div className="min-h-screen bg-gradient-to-br from-white to-pink-50">
+      {/* Hero Section - Professional introduction */}
       <OptimizedHeroSection />
       
       {/* Value Proposition - What I offer */}
@@ -18,13 +20,19 @@ const OptimizedHomePage: React.FC = () => {
       {/* Technical Skills - Core competencies */}
       <TechnicalExpertiseSection />
       
-      {/* Certifications - Credibility */}
+      {/* Certifications - Professional credentials */}
       <CertificationShowcase />
       
-      {/* Experience - Professional background */}
+      {/* Experience - Career timeline */}
       <ExperienceSection />
       
-      {/* Contact - Call to action */}
+      {/* Projects - Featured work */}
+      <ProjectsSection />
+      
+      {/* Blog - Latest insights */}
+      <BlogSection />
+      
+      {/* Contact - Get in touch */}
       <OptimizedContactSection />
     </div>
   );

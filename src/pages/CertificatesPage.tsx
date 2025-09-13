@@ -1,14 +1,85 @@
 import React from 'react';
 
 const CertificatesPage: React.FC = () => {
+  const documents = [
+    {
+      name: 'Curriculum Vitae',
+      type: 'PDF',
+      size: '2.1 MB',
+      icon: '📄',
+      description: 'Complete professional resume with detailed experience',
+      downloadUrl: '#'
+    },
+    {
+      name: 'Cover Letter',
+      type: 'PDF',
+      size: '1.2 MB',
+      icon: '📝',
+      description: 'Professional cover letter template',
+      downloadUrl: '#'
+    },
+    {
+      name: 'M.Sc. Certificates',
+      type: 'PDF',
+      size: '3.5 MB',
+      icon: '🎓',
+      description: 'Master of Science degree certificates',
+      downloadUrl: '#'
+    },
+    {
+      name: 'Reference Letters',
+      type: 'PDF',
+      size: '2.8 MB',
+      icon: '📋',
+      description: 'Professional reference letters from employers',
+      downloadUrl: '#'
+    },
+    {
+      name: 'Excellence Award',
+      type: 'PDF',
+      size: '1.5 MB',
+      icon: '🏆',
+      description: 'Professional excellence and achievement awards',
+      downloadUrl: '#'
+    }
+  ];
+
   const certificates = [
     {
-      name: 'AWS Certified Solutions Architect',
+      name: 'Kubernetes Certifications',
+      issuer: 'Cloud Native Computing Foundation',
+      date: '2023',
+      image: '/api/placeholder/150/150',
+      category: 'Container Orchestration',
+      credlyUrl: 'https://www.credly.com/users/abhik-ghosh.941f4a38',
+      downloadUrl: '#'
+    },
+    {
+      name: 'AWS Certifications',
       issuer: 'Amazon Web Services',
       date: '2023',
       image: '/api/placeholder/150/150',
       category: 'Cloud Architecture',
-      credlyUrl: 'https://www.credly.com/users/abhik-ghosh.941f4a38'
+      credlyUrl: 'https://www.credly.com/users/abhik-ghosh.941f4a38',
+      downloadUrl: '#'
+    },
+    {
+      name: 'Terraform Certifications',
+      issuer: 'HashiCorp',
+      date: '2022',
+      image: '/api/placeholder/150/150',
+      category: 'Infrastructure as Code',
+      credlyUrl: 'https://www.credly.com/users/abhik-ghosh.941f4a38',
+      downloadUrl: '#'
+    },
+    {
+      name: 'Azure Certifications',
+      issuer: 'Microsoft',
+      date: '2023',
+      image: '/api/placeholder/150/150',
+      category: 'Cloud Architecture',
+      credlyUrl: 'https://www.credly.com/users/abhik-ghosh.941f4a38',
+      downloadUrl: '#'
     },
     {
       name: 'Azure Solutions Architect Expert',
@@ -132,36 +203,85 @@ const CertificatesPage: React.FC = () => {
           ))}
         </div>
 
-        {/* Certificates Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
-          {filteredCertificates.map((cert, index) => (
-            <div key={index} className="card card-hover text-center">
-              <img 
-                src={cert.image} 
-                alt={cert.name}
-                className="w-32 h-32 object-contain mx-auto mb-4"
-              />
-              
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{cert.name}</h3>
-              <p className="text-gray-600 mb-2">{cert.issuer}</p>
-              <p className="text-sm text-gray-500 mb-4">{cert.date}</p>
-              
-              <span className="certificate-badge mb-4">
-                {cert.category}
-              </span>
-              
-              <div className="mt-4">
-                <a
-                  href={cert.credlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-sm"
-                >
-                  View Badge
-                </a>
+        {/* Documents Section */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Documents</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {documents.map((doc, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div className="flex items-start space-x-4">
+                  <div className="text-3xl">{doc.icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{doc.name}</h3>
+                    <p className="text-sm text-gray-600 mb-3">{doc.description}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-500">{doc.type} • {doc.size}</span>
+                      <a
+                        href={doc.downloadUrl}
+                        className="inline-flex items-center px-3 py-1 bg-[#E91E63] text-white text-sm rounded-full hover:bg-[#AD1457] transition-colors"
+                      >
+                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Download
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* All Downloads Button */}
+        <div className="text-center mb-16">
+          <button className="bg-gradient-to-r from-[#E91E63] to-[#9C27B0] text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
+            <svg className="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+            </svg>
+            All Downloads
+          </button>
+        </div>
+
+        {/* Certificates Grid */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Certifications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {filteredCertificates.map((cert, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                <img 
+                  src={cert.image} 
+                  alt={cert.name}
+                  className="w-24 h-24 object-contain mx-auto mb-4"
+                />
+                
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{cert.name}</h3>
+                <p className="text-gray-600 mb-2">{cert.issuer}</p>
+                <p className="text-sm text-gray-500 mb-4">{cert.date}</p>
+                
+                <span className="inline-block px-3 py-1 bg-pink-100 text-pink-800 text-xs rounded-full mb-4">
+                  {cert.category}
+                </span>
+                
+                <div className="space-y-2">
+                  <a
+                    href={cert.credlyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-[#E91E63] text-white py-2 px-4 rounded-lg text-sm hover:bg-[#AD1457] transition-colors"
+                  >
+                    View Badge
+                  </a>
+                  <a
+                    href={cert.downloadUrl}
+                    className="block w-full border border-[#E91E63] text-[#E91E63] py-2 px-4 rounded-lg text-sm hover:bg-pink-50 transition-colors"
+                  >
+                    Download PDF
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Credly Integration Section */}

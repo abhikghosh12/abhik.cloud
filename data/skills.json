@@ -10,37 +10,73 @@
           "name": "AWS",
           "level": 95,
           "experience": "5+ years",
-          "certifications": ["AWS Solutions Architect", "AWS DevOps Engineer"],
-          "projects": 25
+          "certifications": ["AWS Solutions Architect Professional", "AWS DevOps Engineer"],
+          "projects": 25,
+          "technologies": ["EKS", "CDK", "SageMaker", "Bedrock"]
         },
         {
           "name": "Azure",
           "level": 90,
           "experience": "4+ years",
-          "certifications": ["Azure Solutions Architect", "Azure DevOps Engineer"],
-          "projects": 18
+          "certifications": ["Azure Solutions Architect Expert"],
+          "projects": 18,
+          "technologies": ["Azure AI", "Microsoft Copilot", "OpenStack"]
         },
         {
           "name": "Google Cloud Platform",
           "level": 85,
           "experience": "3+ years",
           "certifications": ["GCP Professional Cloud Architect"],
-          "projects": 12
-        },
-        {
-          "name": "FinOps",
-          "level": 88,
-          "experience": "3+ years",
-          "certifications": ["FinOps Certified Practitioner"],
-          "projects": 8
+          "projects": 12,
+          "technologies": ["Vertex AI", "GKE"]
         }
       ]
     },
     {
-      "id": "devsecops",
-      "name": "DevSecOps",
+      "id": "container-orchestration",
+      "name": "Container & Orchestration",
+      "icon": "🐳",
+      "description": "Container platforms and orchestration",
+      "skills": [
+        {
+          "name": "Kubernetes",
+          "level": 92,
+          "experience": "4+ years",
+          "certifications": ["CKA - Certified Kubernetes Administrator"],
+          "projects": 20,
+          "technologies": ["EKS", "OpenShift", "Rancher"]
+        },
+        {
+          "name": "Docker",
+          "level": 90,
+          "experience": "5+ years",
+          "certifications": ["Docker Certified Associate"],
+          "projects": 25,
+          "technologies": ["Podman", "Docker Swarm"]
+        },
+        {
+          "name": "OpenShift",
+          "level": 88,
+          "experience": "3+ years",
+          "certifications": [],
+          "projects": 15,
+          "technologies": ["RedHat", "VMware"]
+        },
+        {
+          "name": "Rancher",
+          "level": 85,
+          "experience": "3+ years",
+          "certifications": [],
+          "projects": 12,
+          "technologies": ["Fleet", "Longhorn"]
+        }
+      ]
+    },
+    {
+      "id": "devops-iac",
+      "name": "DevOps & IaC",
       "icon": "🔧",
-      "description": "Development, Security, and Operations practices",
+      "description": "Infrastructure as Code and DevOps practices",
       "skills": [
         {
           "name": "Terraform",
@@ -50,11 +86,18 @@
           "projects": 20
         },
         {
-          "name": "GitLab/GitHub",
+          "name": "Ansible",
           "level": 88,
-          "experience": "5+ years",
+          "experience": "4+ years",
           "certifications": [],
-          "projects": 30
+          "projects": 18
+        },
+        {
+          "name": "GitLab CI/CD",
+          "level": 90,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 22
         },
         {
           "name": "Jenkins",
@@ -64,44 +107,44 @@
           "projects": 15
         },
         {
-          "name": "Ansible",
-          "level": 80,
-          "experience": "3+ years",
+          "name": "ArgoCD",
+          "level": 82,
+          "experience": "2+ years",
           "certifications": [],
-          "projects": 12
+          "projects": 10
         }
       ]
     },
     {
-      "id": "containerization",
-      "name": "Containerization",
-      "icon": "🐳",
-      "description": "Container orchestration and management",
+      "id": "platform-tools",
+      "name": "Platform & Tools",
+      "icon": "🛠️",
+      "description": "Platform components and development tools",
       "skills": [
         {
-          "name": "Docker",
-          "level": 90,
-          "experience": "5+ years",
-          "certifications": ["Docker Certified Associate"],
-          "projects": 25
-        },
-        {
-          "name": "Kubernetes",
-          "level": 88,
-          "experience": "4+ years",
-          "certifications": ["CKA - Certified Kubernetes Administrator"],
-          "projects": 18
-        },
-        {
-          "name": "Microservices",
+          "name": "Harbor",
           "level": 85,
-          "experience": "4+ years",
+          "experience": "3+ years",
           "certifications": [],
-          "projects": 15
+          "projects": 12
         },
         {
-          "name": "Podman",
-          "level": 82,
+          "name": "Gitea",
+          "level": 80,
+          "experience": "2+ years",
+          "certifications": [],
+          "projects": 8
+        },
+        {
+          "name": "MinIO",
+          "level": 78,
+          "experience": "2+ years",
+          "certifications": [],
+          "projects": 6
+        },
+        {
+          "name": "Trivy",
+          "level": 75,
           "experience": "2+ years",
           "certifications": [],
           "projects": 8
@@ -109,35 +152,42 @@
       ]
     },
     {
-      "id": "ai-ml",
-      "name": "AI/ML & Development",
-      "icon": "🤖",
-      "description": "Artificial Intelligence and Machine Learning",
+      "id": "monitoring-observability",
+      "name": "Monitoring & Observability",
+      "icon": "📊",
+      "description": "Monitoring, logging, and observability tools",
       "skills": [
         {
-          "name": "Python",
+          "name": "Grafana",
           "level": 88,
-          "experience": "6+ years",
+          "experience": "4+ years",
           "certifications": [],
-          "projects": 30
+          "projects": 18
         },
         {
-          "name": "Machine Learning",
+          "name": "Prometheus",
           "level": 85,
-          "experience": "4+ years",
-          "certifications": ["Google ML Engineer", "AWS ML Specialty"],
+          "experience": "3+ years",
+          "certifications": [],
           "projects": 15
         },
         {
-          "name": "TensorFlow",
+          "name": "Dynatrace",
+          "level": 82,
+          "experience": "3+ years",
+          "certifications": [],
+          "projects": 12
+        },
+        {
+          "name": "ELK Stack",
           "level": 80,
           "experience": "3+ years",
-          "certifications": ["TensorFlow Developer Certificate"],
+          "certifications": [],
           "projects": 10
         },
         {
-          "name": "GenAI",
-          "level": 90,
+          "name": "Loki",
+          "level": 78,
           "experience": "2+ years",
           "certifications": [],
           "projects": 8
@@ -145,105 +195,192 @@
       ]
     },
     {
-      "id": "security-ops",
-      "name": "Security & Operations",
-      "icon": "🔒",
-      "description": "Cybersecurity and operational practices",
+      "id": "ai-ml-genai",
+      "name": "AI/ML & GenAI",
+      "icon": "🤖",
+      "description": "Artificial Intelligence, Machine Learning, and Generative AI",
       "skills": [
         {
-          "name": "Cyber Security",
-          "level": 92,
-          "experience": "5+ years",
-          "certifications": ["CISSP", "AWS Security Specialty"],
-          "projects": 20
-        },
-        {
-          "name": "Incident Management",
+          "name": "GenAI Development",
           "level": 90,
-          "experience": "5+ years",
-          "certifications": ["ITIL v4"],
-          "projects": 25
+          "experience": "2+ years",
+          "certifications": [],
+          "projects": 8,
+          "technologies": ["LangChain", "Amazon Bedrock", "Azure AI"]
         },
         {
-          "name": "Monitoring",
+          "name": "TensorFlow",
           "level": 85,
           "experience": "4+ years",
-          "certifications": [],
-          "projects": 18
+          "certifications": ["TensorFlow Developer Certificate"],
+          "projects": 12
         },
         {
-          "name": "Grafana",
-          "level": 82,
-          "experience": "3+ years",
+          "name": "Machine Learning",
+          "level": 88,
+          "experience": "5+ years",
           "certifications": [],
-          "projects": 12
+          "projects": 15,
+          "technologies": ["scikit-learn", "Keras", "Data wrangling"]
+        },
+        {
+          "name": "Python ML Stack",
+          "level": 90,
+          "experience": "6+ years",
+          "certifications": [],
+          "projects": 25,
+          "technologies": ["NumPy", "Pandas", "matplotlib", "OpenCV"]
         }
       ]
     },
     {
-      "id": "architecture",
-      "name": "Architecture & Design",
-      "icon": "🏗️",
-      "description": "System architecture and design patterns",
+      "id": "programming-languages",
+      "name": "Programming Languages",
+      "icon": "💻",
+      "description": "Programming languages and development",
       "skills": [
         {
-          "name": "Solution Architecture",
-          "level": 95,
-          "experience": "6+ years",
-          "certifications": ["TOGAF 9 Certified"],
-          "projects": 35
-        },
-        {
-          "name": "System Design",
+          "name": "Python",
           "level": 92,
           "experience": "6+ years",
           "certifications": [],
           "projects": 30
         },
         {
-          "name": "Scalability",
+          "name": "C/C++",
+          "level": 80,
+          "experience": "8+ years",
+          "certifications": [],
+          "projects": 15
+        },
+        {
+          "name": "JavaScript",
+          "level": 75,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 12
+        },
+        {
+          "name": "HTML/XML",
+          "level": 85,
+          "experience": "5+ years",
+          "certifications": [],
+          "projects": 20
+        }
+      ]
+    },
+    {
+      "id": "databases-data",
+      "name": "Databases & Data",
+      "icon": "🗄️",
+      "description": "Database systems and data management",
+      "skills": [
+        {
+          "name": "PostgreSQL",
+          "level": 85,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 15
+        },
+        {
+          "name": "InfluxDB",
+          "level": 80,
+          "experience": "3+ years",
+          "certifications": [],
+          "projects": 10
+        },
+        {
+          "name": "SQL",
           "level": 88,
+          "experience": "6+ years",
+          "certifications": [],
+          "projects": 20
+        }
+      ]
+    },
+    {
+      "id": "iot-automation",
+      "name": "IoT & Automation",
+      "icon": "🔌",
+      "description": "Internet of Things and building automation",
+      "skills": [
+        {
+          "name": "MQTT",
+          "level": 85,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 12
+        },
+        {
+          "name": "REST API",
+          "level": 90,
           "experience": "5+ years",
           "certifications": [],
           "projects": 25
         },
         {
-          "name": "Performance Optimization",
+          "name": "OPC UA",
+          "level": 82,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 8
+        },
+        {
+          "name": "SCADA",
+          "level": 80,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 6
+        },
+        {
+          "name": "Modbus",
+          "level": 78,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 8
+        },
+        {
+          "name": "BACnet",
+          "level": 75,
+          "experience": "4+ years",
+          "certifications": [],
+          "projects": 6
+        }
+      ]
+    },
+    {
+      "id": "operating-systems",
+      "name": "Operating Systems",
+      "icon": "🖥️",
+      "description": "System administration and OS expertise",
+      "skills": [
+        {
+          "name": "Linux",
+          "level": 92,
+          "experience": "8+ years",
+          "certifications": [],
+          "projects": 30
+        },
+        {
+          "name": "Windows",
           "level": 85,
-          "experience": "5+ years",
+          "experience": "10+ years",
           "certifications": [],
           "projects": 20
         }
       ]
     }
   ],
-  "tools": [
-    "Visual Studio Code",
-    "IntelliJ IDEA",
-    "Postman",
-    "Jira",
-    "Confluence",
-    "Slack",
-    "Discord",
-    "Figma",
-    "Draw.io"
-  ],
-  "databases": [
-    "PostgreSQL",
-    "MongoDB",
-    "Redis",
-    "DynamoDB",
-    "InfluxDB",
-    "Elasticsearch"
-  ],
   "languages": [
     {
       "name": "English",
-      "level": "Native"
+      "level": "Professional",
+      "code": "EN"
     },
     {
       "name": "German",
-      "level": "Professional"
+      "level": "Professional",
+      "code": "DE"
     },
     {
       "name": "Hindi",
@@ -253,5 +390,16 @@
       "name": "Bengali",
       "level": "Native"
     }
+  ],
+  "tools": [
+    "Visual Studio Code",
+    "IntelliJ IDEA", 
+    "Jupyter",
+    "Postman",
+    "Jira",
+    "Confluence",
+    "Bitbucket",
+    "GitHub",
+    "GitLab"
   ]
 }
