@@ -1,10 +1,10 @@
 import React from 'react';
-import AppointmentSection from '@/components/sections/AppointmentSection';
+import OptimizedContactSection from '@/components/sections/OptimizedContactSection';
 
 const AppointmentPage: React.FC = () => {
   return (
-    <div>
-      <AppointmentSection />
+    <div className="pt-20">
+      <OptimizedContactSection />
     </div>
   );
 };
