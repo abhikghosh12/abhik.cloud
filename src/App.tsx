@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('@/pages/HomePage'))
+const OptimizedHomePage = lazy(() => import('@/pages/OptimizedHomePage'))
 const ResumePage = lazy(() => import('@/pages/ResumePage'))
 const ProjectsPage = lazy(() => import('@/pages/ProjectsPage'))
 const CertificatesPage = lazy(() => import('@/pages/CertificatesPage'))
@@ -37,7 +38,8 @@ function App() {
           </div>
         }>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<OptimizedHomePage />} />
+            <Route path="/original" element={<HomePage />} />
             <Route path="/resume" element={<ResumePage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/certificates" element={<CertificatesPage />} />
