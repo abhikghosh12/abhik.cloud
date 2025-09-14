@@ -178,8 +178,22 @@ export default function DynamicResume() {
               
               {/* Profile Section */}
               <div className="flex-shrink-0">
-                <div className="w-32 h-32 rounded-2xl bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center border-4 border-gray-200 mb-4">
-                  <span className="text-white font-bold text-4xl">AG</span>
+                <div className="w-32 h-32 rounded-2xl overflow-hidden border-4 border-gray-200 mb-4 bg-white">
+                  <img 
+                    src="/images/profile/profile.png" 
+                    alt="Abhik Ghosh - Cloud Architect" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to initials if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.className = 'w-32 h-32 rounded-2xl bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center border-4 border-gray-200 mb-4';
+                        parent.innerHTML = '<span class="text-white font-bold text-4xl">AG</span>';
+                      }
+                    }}
+                  />
                 </div>
                 <div className="text-center lg:text-left">
                   <div className="flex items-center gap-2 justify-center lg:justify-start mb-2">

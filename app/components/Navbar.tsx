@@ -35,22 +35,22 @@ export default function Navbar() {
     { name: 'Resume', href: '/resume' },
     { name: 'Projects', href: '/projects' },
     { name: 'Certificates', href: '/certificates' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Blog', href: 'https://medium.com/@abhikghosh_46536' },
     { name: 'Contact', href: '/contact' }
   ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-lg shadow-lg border-b border-white/20 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           
           {/* Brand */}
           <div className="flex items-center space-x-8">
             <div className="flex flex-col">
-              <a href="/" className="font-bold text-gray-900 hover:text-pink-600 transition-colors text-xl">
+              <a href="/" className="font-bold text-white hover:text-blue-200 transition-colors text-xl">
                 Abhik Ghosh
               </a>
-              <span className="text-xs text-gray-500 font-medium">Cloud Architect</span>
+              <span className="text-xs text-white/80 font-medium">Cloud Architect</span>
             </div>
             
             {/* Social Icons - Professional */}
@@ -84,10 +84,11 @@ export default function Navbar() {
                 <a
                   key={item.href}
                   href={item.href}
+                  {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                     pathname === item.href 
-                      ? 'bg-pink-100 text-pink-600' 
-                      : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50'
+                      ? 'bg-white/20 text-white' 
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
                   }`}
                 >
                   {item.name}
@@ -107,7 +108,7 @@ export default function Navbar() {
               </a>
               <a
                 href="/contact"
-                className="border border-gray-300 text-gray-700 px-5 py-2.5 rounded-lg font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 text-sm"
+                className="border border-white/30 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-200 text-sm backdrop-blur-sm"
               >
                 Contact
               </a>
@@ -116,7 +117,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-gray-600 hover:text-pink-600 transition-colors"
+            className="md:hidden p-2 text-white/90 hover:text-white transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,17 +132,18 @@ export default function Navbar() {
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="md:hidden mt-4 pb-4 border-t border-gray-100"
+            className="md:hidden mt-4 pb-4 border-t border-white/20 bg-white/10 backdrop-blur-lg rounded-lg"
           >
-            <div className="pt-4 space-y-1">
+            <div className="pt-4 space-y-1 px-4">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
+                  {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className={`block px-4 py-3 text-sm rounded-lg transition-colors ${
                     pathname === item.href
-                      ? 'bg-pink-100 text-pink-600'
-                      : 'text-gray-700 hover:bg-pink-50 hover:text-pink-600'
+                      ? 'bg-white/20 text-white'
+                      : 'text-white/90 hover:bg-white/10 hover:text-white'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -149,7 +151,7 @@ export default function Navbar() {
                 </a>
               ))}
               
-              <div className="pt-4 border-t border-gray-100 mt-4 space-y-3">
+              <div className="pt-4 border-t border-white/20 mt-4 space-y-3">
                 {/* Social Icons Mobile */}
                 <div className="flex items-center justify-center space-x-3 pb-3">
                   <a href="https://www.linkedin.com/in/abhik-ghosh-cloud" target="_blank" rel="noopener noreferrer" 
@@ -179,7 +181,7 @@ export default function Navbar() {
                     Schedule Call
                   </a>
                   <a href="/contact"
-                     className="flex-1 border border-gray-300 text-gray-700 px-4 py-3 rounded-lg text-center text-sm font-medium">
+                     className="flex-1 border border-white/30 text-white px-4 py-3 rounded-lg text-center text-sm font-medium hover:bg-white/10">
                     Contact
                   </a>
                 </div>
@@ -196,7 +198,7 @@ export default function Navbar() {
                 
                 <a
                   href="/contact"
-                  className="block border-2 border-blue-600 text-blue-600 px-4 py-3 rounded-lg font-medium text-center hover:bg-blue-50 transition-colors"
+                  className="block border-2 border-white/30 text-white px-4 py-3 rounded-lg font-medium text-center hover:bg-white/10 transition-colors backdrop-blur-sm"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact Form
