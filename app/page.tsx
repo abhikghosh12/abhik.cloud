@@ -187,7 +187,7 @@ export default function Home() {
                     </p>
                     <p className="text-gray-700 leading-relaxed">
                       With extensive experience in Cloud Services (AWS, Azure, GCP), Kubernetes, DevSecOps, and Machine Learning, 
-                      I'm ready to tackle your most complex challenges. My certifications in AWS, Azure, GCP, Terraform, and Kubernetes underscore my expertise.
+                      I am ready to tackle your most complex challenges. My certifications in AWS, Azure, GCP, Terraform, and Kubernetes underscore my expertise.
                     </p>
                   </div>
 
