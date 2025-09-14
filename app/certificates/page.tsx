@@ -58,10 +58,6 @@ export default function CertificatesPage() {
             className="text-center"
           >
             <h1 className="text-5xl font-bold mb-4">Professional Certifications and Digital Badges</h1>
-            <div className="flex justify-center gap-4 mt-8">
-              <span className="bg-white/20 px-4 py-2 rounded-full">English (EN)</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">German (DE)</span>
-            </div>
           </motion.div>
         </div>
       </section>
