@@ -295,7 +295,7 @@ export default function ResumePage() {
                     <div className="space-y-4">
                       {job.projects.map((project, pIndex) => (
                         <div key={pIndex} className="border-l-4 border-pink-200 pl-4">
-                          {project.customer && (
+                          {'customer' in project && (
                             <p className="text-sm font-medium text-pink-600 mb-1">Customer: {project.customer}</p>
                           )}
                           <h5 className="font-semibold text-gray-900 mb-2">{project.title}</h5>
