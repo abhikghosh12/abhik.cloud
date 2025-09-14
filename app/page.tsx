@@ -242,6 +242,10 @@ export default function Home() {
                         src="/images/profile/profile.png" 
                         alt="Abhik Ghosh - Cloud Architect" 
                         className="w-full h-full object-cover"
+                        width={192}
+                        height={192}
+                        loading="eager"
+                        style={{ maxWidth: '192px', maxHeight: '192px' }}
                       />
                     </div>
                     {/* Status indicator */}
@@ -483,7 +487,7 @@ export default function Home() {
                 Professional Certifications
               </a>
               <a href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" target="_blank" rel="noopener noreferrer" title="View Credly Profile" className="hover:scale-110 transition-transform">
-                <img src="/Site Files-download/Credly.PNG" alt="Credly" className="w-8 h-8" />
+                <img src="/Site Files-download/Credly.PNG" alt="Credly" className="w-8 h-8" width={32} height={32} loading="lazy" />
               </a>
             </h2>
           </motion.div>
