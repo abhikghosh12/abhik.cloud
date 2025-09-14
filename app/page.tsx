@@ -206,7 +206,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-pink-50 transition-colors justify-center shadow-lg"
+                      className="bg-white text-pink-600 px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-pink-50 transition-colors justify-center shadow-lg"
                     >
                       <Calendar size={18} />
                       Book Consultation
@@ -215,7 +215,7 @@ export default function Home() {
                       href="/resume"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-transparent text-white border-2 border-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-white/20 transition-colors justify-center"
+                      className="bg-transparent text-white border border-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-white/20 transition-colors justify-center"
                     >
                       <Briefcase size={18} />
                       View Resume
@@ -225,7 +225,7 @@ export default function Home() {
                       download="Abhik_Ghosh_Resume.pdf"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-white/20 text-white border border-white/30 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-white/30 transition-colors justify-center"
+                      className="bg-white/20 text-white border border-white/30 px-4 py-2 rounded-md text-sm font-medium flex items-center gap-1 hover:bg-white/30 transition-colors justify-center"
                     >
                       <Briefcase size={18} />
                       Download PDF
@@ -516,11 +516,8 @@ export default function Home() {
                   <a
                     href={cert.file}
                     download
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-pink-700 hover:to-purple-700 transition-colors"
+                    className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-3 py-1.5 rounded-md text-xs font-medium hover:from-pink-700 hover:to-purple-700 transition-colors"
                   >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
                     Download
                   </a>
                 )}
@@ -568,7 +565,7 @@ export default function Home() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-pink-50 transition-colors shadow-lg"
+              className="inline-block bg-white text-pink-600 px-6 py-3 rounded-lg text-sm font-medium hover:bg-pink-50 transition-colors shadow-lg"
             >
               Schedule Consultation
             </motion.a>

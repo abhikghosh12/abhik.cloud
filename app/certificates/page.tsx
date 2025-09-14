@@ -116,9 +116,8 @@ export default function CertificatesPage() {
                   <a
                     href={doc.file}
                     download
-                    className="bg-pink-600 text-white px-3 py-1.5 rounded-md text-xs font-medium hover:bg-pink-700 transition-colors flex items-center gap-1"
+                    className="bg-pink-600 text-white px-3 py-1.5 rounded-md text-xs font-medium hover:bg-pink-700 transition-colors"
                   >
-                    <Download size={12} />
                     Download
                   </a>
                 </div>
