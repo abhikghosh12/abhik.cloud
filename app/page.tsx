@@ -392,7 +392,7 @@ export default function Home() {
                 {exp.projects && exp.projects.map((project, pIndex) => (
                   <div key={pIndex} className="bg-black/20 p-4 rounded-lg mb-4">
                     {'customer' in project && <h4 className="text-green-400 font-bold mb-2">Customer: {project.customer}</h4>}
-                    {project.url ? (
+                    {'url' in project ? (
                       <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-100 underline font-semibold mb-3 block">{project.title}</a>
                     ) : (
                       <h5 className="text-white font-semibold mb-3">{project.title}</h5>
