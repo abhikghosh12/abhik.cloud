@@ -359,7 +359,7 @@ export default function DynamicResume() {
                         <div className="grid gap-6">
                           {job.projects.map((project, pIndex) => (
                             <div key={pIndex} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                              {project.customer && (
+                              {'customer' in project && (
                                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold mb-3 inline-block">
                                   {project.customer}
                                 </span>
