@@ -313,7 +313,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -322,8 +322,11 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Service Excellence That Delivers Results
+              What I Offer
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Specialized cloud architecture and AI/ML solutions that drive business transformation
+            </p>
           </motion.div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -333,150 +336,11 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="text-center p-6"
               >
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.outcomes.map((outcome, i) => (
-                    <li key={i} className="flex items-center text-sm text-gray-700">
-                      <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-                      {outcome}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* Education Section */}
-      <section id="education" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Professional Education
-            </h2>
-          </motion.div>
-          
-          <div className="max-w-4xl mx-auto space-y-8">
-            {education.map((edu, index) => (
-              <motion.div
-                key={edu.degree}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg"
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-pink-600 mb-1">{edu.degree}</h3>
-                    <p className="text-xl font-semibold text-gray-900">{edu.field}</p>
-                    {edu.institutionUrl ? (
-                      <a href={edu.institutionUrl} target="_blank" rel="noopener noreferrer" className="text-lg text-blue-600 hover:text-blue-800 underline">{edu.institution}</a>
-                    ) : (
-                      <p className="text-lg text-gray-700">{edu.institution}</p>
-                    )}
-                    <p className="text-gray-600">{edu.location}</p>
-                  </div>
-                  <span className="text-pink-600 font-semibold text-lg">{edu.duration}</span>
-                </div>
-                
-                {edu.specialization && (
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Specialization:</h4>
-                    <p className="text-gray-700">{edu.specialization}</p>
-                  </div>
-                )}
-                
-                {edu.projects && (
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Projects:</h4>
-                    <ul className="space-y-2">
-                      {edu.projects.map((project, pIndex) => (
-                        <li key={pIndex} className="flex items-start">
-                          <span className="w-2 h-2 bg-pink-500 rounded-full mr-3 mt-2"></span>
-                          {edu.projectUrls && edu.projectUrls[pIndex] ? (
-                            <a href={edu.projectUrls[pIndex]} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">{project}</a>
-                          ) : (
-                            <span className="text-gray-700">{project}</span>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                
-                {edu.thesis && (
-                  <div className="bg-pink-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-2">Thesis:</h4>
-                    {edu.thesisUrl ? (
-                      <a href={edu.thesisUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline italic">{edu.thesis}</a>
-                    ) : (
-                      <p className="text-gray-700 italic">{edu.thesis}</p>
-                    )}
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications Section */}
-      <section id="certifications" className="py-20 bg-gradient-to-br from-purple-100 to-pink-100">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
-              <a href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600 transition-colors">
-                Proven Cloud Expertise
-              </a>
-              <a href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" target="_blank" rel="noopener noreferrer" title="View Credly Profile" className="hover:scale-110 transition-transform">
-                <img src="/Site Files-download/Credly.PNG" alt="Credly" className="w-12 h-12" />
-              </a>
-            </h2>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={cert.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white p-6 rounded-xl shadow-lg text-center relative"
-              >
-                <h4 className="font-bold text-gray-900 mb-2">{cert.name}</h4>
-                <p className="text-sm text-gray-600 mb-1">{cert.level}</p>
-                <p className="text-xs text-pink-600 font-medium mb-3">Achieved {cert.year}</p>
-                {cert.file && (
-                  <a
-                    href={cert.file}
-                    download
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors"
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    Download
-                  </a>
-                )}
+                <div className="text-6xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
               </motion.div>
             ))}
           </div>
@@ -484,49 +348,34 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 hero-gradient text-white">
+      <section id="contact" className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold mb-4">Start Your Cloud Transformation Today</h2>
-            <p className="text-xl mb-8">Get a free 30-minute strategy consultation</p>
+            <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Cloud Infrastructure?</h2>
+            <p className="text-xl mb-8 text-gray-300">Let's discuss your project and explore how I can help</p>
             
-            <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
-              <div className="flex items-center gap-3">
-                <Mail className="text-pink-200" />
-                <span>abhikghosh@outlook.com</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="text-pink-200" />
-                <span>+49 176 65979446</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="text-pink-200" />
-                <span>Germany</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <svg className="w-5 h-5 text-pink-200" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/>
-                </svg>
-                <a href="https://www.linkedin.com/in/abhik-ghosh-msc/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-100 transition-colors">
-                  LinkedIn Profile
-                </a>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.a
+                href="https://calendly.com/abhikghosh87"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="bg-pink-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-pink-700 transition-colors"
+              >
+                Schedule Consultation
+              </motion.a>
+              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.05 }}
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-colors"
+              >
+                Contact Me
+              </motion.a>
             </div>
-            
-            <motion.a
-              href="https://calendly.com/abhikghosh87"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-pink-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-pink-700 transition-colors"
-            >
-              Get Your Free Consultation
-            </motion.a>
           </motion.div>
         </div>
       </section>
