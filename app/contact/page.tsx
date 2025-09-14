@@ -148,15 +148,11 @@ export default function ContactPage() {
                 className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
               >
                 <div className="text-center mb-6">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100">
-                    <img 
-                      src="/images/profile/profile.png" 
-                      alt="Abhik Ghosh" 
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center">
+                    <span className="text-white font-bold text-xl">AG</span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">Abhik Ghosh, M.Sc</h3>
-                  <p className="text-blue-600 font-semibold">Cloud Architect</p>
+                  <p className="text-pink-600 font-semibold">Cloud Architect</p>
                   <div className="flex items-center justify-center gap-2 mt-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     <span className="text-sm text-gray-600">Available for consultation</span>
