@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 export default function ResumePage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-blue-50">
       <Navbar />
       <DynamicResume />
       <Footer />
