@@ -372,7 +372,7 @@ export default function Home() {
                     
                     <p className="text-gray-700 leading-relaxed mb-6">
                       With several years of experience in Operation, Incident Management, Software Development, Cloud Services/Hyperscalar (AWS, Azure, GCP), 
-                      Kubernetes, Containerization, Microservices, DevSecOps, Backend, and Machine Learning, I'm ready to tackle your most complex challenges. 
+                      Kubernetes, Containerization, Microservices, DevSecOps, Backend, and Machine Learning, I&apos;m ready to tackle your most complex challenges. 
                       My certifications in AWS, Azure, GCP, Terraform, GenAI, Machine learning and Kubernetes underscore my expertise.
                     </p>
                     
@@ -391,7 +391,7 @@ export default function Home() {
                   {/* Call to Action */}
                   <div className="bg-gradient-to-r from-pink-50 to-purple-50 p-6 rounded-xl border border-pink-200">
                     <p className="text-gray-800 font-medium mb-4 text-center">
-                      Curious to see how I can transform your business? Explore my work and let's connect!
+                      Curious to see how I can transform your business? Explore my work and let&apos;s connect!
                     </p>
                     <div className="text-center">
                       <a
