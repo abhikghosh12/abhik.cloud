@@ -254,7 +254,7 @@ export default function Home() {
                 </p>
                 <p>
                   With several years of experience in AWS, Azure, GCP, Kubernetes, DevSecOps, and Machine Learning, 
-                  I'm ready to tackle your most complex challenges.
+                  I&apos;m ready to tackle your most complex challenges.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-6">
@@ -359,7 +359,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Cloud Infrastructure?</h2>
-            <p className="text-xl mb-8 text-gray-300">Let's discuss your project and explore how I can help</p>
+            <p className="text-xl mb-8 text-gray-300">Let&apos;s discuss your project and explore how I can help</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
