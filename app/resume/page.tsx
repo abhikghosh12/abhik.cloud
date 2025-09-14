@@ -269,37 +269,39 @@ export default function ResumePage() {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-pink-600 mb-2">{job.title}</h3>
-                    <p className="text-xl font-semibold text-gray-900 mb-1">{job.company}</p>
+                    <p className="text-xl font-semibold text-gray-900 mb-2">{job.company}</p>
                     {job.department && (
-                      <p className="text-gray-600 mb-2">{job.department}</p>
+                      <p className="text-gray-600 mb-3">{job.department}</p>
                     )}
                     {job.location && (
-                      <div className="flex items-center text-gray-600 mb-2">
+                      <div className="flex items-center text-gray-600 mb-3">
                         <MapPin size={16} className="mr-2" />
                         {job.location}
                       </div>
                     )}
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <Calendar size={16} className="mr-2" />
-                    <span className="font-medium">{job.period}</span>
-                    <span className="ml-2 px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">
+                  <div className="flex flex-col lg:items-end mt-4 lg:mt-0">
+                    <div className="flex items-center text-gray-600 mb-2">
+                      <Calendar size={16} className="mr-2" />
+                      <span className="font-medium">{job.period}</span>
+                    </div>
+                    <span className="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">
                       {job.type}
                     </span>
                   </div>
                 </div>
 
                 {job.projects && (
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Projects:</h4>
-                    <div className="space-y-4">
+                  <div className="mb-8">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-6">Key Projects:</h4>
+                    <div className="space-y-6">
                       {job.projects.map((project, pIndex) => (
-                        <div key={pIndex} className="border-l-4 border-pink-200 pl-4">
+                        <div key={pIndex} className="bg-gray-50 p-4 rounded-lg border-l-4 border-pink-200">
                           {'customer' in project && (
-                            <p className="text-sm font-medium text-pink-600 mb-1">Customer: {project.customer}</p>
+                            <p className="text-sm font-medium text-pink-600 mb-2">Customer: {project.customer}</p>
                           )}
-                          <h5 className="font-semibold text-gray-900 mb-2">{project.title}</h5>
-                          <ul className="space-y-1">
+                          <h5 className="font-semibold text-gray-900 mb-3">{project.title}</h5>
+                          <ul className="space-y-2">
                             {project.details.map((detail, dIndex) => (
                               <li key={dIndex} className="flex items-start text-gray-700">
                                 <span className="w-2 h-2 bg-pink-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
@@ -328,9 +330,9 @@ export default function ResumePage() {
                 )}
 
                 {job.aiExperience && (
-                  <div className="mb-6 bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
+                  <div className="mb-8 bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-100">
                     <h4 className="text-lg font-semibold text-purple-900 mb-4">{job.aiExperience.title}</h4>
-                    <ul className="space-y-2 mb-4">
+                    <ul className="space-y-3 mb-6">
                       {job.aiExperience.details.map((detail, dIndex) => (
                         <li key={dIndex} className="flex items-start text-gray-700">
                           <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
@@ -338,9 +340,11 @@ export default function ResumePage() {
                         </li>
                       ))}
                     </ul>
-                    <p className="text-sm text-purple-700">
-                      <strong>Skills:</strong> {job.aiExperience.skills}
-                    </p>
+                    <div className="bg-white/50 p-4 rounded border border-purple-200">
+                      <p className="text-sm text-purple-700">
+                        <strong>Skills:</strong> {job.aiExperience.skills}
+                      </p>
+                    </div>
                   </div>
                 )}
 
