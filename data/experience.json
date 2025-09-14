@@ -47,7 +47,11 @@
         ],
         "technologies": ["Azure AI", "Microsoft Copilot", "AWS SageMaker", "Amazon Bedrock", "LangChain", "Google Cloud Vertex AI", "TensorFlow", "Jupyter", "Python"]
       },
-      "technologies": ["OpenShift", "AWS", "Rancher", "Kubernetes", "Podman", "Harbor", "Gitea", "GitLab CI/CD", "Terraform", "Fleet", "Linux", "DevOps", "IaC"]
+      "technologies": ["OpenShift", "AWS", "Rancher", "Kubernetes", "Podman", "Harbor", "Gitea", "GitLab CI/CD", "Terraform", "Fleet", "Linux", "DevOps", "IaC"],
+      "research_publications": {
+        "note": "View all publications on ResearchGate",
+        "url": "https://www.researchgate.net/profile/Abhik_Ghosh5/publications"
+      }
     },
     {
       "id": "augsburg-university-research",
@@ -98,7 +102,7 @@
         {
           "title": "National 5G Energy Hub",
           "achievements": [
-            "Cloud computing and Cloud services: OpenStack and Fiware",
+            "Cloud computing and Cloud services: <a href='https://www.openstack.org/' target='_blank' class='text-pink-600 hover:text-pink-800'>OpenStack</a> and <a href='https://www.fiware.org/' target='_blank' class='text-pink-600 hover:text-pink-800'>FIWARE</a>",
             "System Admin: Linux and Windows",
             "Scrum development"
           ]
@@ -109,7 +113,8 @@
             "Development and implementation of energy management solutions"
           ]
         }
-      ]
+      ],
+      "technologies": ["OpenStack", "FIWARE"]
     },
     {
       "id": "fraunhofer-student",

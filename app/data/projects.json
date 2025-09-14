@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Multi-Agent AI System",
+      "description": "Advanced AI system with multiple intelligent agents working collaboratively to solve complex business problems and automate decision-making processes.",
+      "image": "./assets/images/projects/project1.jpg",
+      "technologies": ["AI/ML", "Python", "TensorFlow", "Docker", "AWS"],
+      "category": "AI/ML",
+      "status": "completed",
+      "featured": true,
+      "details": {
+        "duration": "6 months",
+        "team_size": "4 people",
+        "impact": "40% improvement in decision-making speed"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Scalable Cloud Infrastructure",
+      "description": "Enterprise-grade cloud infrastructure deployed on AWS with automated scaling, monitoring, and security best practices for healthcare applications.",
+      "image": "./assets/images/projects/project2.jpg",
+      "technologies": ["AWS", "Terraform", "Kubernetes", "Docker", "Jenkins"],
+      "category": "Cloud Architecture",
+      "status": "completed",
+      "featured": true,
+      "details": {
+        "duration": "8 months",
+        "team_size": "6 people",
+        "impact": "99.9% uptime achieved"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Automated DevSecOps Pipeline",
+      "description": "Complete CI/CD pipeline with integrated security scanning, automated testing, and deployment across multiple cloud environments.",
+      "image": "./assets/images/projects/project3.jpg",
+      "technologies": ["DevSecOps", "Jenkins", "Docker", "GitLab", "Ansible"],
+      "category": "DevSecOps",
+      "status": "completed",
+      "featured": true,
+      "details": {
+        "duration": "4 months",
+        "team_size": "3 people",
+        "impact": "70% reduction in deployment time"
+      }
+    }
+  ]
+}

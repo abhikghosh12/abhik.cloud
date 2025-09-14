@@ -251,19 +251,38 @@ const AppointmentPage: React.FC = () => {
               </button>
             </form>
 
-            <div className="mt-8 p-4 bg-blue-50 rounded-lg">
-              <div className="flex items-start space-x-3">
-                <svg className="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <div className="text-sm text-blue-700">
-                  <p className="font-medium mb-1">What to expect:</p>
-                  <ul className="space-y-1 text-blue-600">
-                    <li>• Initial consultation (30-60 minutes)</li>
-                    <li>• Architecture assessment and recommendations</li>
-                    <li>• Customized solution roadmap</li>
-                    <li>• Follow-up support and implementation guidance</li>
-                  </ul>
+            <div className="mt-8 space-y-4">
+              <div className="p-4 bg-pink-50 rounded-lg">
+                <div className="flex items-center space-x-3 mb-3">
+                  <svg className="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1M8 7h8m-8 0H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-2" />
+                  </svg>
+                  <p className="font-medium text-pink-700">Quick Booking</p>
+                </div>
+                <p className="text-sm text-pink-600 mb-3">Book directly through Calendly:</p>
+                <a href="https://calendly.com/abhikghosh87" target="_blank" rel="noopener noreferrer" 
+                   className="inline-flex items-center px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors text-sm font-medium">
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Schedule on Calendly
+                </a>
+              </div>
+              
+              <div className="p-4 bg-blue-50 rounded-lg">
+                <div className="flex items-start space-x-3">
+                  <svg className="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div className="text-sm text-blue-700">
+                    <p className="font-medium mb-1">What to expect:</p>
+                    <ul className="space-y-1 text-blue-600">
+                      <li>• Initial consultation (30-60 minutes)</li>
+                      <li>• Architecture assessment and recommendations</li>
+                      <li>• Customized solution roadmap</li>
+                      <li>• Follow-up support and implementation guidance</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

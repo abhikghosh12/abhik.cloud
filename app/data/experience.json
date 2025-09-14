@@ -1,0 +1,83 @@
+{
+  "experience": [
+    {
+      "id": "capgemini-cloud-architect",
+      "title": "Cloud Architect",
+      "company": "Capgemini",
+      "location": "Germany",
+      "type": "Fulltime",
+      "startDate": "2021-01",
+      "endDate": null,
+      "current": true,
+      "duration": "2021 - Present",
+      "description": "Leading cloud transformation initiatives across automotive and public sector clients, specializing in AWS cloud migration, container platforms, and GenAI/ML solutions.",
+      "projects": [
+        {
+          "customer": "Automotive",
+          "title": "AWS Cloud Migration from Kubernetes Platform (GO2Cloud)",
+          "achievements": [
+            "Migration of Global Ordering Platform to AWS EKS",
+            "Automation of Deployments (IaC) with Ansible, Terraform, Jenkins, ArgoCD, GitLab CI/CD",
+            "Monitoring and Alerting: Grafana, Loki, Prometheus, Dynatrace"
+          ]
+        },
+        {
+          "customer": "Public Sector",
+          "title": "Setup & Development of Data Platform - Container Platform",
+          "achievements": [
+            "Development of platform components: Harbor, Gitea, Fleet, MinIO, Longhorn, Policy engine, Trivy, Rancher, Kubernetes, RedHat OpenShift, VMware",
+            "Automation of deployments (IaC) with Ansible, Terraform, GitLab CI/CD, Argo CD, Fleet, Bitbucket",
+            "Observability: Grafana, Prometheus, Dynatrace, ELK stack"
+          ]
+        }
+      ],
+      "genai_experience": {
+        "title": "Experience in GenAI and ML",
+        "achievements": [
+          "Developed and deployed conversational GenAI agents on cloud platforms",
+          "Trained models for natural language understanding and personalized interactions"
+        ],
+        "technologies": ["Azure AI", "Microsoft Copilot", "AWS SageMaker", "Amazon Bedrock", "LangChain", "Google Cloud Vertex AI", "TensorFlow", "Jupyter", "Python"]
+      },
+      "technologies": ["OpenShift", "AWS", "Rancher", "Kubernetes", "Podman", "Harbor", "Gitea", "GitLab CI/CD", "Terraform", "Fleet", "Linux", "DevOps", "IaC"]
+    },
+    {
+      "id": "augsburg-university-research",
+      "title": "Research Associate",
+      "company": "Augsburg University",
+      "location": "Augsburg, Germany",
+      "type": "Fulltime",
+      "department": "Fakultät für Angewandte Informatik",
+      "startDate": "2020-01",
+      "endDate": "2021-01",
+      "current": false,
+      "duration": "2020 - 2021",
+      "description": "Research in data integration for future medicine with focus on ETL processes, system administration, and Scrum development.",
+      "key_skills": {
+        "python": "NumPy, Pandas, matplotlib, scikit-learn, OpenCV",
+        "databases": "SQL, PostgreSQL, InfluxDB",
+        "devops": "CI/CD, Bash, Docker, GitLab, GitHub, Ansible, Terraform, Heroku, Dokku",
+        "ml": "TensorFlow, Keras, Data wrangling",
+        "cloud": "Azure, OpenStack, AWS, Docker, Kubernetes, Rancher, Helm, Docker Swarm"
+      }
+    },
+    {
+      "id": "jsw-energy-engineer",
+      "title": "Energy System Engineer",
+      "company": "JSW Energy",
+      "location": "Ratnagiri, India",
+      "type": "Fulltime",
+      "startDate": "2010-01",
+      "endDate": "2014-01",
+      "current": false,
+      "duration": "2010 - 2014",
+      "description": "Distributed Control System (DCS) operation and maintenance in power generation facility.",
+      "achievements": [
+        "Distributed Control System (DCS) Operation in Boiler base, Turbine base and CCS mode",
+        "Air conditioning system (Klimaanlagen) & HVAC system",
+        "Client-server interfaces, protocols: BACnet, MODBUS, IEC 60870, Ethernet TCP/IP",
+        "SCADA-Trend, Data quality and Alarm analysis"
+      ]
+    }
+  ]
+}
