@@ -1,176 +1,516 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, MapPin, Mail, Phone, MessageSquare } from 'lucide-react'
+import { Calendar, MapPin, Mail, Phone, MessageSquare, Clock, Shield, Award, CheckCircle, Globe, Linkedin, Github } from 'lucide-react'
+import Navbar from '../components/Navbar'
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    consultationType: '',
+    budget: '',
+    timeline: '',
+    message: ''
+  })
+  
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+    }, 2000)
+  }
+
+  const consultationTypes = [
+    { value: 'cloud-architecture', label: 'Cloud Architecture & Strategy' },
+    { value: 'cloud-migration', label: 'Cloud Migration & Modernization' },
+    { value: 'devsecops', label: 'DevSecOps Implementation' },
+    { value: 'ai-ml', label: 'AI/ML Platform Development' },
+    { value: 'multi-cloud', label: 'Multi-Cloud Strategy' },
+    { value: 'assessment', label: 'Infrastructure Assessment' }
+  ]
+
+  const budgetRanges = [
+    { value: '10k-50k', label: '€10K - €50K' },
+    { value: '50k-100k', label: '€50K - €100K' },
+    { value: '100k-250k', label: '€100K - €250K' },
+    { value: '250k+', label: '€250K+' },
+    { value: 'discuss', label: 'Let\'s Discuss' }
+  ]
+
+  const timelines = [
+    { value: 'immediate', label: 'Immediate (< 1 month)' },
+    { value: 'short', label: 'Short Term (1-3 months)' },
+    { value: 'medium', label: 'Medium Term (3-6 months)' },
+    { value: 'long', label: 'Long Term (6+ months)' },
+    { value: 'planning', label: 'Planning Phase' }
+  ]
+
+  const benefits = [
+    { icon: CheckCircle, text: "Free 30-minute strategy consultation", color: "text-green-500" },
+    { icon: Award, text: "Custom architecture recommendations", color: "text-blue-500" },
+    { icon: Shield, text: "Cost optimization analysis", color: "text-purple-500" },
+    { icon: Clock, text: "24-hour response guarantee", color: "text-orange-500" }
+  ]
+
+  const contactMethods = [
+    {
+      icon: Calendar,
+      title: "Schedule Directly",
+      description: "Book a time that works for you",
+      action: "https://calendly.com/abhikghosh87",
+      actionText: "Open Calendly",
+      color: "bg-blue-600"
+    },
+    {
+      icon: MessageSquare,
+      title: "WhatsApp Chat",
+      description: "Quick questions and instant responses",
+      action: "https://wa.me/4917665979446",
+      actionText: "Start Chat",
+      color: "bg-green-600"
+    },
+    {
+      icon: Linkedin,
+      title: "LinkedIn Connect",
+      description: "Professional networking and discussions",
+      action: "https://www.linkedin.com/in/abhik-ghosh-cloud",
+      actionText: "Connect",
+      color: "bg-blue-700"
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <section className="hero-gradient text-white py-20">
+    <main className="min-h-screen bg-gray-50">
+      <Navbar />
+      
+      {/* Professional Header */}
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-16">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl font-bold mb-4">Book an Appointment</h1>
-            <p className="text-2xl text-pink-200">Schedule a consultation to discuss your cloud architecture needs</p>
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+              Let's Transform Your Cloud Infrastructure
+            </h1>
+            <p className="text-xl lg:text-2xl text-blue-100 mb-8">
+              Partner with an experienced Cloud Architect to accelerate your digital transformation journey
+            </p>
+            
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center items-center gap-8 mt-8">
+              <div className="flex items-center gap-2">
+                <Shield className="text-green-400" size={24} />
+                <span className="text-blue-100">Enterprise Security</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="text-yellow-400" size={24} />
+                <span className="text-blue-100">Certified Expert</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Globe className="text-blue-300" size={24} />
+                <span className="text-blue-100">Global Experience</span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      <div className="py-20">
+      <div className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
+          <div className="grid lg:grid-cols-3 gap-12">
+            
+            {/* Contact Information & Methods */}
+            <div className="lg:col-span-1 space-y-8">
               
-              <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
-                <h3 className="text-2xl font-bold text-pink-600 mb-2">Abhik Ghosh</h3>
-                <p className="text-lg text-gray-700 mb-6">Cloud Architect | AI/ML Expert</p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <MapPin className="text-pink-600 mr-3 mt-1" size={20} />
-                    <div>
-                      <p className="font-semibold text-gray-900">Address</p>
-                      <p className="text-gray-700">Morellstraße 6</p>
-                      <p className="text-gray-700">86159 Augsburg, Germany</p>
-                    </div>
+              {/* Professional Info Card */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
+              >
+                <div className="text-center mb-6">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100">
+                    <img 
+                      src="/images/profile/profile.png" 
+                      alt="Abhik Ghosh" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  
-                  <div className="flex items-center">
-                    <Mail className="text-pink-600 mr-3" size={20} />
+                  <h3 className="text-2xl font-bold text-gray-900">Abhik Ghosh, M.Sc</h3>
+                  <p className="text-blue-600 font-semibold">Cloud Architect</p>
+                  <div className="flex items-center justify-center gap-2 mt-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="text-sm text-gray-600">Available for consultation</span>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-sm">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <Mail className="text-blue-600" size={16} />
+                    </div>
                     <div>
-                      <p className="font-semibold text-gray-900">Email</p>
-                      <a href="mailto:abhikghosh@outlook.com" className="text-pink-600 hover:text-pink-700">
+                      <p className="font-medium text-gray-900">Email</p>
+                      <a href="mailto:abhikghosh@outlook.com" className="text-blue-600 hover:text-blue-800">
                         abhikghosh@outlook.com
                       </a>
                     </div>
                   </div>
                   
-                  <div className="flex items-center">
-                    <Phone className="text-pink-600 mr-3" size={20} />
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                      <Phone className="text-green-600" size={16} />
+                    </div>
                     <div>
-                      <p className="font-semibold text-gray-900">Mobile</p>
-                      <a href="tel:+4917665979446" className="text-pink-600 hover:text-pink-700">
-                        (+49) 017665979446
+                      <p className="font-medium text-gray-900">Phone</p>
+                      <a href="tel:+4917665979446" className="text-green-600 hover:text-green-800">
+                        +49 176 65979446
                       </a>
                     </div>
                   </div>
                   
-                  <div className="flex items-center">
-                    <MessageSquare className="text-pink-600 mr-3" size={20} />
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                      <MapPin className="text-gray-600" size={16} />
+                    </div>
                     <div>
-                      <p className="font-semibold text-gray-900">Skype</p>
-                      <p className="text-gray-700">abhik.tukai</p>
+                      <p className="font-medium text-gray-900">Location</p>
+                      <p className="text-gray-600">Germany (CEST)</p>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Connect With Me</h4>
-                <div className="flex space-x-4">
-                  <a href="https://www.linkedin.com/in/abhik-ghosh-cloud" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
-                  </a>
-                  <a href="https://github.com/abhik-ghosh" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                  </a>
-                  <a href="https://wa.me/4917665979446" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg>
-                  </a>
-                  <a href="https://www.credly.com/users/abhik-ghosh" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17h2v8h-2V5zm0 10h2v2h-2v-2z"/></svg>
-                  </a>
+                {/* Social Links */}
+                <div className="mt-6 pt-6 border-t border-gray-100">
+                  <p className="text-sm font-medium text-gray-900 mb-3">Connect Professionally</p>
+                  <div className="flex gap-3">
+                    <a href="https://www.linkedin.com/in/abhik-ghosh-cloud" target="_blank" rel="noopener noreferrer" 
+                       className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
+                      <Linkedin size={18} className="text-white" />
+                    </a>
+                    <a href="https://github.com/abhik-ghosh" target="_blank" rel="noopener noreferrer" 
+                       className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-900 transition-colors">
+                      <Github size={18} className="text-white" />
+                    </a>
+                    <a href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" target="_blank" rel="noopener noreferrer" 
+                       className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+                      <Award size={18} className="text-white" />
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Schedule a Consultation</h2>
-              
-              <form className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                    <input type="text" placeholder="Your first name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <input type="text" placeholder="Your last name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent" />
-                  </div>
+              {/* Quick Contact Methods */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="space-y-4"
+              >
+                <h4 className="text-lg font-bold text-gray-900">Quick Contact Options</h4>
+                {contactMethods.map((method, index) => (
+                  <a
+                    key={method.title}
+                    href={method.action}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block bg-white p-4 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className={`w-12 h-12 ${method.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                        <method.icon size={20} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h5 className="font-semibold text-gray-900">{method.title}</h5>
+                        <p className="text-sm text-gray-600">{method.description}</p>
+                      </div>
+                      <div className="text-blue-600 text-sm font-medium">{method.actionText}</div>
+                    </div>
+                  </a>
+                ))}
+              </motion.div>
+
+              {/* Benefits */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100"
+              >
+                <h4 className="text-lg font-bold text-gray-900 mb-4">What You Get</h4>
+                <div className="space-y-3">
+                  {benefits.map((benefit, index) => (
+                    <div key={benefit.text} className="flex items-start gap-3">
+                      <benefit.icon size={20} className={`${benefit.color} mt-0.5 flex-shrink-0`} />
+                      <span className="text-sm text-gray-700 leading-relaxed">{benefit.text}</span>
+                    </div>
+                  ))}
                 </div>
-                
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                    <input type="email" placeholder="your.email@example.com" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                    <input type="tel" placeholder="+49 xxx xxx xxxx" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent" />
-                  </div>
+              </motion.div>
+            </div>
+
+            {/* Professional Contact Form */}
+            <div className="lg:col-span-2">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
+              >
+                <div className="mb-8">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                    Request Your Cloud Strategy Consultation
+                  </h2>
+                  <p className="text-gray-600 leading-relaxed">
+                    Share your project details below and I'll provide personalized recommendations 
+                    for your cloud transformation journey. All consultations include a custom architecture assessment.
+                  </p>
                 </div>
-                
-                <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
-                  <input type="text" placeholder="Your company name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent" />
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Consultation Type</label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent">
-                      <option>Select consultation type</option>
-                      <option>Cloud Architecture</option>
-                      <option>AI/ML Implementation</option>
-                      <option>DevSecOps</option>
-                      <option>Cloud Migration</option>
-                    </select>
+
+                {!isSubmitted ? (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Contact Details */}
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                          placeholder="Your full name"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                          Business Email *
+                        </label>
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                          placeholder="your.email@company.com"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                          Company *
+                        </label>
+                        <input
+                          type="text"
+                          name="company"
+                          value={formData.company}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                          placeholder="Your company name"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                          placeholder="+49 xxx xxx xxxx"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Project Details */}
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                          Consultation Type *
+                        </label>
+                        <select
+                          name="consultationType"
+                          value={formData.consultationType}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                        >
+                          <option value="">Select service</option>
+                          {consultationTypes.map((type) => (
+                            <option key={type.value} value={type.value}>{type.label}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                          Project Budget
+                        </label>
+                        <select
+                          name="budget"
+                          value={formData.budget}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                        >
+                          <option value="">Select budget range</option>
+                          {budgetRanges.map((range) => (
+                            <option key={range.value} value={range.value}>{range.label}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                          Timeline
+                        </label>
+                        <select
+                          name="timeline"
+                          value={formData.timeline}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                        >
+                          <option value="">Select timeline</option>
+                          {timelines.map((timeline) => (
+                            <option key={timeline.value} value={timeline.value}>{timeline.label}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                        Project Description *
+                      </label>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        rows={5}
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none transition-all duration-300"
+                        placeholder="Please describe your current infrastructure, challenges, and transformation goals. Include any specific requirements or constraints..."
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                    >
+                      {isSubmitting ? (
+                        <div className="flex items-center justify-center gap-3">
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                          Processing Request...
+                        </div>
+                      ) : (
+                        'Request Strategy Consultation'
+                      )}
+                    </button>
+                  </form>
+                ) : (
+                  <div className="text-center py-12">
+                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <CheckCircle size={40} className="text-green-500" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Request Received!</h3>
+                    <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                      Thank you for your interest. I'll review your requirements and respond within 24 hours 
+                      with a personalized consultation proposal.
+                    </p>
+                    <div className="bg-blue-50 p-6 rounded-lg max-w-md mx-auto">
+                      <p className="text-sm text-blue-800">
+                        <strong>Next Steps:</strong> Check your email for confirmation and 
+                        expect a detailed response with consultation options and calendar availability.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Date & Time</label>
-                    <input type="datetime-local" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent" />
+                )}
+
+                {/* Security & Privacy */}
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
+                    <div className="flex items-center space-x-2">
+                      <Shield size={16} className="text-green-500" />
+                      <span>Enterprise Security</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Shield size={16} className="text-blue-500" />
+                      <span>GDPR Compliant</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Clock size={16} className="text-orange-500" />
+                      <span>24hr Response</span>
+                    </div>
                   </div>
+                  <p className="text-xs text-gray-400 text-center mt-3">
+                    Your information is secure and confidential. No spam, no third-party sharing.
+                  </p>
                 </div>
-                
-                <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea rows={4} placeholder="Please describe your project requirements and goals..." className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"></textarea>
-                </div>
-                
-                <button type="submit" className="w-full bg-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
-                  Schedule Appointment
-                </button>
-              </form>
-              
-              <div className="mt-8 bg-pink-50 p-6 rounded-xl">
-                <h4 className="font-semibold text-gray-900 mb-3">What to expect:</h4>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• Initial consultation (30-60 minutes)</li>
-                  <li>• Architecture assessment and recommendations</li>
-                  <li>• Customized solution roadmap</li>
-                  <li>• Follow-up support and implementation guidance</li>
-                </ul>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Call to Action Footer */}
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-bold mb-4">Ready to Accelerate Your Cloud Journey?</h3>
+            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+              Join successful enterprises who have transformed their operations with proven cloud architecture solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://calendly.com/abhikghosh87" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
+              >
+                Schedule Immediate Consultation
+              </a>
+              <a 
+                href="https://wa.me/4917665979446" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
+              >
+                Quick WhatsApp Chat
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </main>
   )
 }
