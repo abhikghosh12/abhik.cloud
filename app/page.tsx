@@ -199,22 +199,23 @@ export default function Home() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <>
       <Navbar />
+      <main className="min-h-screen">
       {/* Hero Section */}
-      <section id="home" className="hero-gradient min-h-screen flex items-center text-white relative overflow-hidden pt-20">
+      <section id="home" className="hero-gradient min-h-screen flex items-center text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-6 relative z-10 py-20">
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 style={{fontSize: '32px'}} className="font-bold mb-6 italic font-serif">
+              <h1 className="text-5xl lg:text-6xl font-bold mb-4 text-white">
                 Abhik Ghosh, M.Sc
               </h1>
-              <p style={{fontSize: '32px'}} className="text-pink-200 mb-6 italic font-serif">
+              <p className="text-2xl lg:text-3xl text-pink-200 mb-8 font-light">
                 Cloud Architect | AI/ML Expert
               </p>
               
@@ -246,15 +247,17 @@ export default function Home() {
                 </a>
               </div>
               
-              <p className="text-lg mb-6 text-pink-100">
-                As a Cloud Architect at Capgemini, I design and shape the future with innovative cloud solutions, 
-                accelerating Cloud transformation through FinOps, Cyber Security, Automation and AI/ML.
-              </p>
-              <p className="text-lg mb-8 text-pink-100">
-                With several years of experience in AWS, Azure, GCP, Kubernetes, DevSecOps, and Machine Learning, 
-                I&apos;m ready to tackle your most complex challenges.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="text-xl text-pink-100 mb-8 space-y-4">
+                <p>
+                  As a Cloud Architect at Capgemini, I design and shape the future with innovative cloud solutions, 
+                  accelerating Cloud transformation through FinOps, Cyber Security, Automation and AI/ML.
+                </p>
+                <p>
+                  With several years of experience in AWS, Azure, GCP, Kubernetes, DevSecOps, and Machine Learning, 
+                  I'm ready to tackle your most complex challenges.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-6">
                 <motion.a
                   href="https://calendly.com/abhikghosh87"
                   target="_blank"
@@ -380,5 +383,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   )
 }
