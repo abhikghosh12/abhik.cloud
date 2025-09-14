@@ -380,7 +380,7 @@ export default function DynamicResume() {
                                 )}
                               </h5>
                               
-                              {'achievements' in project && (
+                              {'achievements' in project && project.achievements && (
                                 <ul className="space-y-2">
                                   {project.achievements.map((achievement, aIndex) => (
                                     <li key={aIndex} className="flex items-start gap-3">

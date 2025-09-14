@@ -116,9 +116,9 @@ export default function CertificatesPage() {
                   <a
                     href={doc.file}
                     download
-                    className="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-pink-700 transition-colors flex items-center gap-2"
+                    className="bg-pink-600 text-white px-3 py-1.5 rounded-md text-xs font-medium hover:bg-pink-700 transition-colors flex items-center gap-1"
                   >
-                    <Download size={16} />
+                    <Download size={12} />
                     Download
                   </a>
                 </div>
@@ -127,7 +127,7 @@ export default function CertificatesPage() {
           </div>
 
           <div className="text-center">
-            <button className="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+            <button className="bg-gray-900 text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
               All Downloads
             </button>
           </div>
@@ -166,10 +166,10 @@ export default function CertificatesPage() {
                     {cert.category}
                   </span>
                   <div className="flex gap-2">
-                    <button className="text-pink-600 hover:text-pink-700 text-sm font-medium">
+                    <button className="text-pink-600 hover:text-pink-700 text-xs font-medium">
                       View Badge
                     </button>
-                    <button className="text-pink-600 hover:text-pink-700 text-sm font-medium">
+                    <button className="text-pink-600 hover:text-pink-700 text-xs font-medium">
                       Download PDF
                     </button>
                   </div>
@@ -192,9 +192,9 @@ export default function CertificatesPage() {
                 href="https://www.credly.com/users/abhik-ghosh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors inline-flex items-center gap-2"
+                className="bg-orange-500 text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-orange-600 transition-colors inline-flex items-center gap-2"
               >
-                <ExternalLink size={20} />
+                <ExternalLink size={16} />
                 View Credly Profile
               </a>
             </div>
@@ -268,7 +268,7 @@ export default function CertificatesPage() {
             </p>
             <a
               href="/contact"
-              className="bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
+              className="bg-pink-600 text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-pink-700 transition-colors"
             >
               Contact me!
             </a>

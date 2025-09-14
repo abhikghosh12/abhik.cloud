@@ -47,7 +47,7 @@ export default function Navbar() {
           {/* Brand */}
           <div className="flex items-center space-x-8">
             <div className="flex flex-col">
-              <a href="/" className="font-bold text-gray-900 hover:text-blue-600 transition-colors text-xl">
+              <a href="/" className="font-bold text-gray-900 hover:text-pink-600 transition-colors text-xl">
                 Abhik Ghosh
               </a>
               <span className="text-xs text-gray-500 font-medium">Cloud Architect</span>
@@ -86,8 +86,8 @@ export default function Navbar() {
                   href={item.href}
                   className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                     pathname === item.href 
-                      ? 'bg-blue-100 text-blue-600' 
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                      ? 'bg-pink-100 text-pink-600' 
+                      : 'text-gray-700 hover:text-pink-600 hover:bg-pink-50'
                   }`}
                 >
                   {item.name}
@@ -101,7 +101,7 @@ export default function Navbar() {
                 href="https://calendly.com/abhikghosh87"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-all duration-200 text-sm shadow-sm hover:shadow-md"
+                className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-5 py-2.5 rounded-lg font-medium hover:from-pink-700 hover:to-purple-700 transition-all duration-200 text-sm shadow-sm hover:shadow-md"
               >
                 Schedule Call
               </a>
@@ -116,7 +116,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors"
+            className="md:hidden p-2 text-gray-600 hover:text-pink-600 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -140,8 +140,8 @@ export default function Navbar() {
                   href={item.href}
                   className={`block px-4 py-3 text-sm rounded-lg transition-colors ${
                     pathname === item.href
-                      ? 'bg-blue-100 text-blue-600'
-                      : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
+                      ? 'bg-pink-100 text-pink-600'
+                      : 'text-gray-700 hover:bg-pink-50 hover:text-pink-600'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -175,7 +175,7 @@ export default function Navbar() {
                 {/* Quick Contact */}
                 <div className="flex space-x-2">
                   <a href="https://calendly.com/abhikghosh87" target="_blank" rel="noopener noreferrer"
-                     className="flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg text-center text-sm font-medium">
+                     className="flex-1 bg-gradient-to-r from-pink-600 to-purple-600 text-white px-4 py-3 rounded-lg text-center text-sm font-medium">
                     Schedule Call
                   </a>
                   <a href="/contact"

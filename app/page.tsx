@@ -135,7 +135,14 @@ export default function Home() {
       )}
 
       {/* Professional Hero Section */}
-      <section id="home" className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
+      <section id="home" className="hero-gradient py-20 text-white relative overflow-hidden">
+        {/* Background Graphics */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-white rounded-full"></div>
+          <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-white rounded-full"></div>
+          <div className="absolute bottom-40 right-10 w-20 h-20 bg-white rounded-full"></div>
+        </div>
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-8 items-center">
@@ -153,23 +160,23 @@ export default function Home() {
                     <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                       Abhik Ghosh, M.Sc
                     </h1>
-                    <h2 className="text-2xl lg:text-3xl text-blue-600 font-semibold mb-6">
+                    <h2 className="text-2xl lg:text-3xl text-pink-200 font-semibold mb-6">
                       Cloud Architect | AI/ML Expert
                     </h2>
                     
                     {/* Current Position */}
-                    <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-blue-600 mb-6">
+                    <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30 mb-6">
                       <div className="flex items-center justify-center lg:justify-start space-x-3">
-                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                          <Briefcase size={16} className="text-blue-600" />
+                        <div className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center">
+                          <Briefcase size={16} className="text-white" />
                         </div>
                         <div className="text-left">
-                          <p className="font-semibold text-gray-900">Cloud Architect</p>
+                          <p className="font-semibold text-white">Cloud Architect</p>
                           <a 
                             href="https://www.capgemini.com/" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
+                            className="text-pink-200 hover:text-white font-medium flex items-center gap-1"
                           >
                             Capgemini <ExternalLink size={14} />
                           </a>
@@ -179,13 +186,13 @@ export default function Home() {
                   </div>
 
                   {/* Professional Summary */}
-                  <div className="bg-white p-6 rounded-lg shadow-md">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4 text-center lg:text-left">Professional Summary</h3>
-                    <p className="text-gray-700 leading-relaxed mb-4">
+                  <div className="bg-white/20 backdrop-blur-sm p-6 rounded-lg border border-white/30">
+                    <h3 className="text-xl font-bold text-white mb-4 text-center lg:text-left">Professional Summary</h3>
+                    <p className="text-pink-100 leading-relaxed mb-4">
                       As a Cloud Architect at Capgemini, I design and shape the future with innovative cloud solutions, 
                       accelerating Cloud transformation through FinOps, Cyber Security, Automation and AI/ML. This allows clients to achieve their goals and optimize their performance.
                     </p>
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-pink-100 leading-relaxed">
                       With extensive experience in Cloud Services (AWS, Azure, GCP), Kubernetes, DevSecOps, and Machine Learning, 
                       I am ready to tackle your most complex challenges. My certifications in AWS, Azure, GCP, Terraform, and Kubernetes underscore my expertise.
                     </p>
@@ -199,7 +206,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-700 transition-colors justify-center"
+                      className="bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-pink-50 transition-colors justify-center shadow-lg"
                     >
                       <Calendar size={18} />
                       Book Consultation
@@ -208,7 +215,7 @@ export default function Home() {
                       href="/resume"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-50 transition-colors justify-center"
+                      className="bg-transparent text-white border-2 border-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-white/20 transition-colors justify-center"
                     >
                       <Briefcase size={18} />
                       View Resume
@@ -218,7 +225,7 @@ export default function Home() {
                       download="Abhik_Ghosh_Resume.pdf"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-gray-200 transition-colors justify-center"
+                      className="bg-white/20 text-white border border-white/30 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-white/30 transition-colors justify-center"
                     >
                       <Briefcase size={18} />
                       Download PDF
@@ -253,20 +260,20 @@ export default function Home() {
                   </div>
                   
                   {/* Contact Info */}
-                  <div className="bg-white p-4 rounded-lg shadow-md space-y-3">
-                    <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
+                  <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30 space-y-3">
+                    <div className="flex items-center justify-center space-x-2 text-sm text-pink-100">
                       <MapPin size={16} />
                       <span>Germany</span>
                     </div>
-                    <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
+                    <div className="flex items-center justify-center space-x-2 text-sm text-pink-100">
                       <Mail size={16} />
-                      <a href="mailto:abhikghosh@outlook.com" className="hover:text-blue-600">
+                      <a href="mailto:abhikghosh@outlook.com" className="hover:text-white">
                         abhikghosh@outlook.com
                       </a>
                     </div>
-                    <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
+                    <div className="flex items-center justify-center space-x-2 text-sm text-pink-100">
                       <Phone size={16} />
-                      <a href="tel:+4917665979446" className="hover:text-blue-600">
+                      <a href="tel:+4917665979446" className="hover:text-white">
                         +49 176 65979446
                       </a>
                     </div>
@@ -303,9 +310,9 @@ export default function Home() {
               className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12"
             >
               {stats.map((stat, index) => (
-                <div key={stat.label} className="bg-white p-4 rounded-lg shadow-md text-center border-l-4 border-blue-600">
-                  <div className="text-2xl font-bold text-blue-600 mb-1">{stat.value}</div>
-                  <div className="text-sm text-gray-600">{stat.label}</div>
+                <div key={stat.label} className="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30 text-center">
+                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-sm text-pink-200">{stat.label}</div>
                 </div>
               ))}
             </motion.div>
@@ -343,7 +350,7 @@ export default function Home() {
                 <ul className="space-y-2">
                   {service.outcomes.map((outcome, i) => (
                     <li key={i} className="flex items-center text-sm text-gray-700">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                      <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
                       {outcome}
                     </li>
                   ))}
@@ -369,7 +376,7 @@ export default function Home() {
             <div className="flex justify-center">
               <a 
                 href="/resume" 
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-800 font-medium"
               >
                 View Detailed Resume <ExternalLink size={16} />
               </a>
@@ -383,19 +390,19 @@ export default function Home() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500"
+                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-pink-500"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-blue-600 mb-1">{exp.title}</h3>
+                    <h3 className="text-xl font-bold text-pink-600 mb-1">{exp.title}</h3>
                     {exp.companyUrl ? (
-                      <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-gray-900 hover:text-blue-600 underline">{exp.company}</a>
+                      <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-gray-900 hover:text-pink-600 underline">{exp.company}</a>
                     ) : (
                       <p className="text-lg font-semibold text-gray-900">{exp.company}</p>
                     )}
-                    {exp.type && <p className="text-sm text-blue-600 font-medium">{exp.type}</p>}
+                    {exp.type && <p className="text-sm text-pink-600 font-medium">{exp.type}</p>}
                   </div>
-                  <span className="text-blue-600 font-semibold">{exp.duration}</span>
+                  <span className="text-pink-600 font-semibold">{exp.duration}</span>
                 </div>
                 
                 <p className="text-gray-700 mb-4">{exp.description}</p>
@@ -403,7 +410,7 @@ export default function Home() {
                 {exp.technologies && (
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, tIndex) => (
-                      <span key={tIndex} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">{tech}</span>
+                      <span key={tIndex} className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">{tech}</span>
                     ))}
                   </div>
                 )}
@@ -441,7 +448,7 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-green-600 mb-1">{edu.degree}</h3>
                     <p className="text-lg font-semibold text-gray-900">{edu.field}</p>
                     {edu.institutionUrl ? (
-                      <a href={edu.institutionUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">{edu.institution}</a>
+                      <a href={edu.institutionUrl} target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800 underline">{edu.institution}</a>
                     ) : (
                       <p className="text-gray-700">{edu.institution}</p>
                     )}
@@ -461,7 +468,7 @@ export default function Home() {
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h4 className="font-semibold text-gray-900 mb-2">Thesis:</h4>
                     {edu.thesisUrl ? (
-                      <a href={edu.thesisUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline italic">{edu.thesis}</a>
+                      <a href={edu.thesisUrl} target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800 underline italic">{edu.thesis}</a>
                     ) : (
                       <p className="text-gray-700 italic">{edu.thesis}</p>
                     )}
@@ -483,7 +490,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
-              <a href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+              <a href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600 transition-colors">
                 Professional Certifications
               </a>
               <a href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" target="_blank" rel="noopener noreferrer" title="View Credly Profile" className="hover:scale-110 transition-transform">
@@ -504,12 +511,12 @@ export default function Home() {
               >
                 <h4 className="font-bold text-gray-900 mb-2">{cert.name}</h4>
                 <p className="text-sm text-gray-600 mb-1">{cert.level}</p>
-                <p className="text-xs text-blue-600 font-medium mb-3">Achieved {cert.year}</p>
+                <p className="text-xs text-pink-600 font-medium mb-3">Achieved {cert.year}</p>
                 {cert.file && (
                   <a
                     href={cert.file}
                     download
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-pink-700 hover:to-purple-700 transition-colors"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -524,7 +531,13 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section id="contact" className="py-20 hero-gradient text-white relative overflow-hidden">
+        {/* Background Graphics */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 right-10 w-40 h-40 bg-white rounded-full"></div>
+          <div className="absolute bottom-10 left-20 w-32 h-32 bg-white rounded-full"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full"></div>
+        </div>
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -536,15 +549,15 @@ export default function Home() {
             
             <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
               <div className="flex items-center gap-3">
-                <Mail className="text-blue-200" />
+                <Mail className="text-pink-200" />
                 <span>abhikghosh@outlook.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="text-blue-200" />
+                <Phone className="text-pink-200" />
                 <span>+49 176 65979446</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="text-blue-200" />
+                <MapPin className="text-pink-200" />
                 <span>Germany</span>
               </div>
             </div>
@@ -555,7 +568,7 @@ export default function Home() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="inline-block bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-pink-50 transition-colors shadow-lg"
             >
               Schedule Consultation
             </motion.a>
