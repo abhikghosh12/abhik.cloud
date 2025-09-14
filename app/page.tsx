@@ -252,7 +252,7 @@ export default function Home() {
               </p>
               <p className="text-lg mb-8 text-pink-100">
                 With several years of experience in AWS, Azure, GCP, Kubernetes, DevSecOps, and Machine Learning, 
-                I'm ready to tackle your most complex challenges.
+                I&apos;m ready to tackle your most complex challenges.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.a
