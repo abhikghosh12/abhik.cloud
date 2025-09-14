@@ -29,12 +29,12 @@ export default function Navbar() {
   }, [lastScrollY])
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Education', href: '#education' },
-    { name: 'Certifications', href: '#certifications' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '/' },
+    { name: 'Resume', href: '/resume' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Certificates', href: '/certificates' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
   ]
 
   return (
