@@ -172,7 +172,7 @@ export default function DynamicResume() {
   return (
     <div className="min-h-screen hero-gradient">
       {/* Professional Header */}
-      <section className="bg-white border-b border-gray-200">
+      <section className="hero-gradient border-b border-pink-300">
         <div className="container mx-auto px-6 py-8">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:flex-row items-start gap-8">
@@ -183,7 +183,7 @@ export default function DynamicResume() {
                 <div className="text-center lg:text-left">
                   <div className="flex items-center gap-2 justify-center lg:justify-start mb-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm text-green-600 font-medium">Available for opportunities</span>
+                    <span className="text-sm text-green-200 font-medium">Available for opportunities</span>
                   </div>
                 </div>
               </div>
@@ -191,10 +191,10 @@ export default function DynamicResume() {
               {/* Header Info */}
               <div className="flex-1">
                 <div className="text-center lg:text-left">
-                  <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
+                  <h1 className="text-4xl lg:text-5xl font-bold text-white mb-2">
                     Abhik Ghosh, M.Sc
                   </h1>
-                  <h2 className="text-2xl lg:text-3xl text-blue-600 font-semibold mb-4">
+                  <h2 className="text-2xl lg:text-3xl text-pink-200 font-semibold mb-4">
                     Cloud Architect | AI/ML Expert
                   </h2>
                   
