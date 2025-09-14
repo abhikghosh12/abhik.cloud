@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Download, ExternalLink, Award, Filter } from 'lucide-react'
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 export default function CertificatesPage() {
   const [activeFilter, setActiveFilter] = useState('All')
@@ -332,6 +333,8 @@ export default function CertificatesPage() {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </main>
   )
 }

@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Calendar, Briefcase, ExternalLink } from 'lucide-react'
 import Navbar from './components/Navbar'
 
+import Footer from './components/Footer'
+
 export default function Home() {
   // Optimization notice
   const showOptimizedLink = true;
@@ -339,6 +341,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      
+      <Footer />
     </main>
   )
 }
