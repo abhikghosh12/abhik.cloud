@@ -366,7 +366,7 @@ export default function DynamicResume() {
                               )}
                               
                               <h5 className="text-lg font-bold text-gray-900 mb-3">
-                                {project.url ? (
+                                {'url' in project ? (
                                   <a 
                                     href={project.url} 
                                     target="_blank" 
