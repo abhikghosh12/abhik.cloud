@@ -108,7 +108,7 @@ export default function ContactPage() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Let's Transform Your Cloud Infrastructure
+              Let&apos;s Transform Your Cloud Infrastructure
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 mb-8">
               Partner with an experienced Cloud Architect to accelerate your digital transformation journey
@@ -281,7 +281,7 @@ export default function ContactPage() {
                     Request Your Cloud Strategy Consultation
                   </h2>
                   <p className="text-gray-600 leading-relaxed">
-                    Share your project details below and I'll provide personalized recommendations 
+                    Share your project details below and I&apos;ll provide personalized recommendations 
                     for your cloud transformation journey. All consultations include a custom architecture assessment.
                   </p>
                 </div>
@@ -440,7 +440,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Request Received!</h3>
                     <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                      Thank you for your interest. I'll review your requirements and respond within 24 hours 
+                      Thank you for your interest. I&apos;ll review your requirements and respond within 24 hours 
                       with a personalized consultation proposal.
                     </p>
                     <div className="bg-blue-50 p-6 rounded-lg max-w-md mx-auto">
