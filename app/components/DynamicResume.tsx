@@ -223,7 +223,7 @@ export default function DynamicResume() {
                       <div className="flex-1">
                         <div className="flex items-start gap-4 mb-4">
                           {job.company === 'Capgemini' && (
-                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
+                            <div className="w-20 h-20 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-3 flex items-center justify-center">
                               <img 
                                 src="/Certificates/capgemini.png" 
                                 alt="Capgemini" 
@@ -241,9 +241,9 @@ export default function DynamicResume() {
                             </div>
                           )}
                           {job.company === 'Universitätsklinikum Augsburg' && (
-                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
+                            <div className="w-20 h-20 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-3 flex items-center justify-center">
                               <img 
-                                src="/Certificates/uniklinik.png" 
+                                src="/Certificates/una.png" 
                                 alt="Universitätsklinikum Augsburg" 
                                 className="w-full h-full object-contain"
                               />
@@ -572,7 +572,7 @@ export default function DynamicResume() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
               >
-                <Globe size={20} />
+                <img src="/Certificates/researchgate.png" alt="ResearchGate" className="w-5 h-5" />
                 View ResearchGate Profile
                 <ExternalLink size={16} />
               </a>
