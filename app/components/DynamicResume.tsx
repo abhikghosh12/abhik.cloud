@@ -223,38 +223,38 @@ export default function DynamicResume() {
                       <div className="flex-1">
                         <div className="flex items-start gap-4 mb-4">
                           {job.company === 'Capgemini' && (
-                            <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
                               <img 
                                 src="/Certificates/capgemini.png" 
                                 alt="Capgemini" 
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                               />
                             </div>
                           )}
                           {job.company === 'JSW Energy' && (
-                            <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
                               <img 
                                 src="/Site Files-download/download (5).png" 
                                 alt="JSW Energy" 
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                               />
                             </div>
                           )}
                           {job.company === 'Universitätsklinikum Augsburg' && (
-                            <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
                               <img 
                                 src="/Certificates/uniklinik.png" 
                                 alt="Universitätsklinikum Augsburg" 
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                               />
                             </div>
                           )}
                           {job.company === 'RWTH Aachen University' && (
-                            <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
                               <img 
                                 src="/Site Files-download/rwth-aachen.jpg" 
                                 alt="RWTH Aachen University" 
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                               />
                             </div>
                           )}
@@ -475,11 +475,11 @@ export default function DynamicResume() {
                       <div className="flex-1">
                         <div className="flex items-start gap-4 mb-4">
                           {edu.institution === 'Otto-von-Guericke-Universität' && (
-                            <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
                               <img 
                                 src="/Site Files-download/download (2)_edited.jpg" 
                                 alt="Otto-von-Guericke-Universität" 
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                               />
                             </div>
                           )}

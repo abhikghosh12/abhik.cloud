@@ -128,50 +128,7 @@ export default function CertificatesPage() {
         </div>
       </section>
 
-      {/* Credly Verification Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-6">
-          <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-4xl mx-auto border border-gray-100">
-            <div className="mb-8">
-              <div className="w-20 h-20 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <img src="/Site Files-download/Credly.PNG" alt="Credly Logo" className="w-12 h-12" />
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Verify My Credentials</h3>
-              <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-                All certifications are verified and can be independently validated through my Credly digital badge profile
-              </p>
-              <a
-                href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors inline-flex items-center gap-2 shadow-lg"
-              >
-                <ExternalLink size={20} />
-                View Credly Profile
-              </a>
-            </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">11</div>
-                <div className="text-sm text-gray-600 font-medium">Active Certifications</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">5</div>
-                <div className="text-sm text-gray-600 font-medium">Cloud Providers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">8</div>
-                <div className="text-sm text-gray-600 font-medium">Technology Areas</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">100%</div>
-                <div className="text-sm text-gray-600 font-medium">Verified Badges</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Certifications Grid */}
       <section className="py-20">
@@ -344,6 +301,51 @@ export default function CertificatesPage() {
                 >
                   Send Email
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Credly Verification Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="container mx-auto px-6">
+          <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-4xl mx-auto border border-gray-100">
+            <div className="mb-8">
+              <div className="w-20 h-20 bg-white rounded-2xl border border-gray-200 flex items-center justify-center mx-auto mb-6 p-3">
+                <img src="/Certificates/c.png" alt="Credly Logo" className="w-full h-full object-contain" />
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Verify My Credentials</h3>
+              <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+                All certifications are verified and can be independently validated through my Credly digital badge profile
+              </p>
+              <a
+                href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors inline-flex items-center gap-2 shadow-lg"
+              >
+                <ExternalLink size={20} />
+                View Credly Profile
+              </a>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">11</div>
+                <div className="text-sm text-gray-600 font-medium">Active Certifications</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-600 mb-2">5</div>
+                <div className="text-sm text-gray-600 font-medium">Cloud Providers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-600 mb-2">8</div>
+                <div className="text-sm text-gray-600 font-medium">Technology Areas</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-orange-600 mb-2">100%</div>
+                <div className="text-sm text-gray-600 font-medium">Verified Badges</div>
               </div>
             </div>
           </div>
