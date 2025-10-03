@@ -101,44 +101,23 @@ export default function ContactPage() {
       {/* Professional Header */}
       <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-16">
         <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+          <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Let&apos;s Transform Your Cloud Infrastructure
+              Get In Touch
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 mb-8">
-              Partner with an experienced Cloud Architect to accelerate your digital transformation journey
+              Ready to discuss your cloud transformation? Let's connect and explore opportunities
             </p>
-            
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-8 mt-8">
-              <div className="flex items-center gap-2">
-                <Shield className="text-green-400" size={24} />
-                <span className="text-blue-100">Enterprise Security</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="text-yellow-400" size={24} />
-                <span className="text-blue-100">Certified Expert</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe className="text-blue-300" size={24} />
-                <span className="text-blue-100">Global Experience</span>
-              </div>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       <div className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="max-w-4xl mx-auto">
             
             {/* Contact Information & Methods */}
-            <div className="lg:col-span-1 space-y-8">
+            <div className="space-y-8">
               
               {/* Professional Info Card */}
               <motion.div
@@ -264,212 +243,7 @@ export default function ContactPage() {
               </motion.div>
             </div>
 
-            {/* Professional Contact Form */}
-            <div className="lg:col-span-2">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
-              >
-                <div className="mb-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                    Request Your Cloud Strategy Consultation
-                  </h2>
-                  <p className="text-gray-600 leading-relaxed">
-                    Share your project details below and I&apos;ll provide personalized recommendations 
-                    for your cloud transformation journey. All consultations include a custom architecture assessment.
-                  </p>
-                </div>
 
-                {!isSubmitted ? (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Contact Details */}
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
-                          Full Name *
-                        </label>
-                        <input
-                          type="text"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                          placeholder="Your full name"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
-                          Business Email *
-                        </label>
-                        <input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                          placeholder="your.email@company.com"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
-                          Company *
-                        </label>
-                        <input
-                          type="text"
-                          name="company"
-                          value={formData.company}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                          placeholder="Your company name"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                          placeholder="+49 xxx xxx xxxx"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Project Details */}
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
-                          Consultation Type *
-                        </label>
-                        <select
-                          name="consultationType"
-                          value={formData.consultationType}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                        >
-                          <option value="">Select service</option>
-                          {consultationTypes.map((type) => (
-                            <option key={type.value} value={type.value}>{type.label}</option>
-                          ))}
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
-                          Project Budget
-                        </label>
-                        <select
-                          name="budget"
-                          value={formData.budget}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                        >
-                          <option value="">Select budget range</option>
-                          {budgetRanges.map((range) => (
-                            <option key={range.value} value={range.value}>{range.label}</option>
-                          ))}
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
-                          Timeline
-                        </label>
-                        <select
-                          name="timeline"
-                          value={formData.timeline}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                        >
-                          <option value="">Select timeline</option>
-                          {timelines.map((timeline) => (
-                            <option key={timeline.value} value={timeline.value}>{timeline.label}</option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Project Description *
-                      </label>
-                      <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        rows={5}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none transition-all duration-300"
-                        placeholder="Please describe your current infrastructure, challenges, and transformation goals. Include any specific requirements or constraints..."
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
-                    >
-                      {isSubmitting ? (
-                        <div className="flex items-center justify-center gap-3">
-                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                          Processing Request...
-                        </div>
-                      ) : (
-                        'Request Strategy Consultation'
-                      )}
-                    </button>
-                  </form>
-                ) : (
-                  <div className="text-center py-12">
-                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <CheckCircle size={40} className="text-green-500" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Request Received!</h3>
-                    <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                      Thank you for your interest. I&apos;ll review your requirements and respond within 24 hours 
-                      with a personalized consultation proposal.
-                    </p>
-                    <div className="bg-blue-50 p-6 rounded-lg max-w-md mx-auto">
-                      <p className="text-sm text-blue-800">
-                        <strong>Next Steps:</strong> Check your email for confirmation and 
-                        expect a detailed response with consultation options and calendar availability.
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                {/* Security & Privacy */}
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
-                    <div className="flex items-center space-x-2">
-                      <Shield size={16} className="text-green-500" />
-                      <span>Enterprise Security</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Shield size={16} className="text-blue-500" />
-                      <span>GDPR Compliant</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Clock size={16} className="text-orange-500" />
-                      <span>24hr Response</span>
-                    </div>
-                  </div>
-                  <p className="text-xs text-gray-400 text-center mt-3">
-                    Your information is secure and confidential. No spam, no third-party sharing.
-                  </p>
-                </div>
-              </motion.div>
-            </div>
           </div>
         </div>
       </div>

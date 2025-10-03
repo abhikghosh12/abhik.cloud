@@ -11,8 +11,8 @@ export default function Home() {
   const showOptimizedLink = true;
   
   const stats = [
-    { value: '15+', label: 'Years Experience' },
-    { value: '50+', label: 'Projects Delivered' },
+    { value: '8+', label: 'Years Experience' },
+    { value: '10+', label: 'Projects Delivered' },
     { value: '3', label: 'Cloud Platforms' },
     { value: '100%', label: 'Client Success' }
   ]
@@ -138,7 +138,7 @@ export default function Home() {
                       className="bg-white text-pink-600 px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-pink-50 transition-colors justify-center shadow-lg"
                     >
                       <Calendar size={18} />
-                      Book Consultation
+                      Schedule Interview
                     </motion.a>
                     <motion.a
                       href="/resume"
@@ -154,7 +154,7 @@ export default function Home() {
                       download="Abhik_Ghosh_Resume.pdf"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-white/20 text-white border border-white/30 px-4 py-2 rounded-md text-sm font-medium flex items-center gap-1 hover:bg-white/30 transition-colors justify-center"
+                      className="bg-white/20 text-white border border-white/30 px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-white/30 transition-colors justify-center"
                     >
                       <Briefcase size={18} />
                       Download PDF
