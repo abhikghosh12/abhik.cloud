@@ -88,7 +88,7 @@ export default function ContactPage() {
       icon: Linkedin,
       title: "LinkedIn Connect",
       description: "Professional networking and discussions",
-      action: "https://www.linkedin.com/in/abhik-ghosh-cloud",
+      action: "https://www.linkedin.com/in/abhik-ghosh-msc/",
       actionText: "Connect",
       color: "bg-blue-700"
     }
@@ -114,9 +114,9 @@ export default function ContactPage() {
 
       <div className="py-16">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             
-            {/* Contact Information & Methods */}
+            {/* Contact Information */}
             <div className="space-y-8">
               
               {/* Professional Info Card */}
@@ -178,7 +178,7 @@ export default function ContactPage() {
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <p className="text-sm font-medium text-gray-900 mb-3">Connect Professionally</p>
                   <div className="flex gap-3">
-                    <a href="https://www.linkedin.com/in/abhik-ghosh-cloud" target="_blank" rel="noopener noreferrer" 
+                    <a href="https://www.linkedin.com/in/abhik-ghosh-msc/" target="_blank" rel="noopener noreferrer" 
                        className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
                       <Linkedin size={18} className="text-white" />
                     </a>
@@ -193,15 +193,17 @@ export default function ContactPage() {
                   </div>
                 </div>
               </motion.div>
+            </div>
 
-              {/* Quick Contact Methods */}
+            {/* Quick Contact Methods */}
+            <div className="space-y-8">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-4"
+                className="space-y-6"
               >
-                <h4 className="text-lg font-bold text-gray-900">Quick Contact Options</h4>
+                <h4 className="text-2xl font-bold text-gray-900 mb-6">Quick Contact Options</h4>
                 {contactMethods.map((method, index) => (
                   <a
                     key={method.title}
@@ -241,9 +243,8 @@ export default function ContactPage() {
                   ))}
                 </div>
               </motion.div>
+              </motion.div>
             </div>
-
-
           </div>
         </div>
       </div>

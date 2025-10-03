@@ -172,90 +172,92 @@ export default function DynamicResume() {
   return (
     <div className="min-h-screen hero-gradient">
       {/* Professional Header */}
-      <section className="hero-gradient border-b border-pink-300">
-        <div className="container mx-auto px-6 py-8">
+      <section className="bg-white border-b border-gray-200">
+        <div className="container mx-auto px-6 py-12">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col lg:flex-row items-start gap-8">
+            <div className="grid lg:grid-cols-3 gap-8 items-start">
               
               {/* Profile Section */}
-              <div className="flex-shrink-0">
+              <div className="lg:col-span-1 text-center">
                 <ProfileImage />
-                <div className="text-center lg:text-left">
-                  <div className="flex items-center gap-2 justify-center lg:justify-start mb-2">
+                <div className="mt-4">
+                  <div className="flex items-center gap-2 justify-center mb-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm text-green-200 font-medium">Available for opportunities</span>
+                    <span className="text-sm text-green-600 font-medium">Available for opportunities</span>
                   </div>
                 </div>
               </div>
 
               {/* Header Info */}
-              <div className="flex-1">
-                <div className="text-center lg:text-left">
-                  <h1 className="text-4xl lg:text-5xl font-bold text-white mb-2">
-                    Abhik Ghosh, M.Sc
-                  </h1>
-                  <h2 className="text-2xl lg:text-3xl text-pink-200 font-semibold mb-4">
-                    Cloud Architect | AI/ML Expert
-                  </h2>
+              <div className="lg:col-span-2">
+                <div className="space-y-6">
+                  <div>
+                    <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
+                      Abhik Ghosh, M.Sc
+                    </h1>
+                    <h2 className="text-2xl lg:text-3xl text-blue-600 font-semibold mb-4">
+                      Cloud Architect | AI/ML Expert
+                    </h2>
+                  </div>
                   
                   {/* Current Position */}
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-                    <div className="flex items-center justify-center lg:justify-start gap-3">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <Award size={16} className="text-blue-600" />
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                        <Award size={20} className="text-blue-600" />
                       </div>
-                      <div className="text-left">
-                        <p className="font-bold text-gray-900">Cloud Architect</p>
+                      <div>
+                        <p className="text-xl font-bold text-gray-900">Cloud Architect</p>
                         <a 
                           href="https://www.capgemini.com/" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
+                          className="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-1 text-lg"
                         >
-                          Capgemini <ExternalLink size={14} />
+                          Capgemini <ExternalLink size={16} />
                         </a>
-                        <p className="text-sm text-gray-600">2021 - Present</p>
+                        <p className="text-gray-600 font-medium">2021 - Present</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Contact Information */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-                    <div className="flex items-center gap-2 justify-center lg:justify-start">
-                      <Mail size={16} className="text-gray-500" />
-                      <a href="mailto:abhikghosh@outlook.com" className="text-gray-700 hover:text-blue-600 text-sm">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                      <Mail size={18} className="text-blue-600" />
+                      <a href="mailto:abhikghosh@outlook.com" className="text-gray-700 hover:text-blue-600 font-medium">
                         abhikghosh@outlook.com
                       </a>
                     </div>
-                    <div className="flex items-center gap-2 justify-center lg:justify-start">
-                      <Phone size={16} className="text-gray-500" />
-                      <a href="tel:+4917665979446" className="text-gray-700 hover:text-blue-600 text-sm">
+                    <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                      <Phone size={18} className="text-green-600" />
+                      <a href="tel:+4917665979446" className="text-gray-700 hover:text-green-600 font-medium">
                         +49 176 65979446
                       </a>
                     </div>
-                    <div className="flex items-center gap-2 justify-center lg:justify-start">
-                      <MapPin size={16} className="text-gray-500" />
-                      <span className="text-gray-700 text-sm">Germany</span>
+                    <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                      <MapPin size={18} className="text-purple-600" />
+                      <span className="text-gray-700 font-medium">Germany</span>
                     </div>
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <a
                       href="https://calendly.com/abhikghosh87"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center gap-2 justify-center"
+                      className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2 justify-center shadow-lg"
                     >
-                      <Calendar size={18} />
+                      <Calendar size={20} />
                       Schedule Interview
                     </a>
                     <a
                       href="/Certificates/Lebenslauf_Ghosh_Abhik.pdf"
                       download="Abhik_Ghosh_Resume.pdf"
-                      className="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors flex items-center gap-2 justify-center"
+                      className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center gap-2 justify-center"
                     >
-                      <Download size={18} />
+                      <Download size={20} />
                       Download PDF
                     </a>
                   </div>
