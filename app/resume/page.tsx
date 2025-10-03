@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import DynamicResume from '../components/DynamicResume'
 import Footer from '../components/Footer'
@@ -12,7 +13,12 @@ export default function ResumePage() {
       {/* Professional Header */}
       <section className="navbar-top-gradient text-white py-16 pt-24">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
               Professional Experience
             </h1>
@@ -44,7 +50,7 @@ export default function ResumePage() {
                 Download Resume
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       

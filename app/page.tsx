@@ -7,9 +7,6 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 export default function Home() {
-  // Optimization notice
-  const showOptimizedLink = true;
-  
   const stats = [
     { value: '8+', label: 'Years Experience' },
     { value: '10+', label: 'Projects Delivered' },
@@ -46,25 +43,8 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Optimization Banner */}
-      {showOptimizedLink && (
-        <div className="bg-gradient-to-r from-pink-600 to-purple-600 text-white py-3 px-6 text-center relative z-40">
-          <div className="container mx-auto">
-            <p className="text-sm md:text-base font-medium">
-              🚀 <strong>NEW:</strong> Experience the conversion-optimized version of this portfolio →{' '}
-              <a 
-                href="/optimized" 
-                className="underline hover:no-underline font-bold ml-2 bg-white/20 px-3 py-1 rounded-full hover:bg-white/30 transition-all"
-              >
-                View Optimized Site
-              </a>
-            </p>
-          </div>
-        </div>
-      )}
-
       {/* Professional Hero Section */}
-      <section id="home" className="navbar-top-gradient py-20 text-white relative overflow-hidden">
+      <section id="home" className="hero-gradient py-20 text-white relative overflow-hidden">
         {/* Background Graphics */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full"></div>
@@ -394,20 +374,9 @@ export default function Home() {
                   
                   {/* Call to Action */}
                   <div className="bg-gradient-to-r from-pink-50 to-purple-50 p-6 rounded-xl border border-pink-200">
-                    <p className="text-gray-800 font-medium mb-4 text-center">
+                    <p className="text-gray-800 font-medium text-center">
                       Curious to see how I can transform your business? Explore my work and let&apos;s connect!
                     </p>
-                    <div className="text-center">
-                      <a
-                        href="https://calendly.com/abhikghosh87"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-pink-700 hover:to-purple-700 transition-all duration-200 inline-flex items-center gap-2 shadow-lg hover:shadow-xl"
-                      >
-                        <Calendar size={20} />
-                        Schedule an Appointment
-                      </a>
-                    </div>
                   </div>
                 </motion.div>
               </div>

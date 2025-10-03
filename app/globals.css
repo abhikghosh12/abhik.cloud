@@ -42,11 +42,13 @@ body {
   background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
 }
 
-/* Navbar-top gradient: Pink strip at top, then blue */
+/* Navbar-top gradient: Pink-to-purple in navbar area, then blue below */
 .navbar-top-gradient {
   background: linear-gradient(to bottom, 
     #e91e63 0%, 
-    #e91e63 80px, 
+    #ad1457 40px,
+    #8e24aa 60px,
+    #7b1fa2 80px, 
     #1e40af 80px, 
     #2563eb 100%
   );
