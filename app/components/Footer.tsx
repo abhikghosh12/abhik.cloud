@@ -35,7 +35,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex space-x-4">
               <a 
-                href="https://www.linkedin.com/in/abhik-ghosh-cloud" 
+                href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"

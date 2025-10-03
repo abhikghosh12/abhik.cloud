@@ -10,7 +10,7 @@ export default function ResumePage() {
       <Navbar />
       
       {/* Professional Header */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-16">
+      <section className="hero-gradient text-white py-16 mt-20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
@@ -31,11 +31,11 @@ export default function ResumePage() {
                 Schedule Interview
               </a>
               <a
-                href="/Certificates/Lebenslauf_Ghosh_Abhik.pdf"
+                href="/Certificates/EN_Ghosh_Abhik_Short.pdf"
                 download="Abhik_Ghosh_Resume.pdf"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center gap-2"
               >
-                Download PDF
+                Download Resume
               </a>
             </div>
           </div>

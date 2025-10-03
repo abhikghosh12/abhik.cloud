@@ -99,7 +99,7 @@ export default function ContactPage() {
       <Navbar />
       
       {/* Professional Header */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-24 mt-16">
+      <section className="hero-gradient text-white py-24 mt-16">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
@@ -249,7 +249,7 @@ export default function ContactPage() {
       </div>
 
       {/* Call to Action Footer */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+      <section className="hero-gradient text-white py-12">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

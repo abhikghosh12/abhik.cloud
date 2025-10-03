@@ -54,18 +54,14 @@ export default function CertificatesPage() {
   ]
 
   const certifications = [
-    { title: 'AWS Solutions Architect Professional', issuer: 'Amazon Web Services', year: '2024', category: 'Cloud Architecture', badge: true },
-    { title: 'Azure Solutions Architect Expert', issuer: 'Microsoft', year: '2024', category: 'Cloud Architecture', badge: true },
-    { title: 'Google Cloud Professional Architect', issuer: 'Google Cloud', year: '2023', category: 'Cloud Architecture', badge: true },
-    { title: 'Certified Kubernetes Administrator (CKA)', issuer: 'Cloud Native Computing Foundation', year: '2024', category: 'Container Orchestration', badge: true },
-    { title: 'HashiCorp Certified: Terraform Associate', issuer: 'HashiCorp', year: '2023', category: 'Infrastructure as Code', badge: true },
-    { title: 'Docker Certified Associate', issuer: 'Docker', year: '2023', category: 'Container Orchestration', badge: true },
-    { title: 'AWS Security Specialty', issuer: 'Amazon Web Services', year: '2024', category: 'Security', badge: true },
-    { title: 'Azure DevOps Engineer Expert', issuer: 'Microsoft', year: '2023', category: 'DevOps', badge: true },
-    { title: 'Machine Learning Engineer', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', badge: true },
-    { title: 'DevSecOps Foundation', issuer: 'DevOps Institute', year: '2023', category: 'Security', badge: true },
-    { title: 'Python Developer Certified', issuer: 'Python Institute', year: '2022', category: 'Programming', badge: true },
-    { title: 'Certified ScrumMaster', issuer: 'Scrum Alliance', year: '2022', category: 'Project Management', badge: true }
+    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026' },
+    { title: 'CKA: Certified Kubernetes Administrator', issuer: 'The Linux Foundation', year: '2023', category: 'Container Orchestration', expires: 'Aug 3, 2026' },
+    { title: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026' },
+    { title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026' },
+    { title: 'Microsoft Certified: Azure Fundamentals', issuer: 'Microsoft', year: '2021', category: 'Cloud Architecture', expires: 'Never' },
+    { title: 'Certified SAFe® 6 Architect', issuer: 'Scaled Agile, Inc.', year: '2024', category: 'Project Management', expires: 'May 4, 2025' },
+    { title: 'Integrate Vertex AI Search and Conversation', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never' },
+    { title: 'Text Prompt Engineering Techniques', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never' }
   ]
 
   const filteredCertifications = activeFilter === 'All' 
@@ -77,7 +73,7 @@ export default function CertificatesPage() {
       <Navbar />
       
       {/* Professional Header */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-24 mt-16">
+      <section className="hero-gradient text-white py-20 mt-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -96,7 +92,7 @@ export default function CertificatesPage() {
             <div className="flex flex-wrap justify-center items-center gap-8 mt-8">
               <div className="flex items-center gap-2">
                 <Award className="text-yellow-400" size={24} />
-                <span className="text-blue-100">15+ Active Certifications</span>
+                <span className="text-blue-100">11 Active Certifications</span>
               </div>
               <div className="flex items-center gap-2">
                 <ExternalLink className="text-green-400" size={24} />
@@ -157,7 +153,7 @@ export default function CertificatesPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">11</div>
                 <div className="text-sm text-gray-600 font-medium">Active Certifications</div>
               </div>
               <div className="text-center">
@@ -188,7 +184,7 @@ export default function CertificatesPage() {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Professional Documents</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Download comprehensive documentation of qualifications, experience, and achievements
+              Download comprehensive documentation of qualifications, experience, achievements, and certifications
             </p>
           </motion.div>
 
@@ -232,106 +228,7 @@ export default function CertificatesPage() {
         </div>
       </section>
 
-      {/* Professional Certifications */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Industry Certifications</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Validated expertise from leading technology vendors and organizations
-            </p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredCertifications.map((cert, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Award className="text-blue-600" size={24} />
-                  </div>
-                  <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">{cert.year}</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{cert.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{cert.issuer}</p>
-                <div className="flex items-center justify-between">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
-                    {cert.category}
-                  </span>
-                  <div className="flex gap-2">
-                    <a 
-                      href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 text-xs font-medium transition-colors"
-                    >
-                      View Badge
-                    </a>
-                    <button className="text-gray-600 hover:text-gray-800 text-xs font-medium transition-colors">
-                      Download
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Credly Verification Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-6">
-          <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-4xl mx-auto border border-gray-100">
-            <div className="mb-8">
-              <div className="w-20 h-20 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <img src="/Site Files-download/Credly.PNG" alt="Credly Logo" className="w-12 h-12" />
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Verify My Credentials</h3>
-              <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-                All certifications are verified and can be independently validated through my Credly digital badge profile
-              </p>
-              <a
-                href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors inline-flex items-center gap-2 shadow-lg"
-              >
-                <ExternalLink size={20} />
-                View Credly Profile
-              </a>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
-                <div className="text-sm text-gray-600 font-medium">Active Certifications</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">5</div>
-                <div className="text-sm text-gray-600 font-medium">Cloud Providers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">8</div>
-                <div className="text-sm text-gray-600 font-medium">Technology Areas</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">100%</div>
-                <div className="text-sm text-gray-600 font-medium">Verified Badges</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Learning Journey */}
       <section className="py-20 bg-white">
