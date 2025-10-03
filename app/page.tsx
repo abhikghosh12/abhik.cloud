@@ -64,7 +64,7 @@ export default function Home() {
       )}
 
       {/* Professional Hero Section */}
-      <section id="home" className="hero-gradient py-20 text-white relative overflow-hidden">
+      <section id="home" className="navbar-top-gradient py-20 text-white relative overflow-hidden">
         {/* Background Graphics */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full"></div>
@@ -132,7 +132,7 @@ export default function Home() {
                         href="https://calendly.com/abhikghosh87"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white text-pink-600 px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-pink-50 transition-colors justify-center shadow-lg"
+                        className="bg-transparent text-white border border-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-white/20 transition-colors justify-center"
                       >
                         <Calendar size={18} />
                         Schedule Call
@@ -417,7 +417,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 hero-gradient text-white relative overflow-hidden">
+      <section id="contact" className="py-20 navbar-top-gradient text-white relative overflow-hidden">
         {/* Background Graphics */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-10 w-40 h-40 bg-white rounded-full"></div>
@@ -434,14 +434,14 @@ export default function Home() {
             <p className="text-xl mb-8">Get a free 30-minute strategy consultation</p>
             
             <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
-              <div className="flex items-center gap-3">
+              <a href="mailto:abhikghosh@outlook.com" className="flex items-center gap-3 hover:text-pink-100 transition-colors">
                 <Mail className="text-pink-200" />
                 <span>abhikghosh@outlook.com</span>
-              </div>
-              <div className="flex items-center gap-3">
+              </a>
+              <a href="tel:+4917665979446" className="flex items-center gap-3 hover:text-pink-100 transition-colors">
                 <Phone className="text-pink-200" />
                 <span>+49 176 65979446</span>
-              </div>
+              </a>
               <div className="flex items-center gap-3">
                 <MapPin className="text-pink-200" />
                 <span>Germany</span>

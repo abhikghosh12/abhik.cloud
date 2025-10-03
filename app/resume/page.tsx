@@ -10,7 +10,7 @@ export default function ResumePage() {
       <Navbar />
       
       {/* Professional Header */}
-      <section className="hero-gradient text-white py-16 mt-20">
+      <section className="navbar-top-gradient text-white py-16 pt-24">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
@@ -26,7 +26,7 @@ export default function ResumePage() {
                 href="https://calendly.com/abhikghosh87"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors inline-flex items-center gap-2 shadow-lg"
+                className="bg-transparent text-white border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors inline-flex items-center gap-2"
               >
                 Schedule Call
               </a>

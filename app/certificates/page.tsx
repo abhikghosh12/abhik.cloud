@@ -73,7 +73,7 @@ export default function CertificatesPage() {
       <Navbar />
       
       {/* Professional Header */}
-      <section className="hero-gradient text-white py-20 mt-20">
+      <section className="navbar-top-gradient text-white py-20 pt-28">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

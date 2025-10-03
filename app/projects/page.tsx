@@ -44,7 +44,7 @@ export default function ProjectsPage() {
       <Navbar />
       
       {/* Professional Header */}
-      <section className="hero-gradient text-white py-24 mt-16">
+      <section className="navbar-top-gradient text-white py-24 pt-32">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
