@@ -34,7 +34,7 @@ body {
 
 /* Professional gradient for hero sections */
 .hero-gradient {
-  background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #e91e63 0%, #ad1457 25%, #8e24aa 75%, #7b1fa2 100%);
 }
 
 /* Professional blue gradient */

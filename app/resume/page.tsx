@@ -26,9 +26,15 @@ export default function ResumePage() {
                 href="https://calendly.com/abhikghosh87"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center gap-2 shadow-lg"
+                className="bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors inline-flex items-center gap-2 shadow-lg"
               >
-                Schedule Interview
+                Schedule Call
+              </a>
+              <a
+                href="/resume"
+                className="bg-transparent text-white border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors inline-flex items-center gap-2"
+              >
+                View Resume
               </a>
               <a
                 href="/Certificates/EN_Ghosh_Abhik_Short.pdf"

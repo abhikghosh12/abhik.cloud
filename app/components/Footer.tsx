@@ -43,7 +43,7 @@ export default function Footer() {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://github.com/abhik-ghosh" 
+                href="https://github.com/abhikghosh12" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"
