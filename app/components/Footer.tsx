@@ -38,6 +38,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                title="LinkedIn"
                 className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
               >
                 <Linkedin size={20} />
@@ -46,22 +47,52 @@ export default function Footer() {
                 href="https://github.com/abhikghosh12" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                title="GitHub"
                 className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"
               >
                 <Github size={20} />
               </a>
               <a 
+                href="https://www.xing.com/profile/Abhik_Ghosh" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="Xing"
+                className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center hover:bg-teal-700 transition-colors"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536L14.408 14.4s7.649-13.619 7.649-13.619c.095-.191.095-.387.006-.535C22.974.078 22.81 0 22.599 0h-4.411zm-11.19 7.691c-.211 0-.375.078-.463.22-.09.151-.09.346.009.536L9.497 13.3s-4.876 8.209-4.876 8.209c-.095.191-.095.387-.006.535.088.167.252.245.463.245h3.454c.517 0 .741-.325.927-.66 0 0 4.876-8.209 4.876-8.209-.015-.024-2.953-5.418-2.953-5.418-.17-.308-.436-.66-.967-.66H6.998z"/>
+                </svg>
+              </a>
+              <a 
                 href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                title="Credly"
                 className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors"
               >
-                <Award size={20} />
+                <img src="/Certificates/c.png" alt="Credly" className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.researchgate.net/profile/Abhik-Ghosh-4" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="ResearchGate"
+                className="w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center hover:bg-teal-600 transition-colors"
+              >
+                <img src="/Site Files-download/9f59698c-e156-4f33-9520-405cb7f4d9c6_researchgate_56f72ad6_490x330.png" alt="ResearchGate" className="w-5 h-5" />
+              </a>
+              <a 
+                href="mailto:abhikghosh@outlook.com" 
+                title="Email"
+                className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors"
+              >
+                <Mail size={20} />
               </a>
               <a 
                 href="https://medium.com/@abhikghosh" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                title="Medium"
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
@@ -147,9 +178,7 @@ export default function Footer() {
             <div className="text-gray-400 text-sm">
               © {currentYear} Abhik Ghosh. All rights reserved.
             </div>
-            <div className="text-gray-400 text-sm">
-              Built with Next.js & TypeScript • Deployed on GitHub Pages
-            </div>
+
           </div>
         </div>
       </div>

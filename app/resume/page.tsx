@@ -37,12 +37,6 @@ export default function ResumePage() {
                 Schedule Call
               </a>
               <a
-                href="/resume"
-                className="bg-transparent text-white border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors inline-flex items-center gap-2"
-              >
-                View Resume
-              </a>
-              <a
                 href="/Certificates/EN_Ghosh_Abhik_Short.pdf"
                 download="Abhik_Ghosh_Resume.pdf"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center gap-2"

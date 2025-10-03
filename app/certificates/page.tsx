@@ -173,8 +173,49 @@ export default function CertificatesPage() {
         </div>
       </section>
 
-      {/* Professional Documents */}
+      {/* Certifications Grid */}
       <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Certifications & Badges</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {activeFilter === 'All' ? 'All verified certifications' : `${activeFilter} certifications`} ({filteredCertifications.length})
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+            {filteredCertifications.map((cert, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              >
+                <div className="mb-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                      {cert.category}
+                    </span>
+                    <span className="text-gray-500 text-sm">{cert.year}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{cert.title}</h3>
+                  <p className="text-gray-600 text-sm mb-2">{cert.issuer}</p>
+                  <p className="text-gray-500 text-xs">Expires: {cert.expires}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Documents */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

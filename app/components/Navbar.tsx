@@ -85,9 +85,11 @@ export default function Navbar() {
               </a>
               <a href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" target="_blank" rel="noopener noreferrer" 
                  title="Credly" className="w-6 h-6 bg-[#FF6B35] rounded flex items-center justify-center hover:scale-110 transition-transform">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="white">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
+                <img src="/Certificates/c.png" alt="Credly" className="w-3 h-3" />
+              </a>
+              <a href="https://www.researchgate.net/profile/Abhik-Ghosh-4" target="_blank" rel="noopener noreferrer" 
+                 title="ResearchGate" className="w-6 h-6 bg-[#00D0B7] rounded flex items-center justify-center hover:scale-110 transition-transform">
+                <img src="/Site Files-download/9f59698c-e156-4f33-9520-405cb7f4d9c6_researchgate_56f72ad6_490x330.png" alt="ResearchGate" className="w-3 h-3" />
               </a>
               <a href="https://medium.com/@abhikghosh_46536" target="_blank" rel="noopener noreferrer" 
                  title="Medium" className="w-6 h-6 bg-[#000] rounded flex items-center justify-center hover:scale-110 transition-transform">

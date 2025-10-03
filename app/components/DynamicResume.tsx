@@ -221,13 +221,53 @@ export default function DynamicResume() {
                     {/* Job Header */}
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                       <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-2xl font-bold text-gray-900">{job.position}</h3>
-                          {job.type && (
-                            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                              {job.type}
-                            </span>
+                        <div className="flex items-start gap-4 mb-4">
+                          {job.company === 'Capgemini' && (
+                            <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                              <img 
+                                src="/Certificates/capgemini.png" 
+                                alt="Capgemini" 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
                           )}
+                          {job.company === 'JSW Energy' && (
+                            <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                              <img 
+                                src="/Site Files-download/download (5).png" 
+                                alt="JSW Energy" 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          )}
+                          {job.company === 'Universitätsklinikum Augsburg' && (
+                            <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                              <img 
+                                src="/Certificates/uniklinik.png" 
+                                alt="Universitätsklinikum Augsburg" 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          )}
+                          {job.company === 'RWTH Aachen University' && (
+                            <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                              <img 
+                                src="/Site Files-download/rwth-aachen.jpg" 
+                                alt="RWTH Aachen University" 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          )}
+                          <div>
+                            <div className="flex items-center gap-3 mb-2">
+                              <h3 className="text-2xl font-bold text-gray-900">{job.position}</h3>
+                              {job.type && (
+                                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                  {job.type}
+                                </span>
+                              )}
+                            </div>
+                          </div>
                         </div>
                         
                         <div className="space-y-1">
@@ -433,8 +473,21 @@ export default function DynamicResume() {
                   <div className="p-8">
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-green-600 mb-2">{edu.degree}</h3>
-                        <p className="text-xl font-semibold text-gray-900 mb-1">{edu.field}</p>
+                        <div className="flex items-start gap-4 mb-4">
+                          {edu.institution === 'Otto-von-Guericke-Universität' && (
+                            <div className="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                              <img 
+                                src="/Site Files-download/download (2)_edited.jpg" 
+                                alt="Otto-von-Guericke-Universität" 
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          )}
+                          <div>
+                            <h3 className="text-2xl font-bold text-green-600 mb-2">{edu.degree}</h3>
+                            <p className="text-xl font-semibold text-gray-900 mb-1">{edu.field}</p>
+                          </div>
+                        </div>
                         
                         <a 
                           href={edu.institutionUrl} 
