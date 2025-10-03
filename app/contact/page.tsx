@@ -106,7 +106,7 @@ export default function ContactPage() {
               Get In Touch
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 mb-8">
-              Ready to discuss your cloud transformation? Let's connect and explore opportunities
+              Ready to discuss your cloud transformation? Let&apos;s connect and explore opportunities
             </p>
           </div>
         </div>
