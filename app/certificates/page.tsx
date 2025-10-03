@@ -54,14 +54,14 @@ export default function CertificatesPage() {
   ]
 
   const certifications = [
-    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026' },
-    { title: 'CKA: Certified Kubernetes Administrator', issuer: 'The Linux Foundation', year: '2023', category: 'Container Orchestration', expires: 'Aug 3, 2026' },
-    { title: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026' },
-    { title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026' },
-    { title: 'Microsoft Certified: Azure Fundamentals', issuer: 'Microsoft', year: '2021', category: 'Cloud Architecture', expires: 'Never' },
-    { title: 'Certified SAFe® 6 Architect', issuer: 'Scaled Agile, Inc.', year: '2024', category: 'Project Management', expires: 'May 4, 2025' },
-    { title: 'Integrate Vertex AI Search and Conversation', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never' },
-    { title: 'Text Prompt Engineering Techniques', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never' }
+    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026', icon: '/Certificates/hashicorp.svg' },
+    { title: 'CKA: Certified Kubernetes Administrator', issuer: 'The Linux Foundation', year: '2023', category: 'Container Orchestration', expires: 'Aug 3, 2026', icon: '/Certificates/kubernetes.svg' },
+    { title: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/c.png' },
+    { title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/c.png' },
+    { title: 'Microsoft Certified: Azure Fundamentals', issuer: 'Microsoft', year: '2021', category: 'Cloud Architecture', expires: 'Never', icon: '/Certificates/c.png' },
+    { title: 'Certified SAFe® 6 Architect', issuer: 'Scaled Agile, Inc.', year: '2024', category: 'Project Management', expires: 'May 4, 2025', icon: '/Certificates/jira.svg' },
+    { title: 'Integrate Vertex AI Search and Conversation', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never', icon: '/Certificates/google-cloud.svg' },
+    { title: 'Text Prompt Engineering Techniques', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never', icon: '/Certificates/google-cloud.svg' }
   ]
 
   const filteredCertifications = activeFilter === 'All' 
@@ -155,14 +155,21 @@ export default function CertificatesPage() {
                 className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="mb-4">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-4">
                     <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
                       {cert.category}
                     </span>
                     <span className="text-gray-500 text-sm">{cert.year}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{cert.title}</h3>
-                  <p className="text-gray-600 text-sm mb-2">{cert.issuer}</p>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-white rounded-lg border border-gray-200 flex items-center justify-center p-2">
+                      <img src={cert.icon} alt={cert.issuer} className="w-full h-full object-contain" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-gray-900 mb-1">{cert.title}</h3>
+                      <p className="text-gray-600 text-sm">{cert.issuer}</p>
+                    </div>
+                  </div>
                   <p className="text-gray-500 text-xs">Expires: {cert.expires}</p>
                 </div>
               </motion.div>

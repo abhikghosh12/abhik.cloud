@@ -223,7 +223,7 @@ export default function DynamicResume() {
                       <div className="flex-1">
                         <div className="flex items-start gap-4 mb-4">
                           {job.company === 'Capgemini' && (
-                            <div className="w-20 h-20 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-3 flex items-center justify-center">
+                            <div className="w-24 h-24 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-4 flex items-center justify-center">
                               <img 
                                 src="/Certificates/capgemini.png" 
                                 alt="Capgemini" 
@@ -232,7 +232,7 @@ export default function DynamicResume() {
                             </div>
                           )}
                           {job.company === 'JSW Energy' && (
-                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
+                            <div className="w-24 h-24 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-4 flex items-center justify-center">
                               <img 
                                 src="/Site Files-download/download (5).png" 
                                 alt="JSW Energy" 
@@ -241,7 +241,7 @@ export default function DynamicResume() {
                             </div>
                           )}
                           {job.company === 'Universitätsklinikum Augsburg' && (
-                            <div className="w-20 h-20 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-3 flex items-center justify-center">
+                            <div className="w-24 h-24 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-4 flex items-center justify-center">
                               <img 
                                 src="/Certificates/una.png" 
                                 alt="Universitätsklinikum Augsburg" 
@@ -250,7 +250,7 @@ export default function DynamicResume() {
                             </div>
                           )}
                           {job.company === 'RWTH Aachen University' && (
-                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
+                            <div className="w-24 h-24 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-4 flex items-center justify-center">
                               <img 
                                 src="/Site Files-download/rwth-aachen.jpg" 
                                 alt="RWTH Aachen University" 
@@ -475,7 +475,7 @@ export default function DynamicResume() {
                       <div className="flex-1">
                         <div className="flex items-start gap-4 mb-4">
                           {edu.institution === 'Otto-von-Guericke-Universität' && (
-                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
+                            <div className="w-24 h-24 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-4 flex items-center justify-center">
                               <img 
                                 src="/Site Files-download/download (2)_edited.jpg" 
                                 alt="Otto-von-Guericke-Universität" 
