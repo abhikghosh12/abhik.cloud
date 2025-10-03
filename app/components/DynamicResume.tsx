@@ -198,7 +198,7 @@ export default function DynamicResume() {
           <div className="space-y-16">
           
           {/* Professional Experience Section */}
-          <section id="experience">
+          <section id="experience" className="scroll-mt-32">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -411,7 +411,7 @@ export default function DynamicResume() {
           </section>
 
           {/* Education Section */}
-          <section id="education">
+          <section id="education" className="scroll-mt-32">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

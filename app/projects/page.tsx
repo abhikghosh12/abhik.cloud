@@ -44,7 +44,7 @@ export default function ProjectsPage() {
       <Navbar />
       
       {/* Professional Header */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-24 mt-16">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">

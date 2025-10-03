@@ -3,11 +3,38 @@
 import { motion } from 'framer-motion'
 import { Download, ExternalLink, Award, Filter } from 'lucide-react'
 import { useState } from 'react'
+import JSZip from 'jszip'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export default function CertificatesPage() {
   const [activeFilter, setActiveFilter] = useState('All')
+
+  const downloadAllDocuments = async () => {
+    const zip = new JSZip()
+    
+    try {
+      // Fetch all PDF files and add to ZIP
+      for (const doc of documents) {
+        const response = await fetch(doc.file)
+        const blob = await response.blob()
+        zip.file(`${doc.title}.pdf`, blob)
+      }
+      
+      // Generate ZIP file and download
+      const zipBlob = await zip.generateAsync({ type: 'blob' })
+      const link = document.createElement('a')
+      link.href = URL.createObjectURL(zipBlob)
+      link.download = 'Abhik_Ghosh_All_Documents.zip'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      URL.revokeObjectURL(link.href)
+    } catch (error) {
+      console.error('Error creating ZIP file:', error)
+      alert('Error downloading files. Please try again.')
+    }
+  }
 
   const filters = [
     'All', 'Cloud Architecture', 'Container Orchestration', 'Infrastructure as Code', 
@@ -15,15 +42,15 @@ export default function CertificatesPage() {
   ]
 
   const documents = [
-    { title: 'Curriculum vitae', description: 'Complete professional resume with detailed experience', size: '2.1 MB', icon: '📄', file: '/Certificates/Lebenslauf_Ghosh_Abhik.pdf' },
-    { title: 'Cover letter', description: 'Professional cover letter template', size: '1.2 MB', icon: '📝', file: '/Certificates/EN_Ghosh_Abhik.pdf' },
-    { title: 'M.Sc. Certificates', description: 'Master of Science degree certificates', size: '3.5 MB', icon: '🎓', file: '/Certificates/1690817489161.pdf' },
-    { title: 'Reference letter', description: 'Professional reference letters from employers', size: '2.8 MB', icon: '📋', file: '/Certificates/50477187_EN_Ghosh_Abhik_Short.pdf' },
+    { title: 'Curriculum vitae (German)', description: 'Complete professional resume in German', size: '2.1 MB', icon: '📄', file: '/Certificates/Lebenslauf_Ghosh_Abhik.pdf' },
+    { title: 'Curriculum vitae (English)', description: 'Complete professional resume in English', size: '2.8 MB', icon: '📄', file: '/Certificates/EN_Ghosh_Abhik.pdf' },
+    { title: 'Cover letter', description: 'Professional cover letter template', size: '1.2 MB', icon: '📝', file: '/Certificates/50477187_EN_Ghosh_Abhik_Short.pdf' },
+    { title: 'M.Sc. Certificates', description: 'Master of Science degree certificates', size: '3.5 MB', icon: '🎓', file: '/Certificates/M.SC.pdf' },
     { title: 'Certificates Kubernetes', description: 'Kubernetes certification documents', size: '2.2 MB', icon: '☸️', file: '/Certificates/Certified Kubernetes Administrator (CKA).pdf' },
-    { title: 'Certificates AWS', description: 'Amazon Web Services certification documents', size: '3.1 MB', icon: '☁️', file: '/Certificates/AWS certified Solution Architect- Associate.pdf' },
+    { title: 'Certificates AWS Solution Architect', description: 'AWS Solution Architect Associate certification', size: '3.1 MB', icon: '☁️', file: '/Certificates/AWS certified Solution Architect- Associate.pdf' },
     { title: 'Certificates Terraform', description: 'Terraform Infrastructure as Code certifications', size: '1.8 MB', icon: '🏗️', file: '/Certificates/Terraform Associate.pdf' },
-    { title: 'Certificates Azure', description: 'Microsoft Azure certification documents', size: '2.5 MB', icon: '🔷', file: '/Certificates/Exam AZ-900  Microsoft Azure Fundamentals.pdf' },
-    { title: 'Excellence Award', description: 'Professional excellence and achievement awards', size: '1.5 MB', icon: '🏆', file: '/Certificates/AWS Certified Cloud Practitioner.pdf' }
+    { title: 'Certificates Azure Fundamentals', description: 'Microsoft Azure Fundamentals certification', size: '2.5 MB', icon: '🔷', file: '/Certificates/Exam AZ-900  Microsoft Azure Fundamentals.pdf' },
+    { title: 'Excellence Award', description: 'Professional excellence and achievement awards', size: '1.5 MB', icon: '🏆', file: '/Certificates/excellence_award.pdf' }
   ]
 
   const certifications = [
@@ -50,7 +77,7 @@ export default function CertificatesPage() {
       <Navbar />
       
       {/* Professional Header */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-24 mt-16">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -105,6 +132,51 @@ export default function CertificatesPage() {
         </div>
       </section>
 
+      {/* Credly Verification Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="container mx-auto px-6">
+          <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-4xl mx-auto border border-gray-100">
+            <div className="mb-8">
+              <div className="w-20 h-20 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <img src="/Site Files-download/Credly.PNG" alt="Credly Logo" className="w-12 h-12" />
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Verify My Credentials</h3>
+              <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+                All certifications are verified and can be independently validated through my Credly digital badge profile
+              </p>
+              <a
+                href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors inline-flex items-center gap-2 shadow-lg"
+              >
+                <ExternalLink size={20} />
+                View Credly Profile
+              </a>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
+                <div className="text-sm text-gray-600 font-medium">Active Certifications</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-600 mb-2">5</div>
+                <div className="text-sm text-gray-600 font-medium">Cloud Providers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-600 mb-2">8</div>
+                <div className="text-sm text-gray-600 font-medium">Technology Areas</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-orange-600 mb-2">100%</div>
+                <div className="text-sm text-gray-600 font-medium">Verified Badges</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Professional Documents */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -136,7 +208,8 @@ export default function CertificatesPage() {
                   <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">PDF • {doc.size}</span>
                   <a
                     href={doc.file}
-                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors flex items-center gap-2"
                   >
                     <Download size={16} />
@@ -148,13 +221,13 @@ export default function CertificatesPage() {
           </div>
 
           <div className="text-center">
-            <a
-              href="#all-downloads"
+            <button
+              onClick={downloadAllDocuments}
               className="bg-gray-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2"
             >
               <Download size={20} />
-              Download All Documents
-            </a>
+              Download All Documents (ZIP)
+            </button>
           </div>
         </div>
       </section>
@@ -196,9 +269,14 @@ export default function CertificatesPage() {
                     {cert.category}
                   </span>
                   <div className="flex gap-2">
-                    <button className="text-blue-600 hover:text-blue-800 text-xs font-medium transition-colors">
+                    <a 
+                      href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 text-xs font-medium transition-colors"
+                    >
                       View Badge
-                    </button>
+                    </a>
                     <button className="text-gray-600 hover:text-gray-800 text-xs font-medium transition-colors">
                       Download
                     </button>
