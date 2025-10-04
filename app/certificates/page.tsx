@@ -14,11 +14,20 @@ export default function CertificatesPage() {
     const zip = new JSZip()
     
     try {
-      // Fetch all PDF files and add to ZIP
+      // Fetch all PDF files from documents and add to ZIP
       for (const doc of documents) {
         const response = await fetch(doc.file)
         const blob = await response.blob()
         zip.file(`${doc.title}.pdf`, blob)
+      }
+      
+      // Fetch all certification PDFs and add to ZIP
+      for (const cert of certifications) {
+        if (cert.pdf) {
+          const response = await fetch(cert.pdf)
+          const blob = await response.blob()
+          zip.file(`${cert.title}.pdf`, blob)
+        }
       }
       
       // Generate ZIP file and download
@@ -46,22 +55,18 @@ export default function CertificatesPage() {
     { title: 'Curriculum vitae (English)', description: 'Complete professional resume in English', size: '2.8 MB', icon: '📄', file: '/Certificates/EN_Ghosh_Abhik.pdf' },
     { title: 'Cover letter', description: 'Professional cover letter template', size: '1.2 MB', icon: '📝', file: '/Certificates/50477187_EN_Ghosh_Abhik_Short.pdf' },
     { title: 'M.Sc. Certificates', description: 'Master of Science degree certificates', size: '3.5 MB', icon: '🎓', file: '/Certificates/M.SC.pdf' },
-    { title: 'Certificates Kubernetes', description: 'Kubernetes certification documents', size: '2.2 MB', icon: '☸️', file: '/Certificates/Certified Kubernetes Administrator (CKA).pdf' },
-    { title: 'Certificates AWS Solution Architect', description: 'AWS Solution Architect Associate certification', size: '3.1 MB', icon: '☁️', file: '/Certificates/AWS certified Solution Architect- Associate.pdf' },
-    { title: 'Certificates Terraform', description: 'Terraform Infrastructure as Code certifications', size: '1.8 MB', icon: '🏗️', file: '/Certificates/Terraform Associate.pdf' },
-    { title: 'Certificates Azure Fundamentals', description: 'Microsoft Azure Fundamentals certification', size: '2.5 MB', icon: '🔷', file: '/Certificates/Exam AZ-900  Microsoft Azure Fundamentals.pdf' },
-    { title: 'Excellence Award', description: 'Professional excellence and achievement awards', size: '1.5 MB', icon: '🏆', file: '/Certificates/excellence_award.pdf' }
+    { title: 'Excellence Award Capgemini', description: 'Professional excellence and achievement awards', size: '1.5 MB', icon: '🏆', file: '/Certificates/excellence_award.pdf' }
   ]
 
   const certifications = [
-    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026', icon: '/Certificates/terraform.png' },
-    { title: 'CKA: Certified Kubernetes Administrator', issuer: 'The Linux Foundation', year: '2023', category: 'Container Orchestration', expires: 'Aug 3, 2026', icon: '/Certificates/cka-certified-kubernetes-administrator.png' },
-    { title: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-solutions-architect-associate.png' },
-    { title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-cloud-practitioner.png' },
-    { title: 'Microsoft Certified: Azure Fundamentals', issuer: 'Microsoft', year: '2021', category: 'Cloud Architecture', expires: 'Never', icon: '/Certificates/azure-fundamentals.png' },
-    { title: 'Certified SAFe® 6 Architect', issuer: 'Scaled Agile, Inc.', year: '2024', category: 'Project Management', expires: 'May 4, 2025', icon: '/Certificates/safe-6-architect.png' },
-    { title: 'Integrate Vertex AI Search and Conversation', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never', icon: '/Certificates/google-cloud.svg' },
-    { title: 'Text Prompt Engineering Techniques', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never', icon: '/Certificates/google-cloud.svg' }
+    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026', icon: '/Certificates/terraform.png', pdf: '/Certificates/Terraform Associate.pdf' },
+    { title: 'CKA: Certified Kubernetes Administrator', issuer: 'The Linux Foundation', year: '2023', category: 'Container Orchestration', expires: 'Aug 3, 2026', icon: '/Certificates/cka-certified-kubernetes-administrator.png', pdf: '/Certificates/Certified Kubernetes Administrator (CKA).pdf' },
+    { title: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-solutions-architect-associate.png', pdf: '/Certificates/AWS certified Solution Architect- Associate.pdf' },
+    { title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-cloud-practitioner.png', pdf: '/Certificates/AWS Certified Cloud Practitioner.pdf' },
+    { title: 'Microsoft Certified: Azure Fundamentals', issuer: 'Microsoft', year: '2021', category: 'Cloud Architecture', expires: 'Never', icon: '/Certificates/azure-fundamentals.png', pdf: '/Certificates/Exam AZ-900  Microsoft Azure Fundamentals.pdf' },
+    { title: 'Certified SAFe® 6 Architect', issuer: 'Scaled Agile, Inc.', year: '2024', category: 'Project Management', expires: 'May 4, 2025', icon: '/Certificates/safe-6-architect.png', pdf: null },
+    { title: 'Integrate Vertex AI Search and Conversation', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never', icon: '/Certificates/google-cloud.svg', pdf: null },
+    { title: 'Text Prompt Engineering Techniques', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never', icon: '/Certificates/google-cloud.svg', pdf: null }
   ]
 
   const filteredCertifications = activeFilter === 'All' 
@@ -171,6 +176,28 @@ export default function CertificatesPage() {
                     </div>
                   </div>
                   <p className="text-gray-500 text-xs">Expires: {cert.expires}</p>
+                  <div className="mt-4 pt-4 border-t border-gray-100 flex gap-2">
+                    {cert.pdf && (
+                      <a
+                        href={cert.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors flex items-center gap-2 flex-1 justify-center"
+                      >
+                        <Download size={16} />
+                        Download Certificate
+                      </a>
+                    )}
+                    <a
+                      href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-orange-600 transition-colors flex items-center gap-2 flex-1 justify-center"
+                    >
+                      <img src="/Site Files-download/Credly.PNG" alt="Credly" className="w-4 h-4" />
+                      View on Credly
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
