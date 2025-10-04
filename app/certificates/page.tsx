@@ -182,20 +182,18 @@ export default function CertificatesPage() {
                         href={cert.pdf}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-xs font-medium hover:bg-blue-700 transition-colors flex items-center gap-1 flex-1 justify-center"
+                        className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center flex-1"
                       >
-                        <Download size={14} />
-                        Download
+                        <Download size={16} />
                       </a>
                     )}
                     <a
                       href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-orange-500 text-white px-3 py-2 rounded-lg text-xs font-medium hover:bg-orange-600 transition-colors flex items-center gap-1 flex-1 justify-center"
+                      className="bg-orange-500 text-white p-2 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center flex-1"
                     >
-                      <img src="/Site Files-download/Credly.PNG" alt="Credly" className="w-3 h-3" />
-                      Credly
+                      <img src="/Certificates/c.png" alt="Credly" className="w-4 h-4" />
                     </a>
                   </div>
                 </div>
