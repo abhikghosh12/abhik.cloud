@@ -22,7 +22,7 @@ export default function OptimizedContactSection() {
             Ready to Transform Your Cloud Infrastructure?
           </h2>
           <p className="text-xl text-pink-100 mb-8">
-            Let's discuss how I can help accelerate your cloud transformation journey
+            Let&apos;s discuss how I can help accelerate your cloud transformation journey
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
