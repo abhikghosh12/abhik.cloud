@@ -54,7 +54,7 @@ export default function CertificatesPage() {
   ]
 
   const certifications = [
-    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026', icon: '/Certificates/terraform-associate-003.png' },
+    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026', icon: '/Certificates/terraform.png' },
     { title: 'CKA: Certified Kubernetes Administrator', issuer: 'The Linux Foundation', year: '2023', category: 'Container Orchestration', expires: 'Aug 3, 2026', icon: '/Certificates/cka-certified-kubernetes-administrator.png' },
     { title: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-solutions-architect-associate.png' },
     { title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-cloud-practitioner.png' },
