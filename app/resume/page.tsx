@@ -1,9 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Navbar from '../components/Navbar'
-import DynamicResume from '../components/DynamicResume'
-import Footer from '../components/Footer'
+import Navbar from '../components/layout/Navbar'
+import DynamicResume from '../components/common/DynamicResume'
+import Footer from '../components/layout/Footer'
 
 export default function ResumePage() {
   return (

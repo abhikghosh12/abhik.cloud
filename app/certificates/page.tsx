@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import { Download, ExternalLink, Award, Filter } from 'lucide-react'
 import { useState } from 'react'
 import JSZip from 'jszip'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Navbar from '../components/layout/Navbar'
+import Footer from '../components/layout/Footer'
 
 export default function CertificatesPage() {
   const [activeFilter, setActiveFilter] = useState('All')
@@ -51,18 +51,18 @@ export default function CertificatesPage() {
   ]
 
   const documents = [
-    { title: 'Curriculum vitae (German)', description: 'Complete professional resume in German', size: '2.1 MB', icon: '📄', file: '/Certificates/Lebenslauf_Ghosh_Abhik.pdf' },
-    { title: 'Curriculum vitae (English)', description: 'Complete professional resume in English', size: '2.8 MB', icon: '📄', file: '/Certificates/EN_Ghosh_Abhik.pdf' },
-    { title: 'Cover letter', description: 'Professional cover letter template', size: '1.2 MB', icon: '📝', file: '/Certificates/50477187_EN_Ghosh_Abhik_Short.pdf' },
-    { title: 'M.Sc. Certificates', description: 'Master of Science degree certificates', size: '3.5 MB', icon: '🎓', file: '/Certificates/M.SC.pdf' },
-    { title: 'Excellence Award Capgemini', description: 'Professional excellence and achievement awards', size: '1.5 MB', icon: '🏆', file: '/Certificates/excellence_award.pdf' }
+    { title: 'Curriculum vitae (German)', description: 'Complete professional resume in German', size: '2.1 MB', icon: '📄', file: '/Certificates/resumes/Lebenslauf_Ghosh_Abhik.pdf' },
+    { title: 'Curriculum vitae (English)', description: 'Complete professional resume in English', size: '2.8 MB', icon: '📄', file: '/Certificates/resumes/EN_Ghosh_Abhik.pdf' },
+    { title: 'Cover letter', description: 'Professional cover letter template', size: '1.2 MB', icon: '📝', file: '/Certificates/resumes/50477187_EN_Ghosh_Abhik_Short.pdf' },
+    { title: 'M.Sc. Certificates', description: 'Master of Science degree certificates', size: '3.5 MB', icon: '🎓', file: '/Certificates/pdfs/masters-degree.pdf' },
+    { title: 'Excellence Award Capgemini', description: 'Professional excellence and achievement awards', size: '1.5 MB', icon: '🏆', file: '/Certificates/pdfs/excellence-award.pdf' }
   ]
 
   const certifications = [
-    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026', icon: '/Certificates/terraform.png', pdf: '/Certificates/Terraform Associate.pdf' },
-    { title: 'CKA: Certified Kubernetes Administrator', issuer: 'The Linux Foundation', year: '2023', category: 'Container Orchestration', expires: 'Aug 3, 2026', icon: '/Certificates/cka-certified-kubernetes-administrator.png', pdf: '/Certificates/Certified Kubernetes Administrator (CKA).pdf' },
-    { title: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-solutions-architect-associate.png', pdf: '/Certificates/AWS certified Solution Architect- Associate.pdf' },
-    { title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-cloud-practitioner.png', pdf: '/Certificates/AWS Certified Cloud Practitioner.pdf' },
+    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026', icon: '/Certificates/terraform.png', pdf: '/Certificates/pdfs/terraform-associate.pdf' },
+    { title: 'CKA: Certified Kubernetes Administrator', issuer: 'The Linux Foundation', year: '2023', category: 'Container Orchestration', expires: 'Aug 3, 2026', icon: '/Certificates/cka-certified-kubernetes-administrator.png', pdf: '/Certificates/pdfs/cka-kubernetes-administrator.pdf' },
+    { title: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-solutions-architect-associate.png', pdf: '/Certificates/pdfs/aws-solutions-architect-associate.pdf' },
+    { title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-cloud-practitioner.png', pdf: '/Certificates/pdfs/aws-cloud-practitioner.pdf' },
     { title: 'Microsoft Certified: Azure Fundamentals', issuer: 'Microsoft', year: '2021', category: 'Cloud Architecture', expires: 'Never', icon: '/Certificates/azure-fundamentals.png', pdf: '/Certificates/Exam AZ-900  Microsoft Azure Fundamentals.pdf' },
     { title: 'Certified SAFe® 6 Architect', issuer: 'Scaled Agile, Inc.', year: '2024', category: 'Project Management', expires: 'May 4, 2025', icon: '/Certificates/safe-6-architect.png', pdf: null },
     { title: 'Integrate Vertex AI Search and Conversation', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never', icon: '/Certificates/google-cloud.svg', pdf: null },
@@ -265,7 +265,7 @@ export default function CertificatesPage() {
           <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-4xl mx-auto border border-gray-100">
             <div className="mb-8">
               <div className="w-20 h-20 bg-white rounded-2xl border border-gray-200 flex items-center justify-center mx-auto mb-6 p-3">
-                <img src="/Site Files-download/Credly.PNG" alt="Credly Logo" className="w-full h-full object-contain" />
+                <img src="/Certificates/c.png" alt="Credly Logo" className="w-full h-full object-contain" />
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Verify My Credentials</h3>
               <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">

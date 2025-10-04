@@ -41,7 +41,7 @@ A clean, modern, and responsive portfolio website showcasing cloud architecture 
 ## 📁 Project Structure
 
 ```
-src/
+app/
 ├── components/
 │   ├── layout/
 │   │   ├── Navbar.tsx              # Clean navigation with social links
@@ -49,29 +49,32 @@ src/
 │   ├── sections/
 │   │   ├── OptimizedHeroSection.tsx     # Value proposition hero
 │   │   ├── ValuePropositionSection.tsx  # What I offer
-│   │   ├── TechnicalExpertiseSection.tsx # Skills & technologies
-│   │   ├── CertificationShowcase.tsx    # Professional certifications
-│   │   ├── ExperienceSection.tsx        # Career timeline
-│   │   ├── ProjectsSection.tsx          # Featured projects
-│   │   ├── BlogSection.tsx              # Latest articles
 │   │   └── OptimizedContactSection.tsx  # Contact form
 │   └── common/
-│       └── PlaceholderImage.tsx
+│       ├── PlaceholderImage.tsx    # Reusable placeholder component
+│       └── DynamicResume.tsx       # Dynamic resume component
 ├── pages/
-│   ├── OptimizedHomePage.tsx   # Main landing page
-│   ├── ResumePage.tsx          # Detailed career timeline
-│   ├── ProjectsPage.tsx        # Full project portfolio
-│   ├── CertificatesPage.tsx    # All certifications
-│   ├── AppointmentPage.tsx     # Contact & booking
-│   └── BlogsPage.tsx           # All blog articles
+│   └── OptimizedHomePage.tsx   # Main landing page component
 ├── data/
 │   ├── experience.json         # Professional experience data
 │   ├── projects.json           # Project information
 │   ├── skills.json             # Technical skills
 │   └── siteConfig.json         # Site configuration
-├── App.tsx                     # Main app component
-├── main.tsx                    # App entry point
-└── index.css                   # Global styles
+├── certificates/
+│   └── page.tsx               # Certificates page
+├── contact/
+│   └── page.tsx               # Contact page
+├── projects/
+│   └── page.tsx               # Projects page
+├── resume/
+│   ├── layout.tsx             # Resume layout
+│   └── page.tsx               # Resume page
+├── globals.css                # Global styles with professional theme
+├── layout.tsx                 # Root layout
+└── page.tsx                   # Home page
+public/
+├── Certificates/              # Certificate images and PDFs
+└── images/                    # Profile and other images
 ```
 
 ## 🎨 Design System

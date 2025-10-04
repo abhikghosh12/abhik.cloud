@@ -1,0 +1,136 @@
+{
+  "technical_skills": {
+    "cloud_platforms": [
+      {
+        "name": "Amazon Web Services (AWS)",
+        "level": "Expert",
+        "certifications": ["Solutions Architect Associate", "Cloud Practitioner"],
+        "services": ["EC2", "S3", "Lambda", "EKS", "RDS", "CloudFormation", "CDK"]
+      },
+      {
+        "name": "Microsoft Azure",
+        "level": "Advanced",
+        "certifications": ["Azure Fundamentals"],
+        "services": ["Virtual Machines", "Azure Kubernetes Service", "Azure DevOps", "Azure AI"]
+      },
+      {
+        "name": "Google Cloud Platform (GCP)",
+        "level": "Intermediate",
+        "services": ["Compute Engine", "GKE", "Cloud Functions", "Vertex AI"]
+      }
+    ],
+    "containerization": [
+      {
+        "name": "Kubernetes",
+        "level": "Expert",
+        "certifications": ["CKA - Certified Kubernetes Administrator"],
+        "tools": ["kubectl", "Helm", "Rancher", "OpenShift"]
+      },
+      {
+        "name": "Docker",
+        "level": "Expert",
+        "tools": ["Docker Compose", "Docker Swarm", "Harbor Registry"]
+      }
+    ],
+    "devops_tools": [
+      {
+        "category": "CI/CD",
+        "tools": ["Jenkins", "GitLab CI/CD", "GitHub Actions", "ArgoCD", "Fleet"]
+      },
+      {
+        "category": "Infrastructure as Code",
+        "tools": ["Terraform", "Ansible", "AWS CDK", "CloudFormation"]
+      },
+      {
+        "category": "Monitoring & Observability",
+        "tools": ["Grafana", "Prometheus", "Loki", "Dynatrace", "ELK Stack"]
+      }
+    ],
+    "programming_languages": [
+      {
+        "name": "Python",
+        "level": "Expert",
+        "frameworks": ["Django", "Flask", "FastAPI", "NumPy", "Pandas", "scikit-learn"]
+      },
+      {
+        "name": "JavaScript/TypeScript",
+        "level": "Advanced",
+        "frameworks": ["Node.js", "React", "Next.js"]
+      },
+      {
+        "name": "C/C++",
+        "level": "Intermediate"
+      }
+    ],
+    "ai_ml": [
+      {
+        "category": "Machine Learning",
+        "tools": ["TensorFlow", "Keras", "scikit-learn", "OpenCV"]
+      },
+      {
+        "category": "GenAI & LLM",
+        "tools": ["AWS SageMaker", "Amazon Bedrock", "LangChain", "Azure AI", "Microsoft Copilot"]
+      },
+      {
+        "category": "Data Processing",
+        "tools": ["Jupyter", "Pandas", "NumPy", "matplotlib"]
+      }
+    ],
+    "databases": [
+      {
+        "type": "Relational",
+        "systems": ["PostgreSQL", "MySQL", "SQL Server"]
+      },
+      {
+        "type": "NoSQL",
+        "systems": ["MongoDB", "Redis"]
+      },
+      {
+        "type": "Time Series",
+        "systems": ["InfluxDB"]
+      }
+    ]
+  },
+  "certifications": [
+    {
+      "name": "AWS Solutions Architect Associate",
+      "issuer": "Amazon Web Services",
+      "status": "Active",
+      "badge_url": "/Certificates/aws-solutions-architect-associate.png"
+    },
+    {
+      "name": "AWS Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "status": "Active",
+      "badge_url": "/Certificates/aws-cloud-practitioner.png"
+    },
+    {
+      "name": "CKA - Certified Kubernetes Administrator",
+      "issuer": "Cloud Native Computing Foundation",
+      "status": "Active",
+      "badge_url": "/Certificates/cka-certified-kubernetes-administrator.png"
+    },
+    {
+      "name": "Terraform Associate",
+      "issuer": "HashiCorp",
+      "status": "Active",
+      "badge_url": "/Certificates/terraform-associate-003.png"
+    },
+    {
+      "name": "Azure Fundamentals",
+      "issuer": "Microsoft",
+      "status": "Active",
+      "badge_url": "/Certificates/azure-fundamentals.png"
+    }
+  ],
+  "soft_skills": [
+    "Leadership & Team Management",
+    "Project Management",
+    "Client Communication",
+    "Problem Solving",
+    "Strategic Planning",
+    "Cross-functional Collaboration",
+    "Agile/Scrum Methodologies",
+    "Technical Documentation"
+  ]
+}
