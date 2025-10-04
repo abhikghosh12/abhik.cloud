@@ -176,13 +176,13 @@ export default function CertificatesPage() {
                     </div>
                   </div>
                   <p className="text-gray-500 text-xs">Expires: {cert.expires}</p>
-                  <div className="mt-4 pt-4 border-t border-gray-100 flex gap-2">
+                  <div className="mt-4 pt-4 border-t border-gray-100 flex gap-2 justify-end">
                     {cert.pdf && (
                       <a
                         href={cert.pdf}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center flex-1"
+                        className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center w-10 h-10"
                       >
                         <Download size={16} />
                       </a>
@@ -191,7 +191,7 @@ export default function CertificatesPage() {
                       href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-orange-500 text-white p-2 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center flex-1"
+                      className="bg-orange-500 text-white p-2 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center w-10 h-10"
                     >
                       <img src="/Certificates/c.png" alt="Credly" className="w-4 h-4" />
                     </a>
@@ -236,10 +236,9 @@ export default function CertificatesPage() {
                     href={doc.file}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors flex items-center gap-2"
+                    className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center w-10 h-10"
                   >
                     <Download size={16} />
-                    Download
                   </a>
                 </div>
               </motion.div>
