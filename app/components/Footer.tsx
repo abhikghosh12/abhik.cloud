@@ -156,15 +156,22 @@ export default function Footer() {
             </div>
             
             {/* CTA */}
-            <div className="mt-6">
+            <div className="mt-6 space-y-3">
               <a 
                 href="https://calendly.com/abhikghosh87"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors w-full justify-center"
               >
                 <ExternalLink size={16} />
                 Schedule Consultation
+              </a>
+              <a 
+                href="mailto:abhikghosh@outlook.com"
+                className="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-400 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-colors w-full justify-center"
+              >
+                <Mail size={16} />
+                Send Email
               </a>
             </div>
           </div>

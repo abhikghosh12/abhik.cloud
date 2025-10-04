@@ -176,18 +176,18 @@ export default function DynamicResume() {
         <div className="max-w-6xl mx-auto">
           
           {/* Quick Navigation */}
-          <div className="flex justify-center mb-12">
-            <div className="bg-white rounded-lg shadow-lg p-4 border border-gray-200">
-              <div className="flex gap-4">
+          <div className="flex justify-center mb-8">
+            <div className="bg-white rounded-lg shadow-lg p-3 border border-gray-200">
+              <div className="flex gap-3">
                 <a 
                   href="#experience" 
-                  className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm"
                 >
                   Professional Experience
                 </a>
                 <a 
                   href="#education" 
-                  className="bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors"
+                  className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors text-sm"
                 >
                   Education
                 </a>
@@ -223,9 +223,9 @@ export default function DynamicResume() {
                       <div className="flex-1">
                         <div className="flex items-start gap-4 mb-4">
                           {job.company === 'Capgemini' && (
-                            <div className="w-24 h-24 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-2 flex items-center justify-center">
+                            <div className="w-16 h-16 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-1 flex items-center justify-center">
                               <img 
-                                src="/Certificates/capgemini.png" 
+                                src="/Certificates/capgemini.jpg" 
                                 alt="Capgemini" 
                                 className="w-full h-full object-contain"
                               />
@@ -243,7 +243,7 @@ export default function DynamicResume() {
                           {job.company === 'Universitätsklinikum Augsburg' && (
                             <div className="w-24 h-24 rounded-lg border border-gray-200 flex-shrink-0 bg-white p-4 flex items-center justify-center">
                               <img 
-                                src="/Certificates/una.png" 
+                                src="/Certificates/university.png" 
                                 alt="Universitätsklinikum Augsburg" 
                                 className="w-full h-full object-contain"
                               />
