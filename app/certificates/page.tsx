@@ -162,8 +162,8 @@ export default function CertificatesPage() {
                     <span className="text-gray-500 text-sm">{cert.year}</span>
                   </div>
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 bg-white rounded-lg border border-gray-200 flex items-center justify-center p-1">
-                      <img src={cert.icon} alt={cert.issuer} className="w-full h-full object-contain" />
+                    <div className="w-12 h-12 bg-white rounded-lg border border-gray-200 flex items-center justify-center">
+                      <img src={cert.icon} alt={cert.issuer} className="w-10 h-10 object-contain" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-lg font-bold text-gray-900 mb-1">{cert.title}</h3>
