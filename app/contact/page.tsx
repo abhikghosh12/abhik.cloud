@@ -196,7 +196,7 @@ export default function ContactPage() {
                     <a href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" target="_blank" rel="noopener noreferrer" 
                        title="Credly Badges"
                        className="w-10 h-10 bg-white rounded-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors">
-                      <img src="/Certificates/c.png" alt="Credly" className="w-8 h-8 object-contain" />
+                      <img src="/Site Files-download/Credly.PNG" alt="Credly" className="w-8 h-8 object-contain" />
                     </a>
                   </div>
                 </div>

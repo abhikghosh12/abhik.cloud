@@ -241,7 +241,7 @@ export default function CertificatesPage() {
           <div className="bg-white p-12 rounded-2xl shadow-xl text-center max-w-4xl mx-auto border border-gray-100">
             <div className="mb-8">
               <div className="w-20 h-20 bg-white rounded-2xl border border-gray-200 flex items-center justify-center mx-auto mb-6 p-3">
-                <img src="/Certificates/c.png" alt="Credly Logo" className="w-full h-full object-contain" />
+                <img src="/Site Files-download/Credly.PNG" alt="Credly Logo" className="w-full h-full object-contain" />
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Verify My Credentials</h3>
               <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
