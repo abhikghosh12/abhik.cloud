@@ -54,12 +54,12 @@ export default function CertificatesPage() {
   ]
 
   const certifications = [
-    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026', icon: '/Certificates/hashicorp.svg' },
-    { title: 'CKA: Certified Kubernetes Administrator', issuer: 'The Linux Foundation', year: '2023', category: 'Container Orchestration', expires: 'Aug 3, 2026', icon: '/Certificates/kubernetes.svg' },
-    { title: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/c.png' },
-    { title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/c.png' },
-    { title: 'Microsoft Certified: Azure Fundamentals', issuer: 'Microsoft', year: '2021', category: 'Cloud Architecture', expires: 'Never', icon: '/Certificates/c.png' },
-    { title: 'Certified SAFe® 6 Architect', issuer: 'Scaled Agile, Inc.', year: '2024', category: 'Project Management', expires: 'May 4, 2025', icon: '/Certificates/jira.svg' },
+    { title: 'HashiCorp Certified: Terraform Associate (003)', issuer: 'HashiCorp', year: '2024', category: 'Infrastructure as Code', expires: 'Aug 2, 2026', icon: '/Certificates/terraform-associate-003.png' },
+    { title: 'CKA: Certified Kubernetes Administrator', issuer: 'The Linux Foundation', year: '2023', category: 'Container Orchestration', expires: 'Aug 3, 2026', icon: '/Certificates/cka-certified-kubernetes-administrator.png' },
+    { title: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-solutions-architect-associate.png' },
+    { title: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2023', category: 'Cloud Architecture', expires: 'Feb 28, 2026', icon: '/Certificates/aws-cloud-practitioner.png' },
+    { title: 'Microsoft Certified: Azure Fundamentals', issuer: 'Microsoft', year: '2021', category: 'Cloud Architecture', expires: 'Never', icon: '/Certificates/azure-fundamentals.png' },
+    { title: 'Certified SAFe® 6 Architect', issuer: 'Scaled Agile, Inc.', year: '2024', category: 'Project Management', expires: 'May 4, 2025', icon: '/Certificates/safe-6-architect.png' },
     { title: 'Integrate Vertex AI Search and Conversation', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never', icon: '/Certificates/google-cloud.svg' },
     { title: 'Text Prompt Engineering Techniques', issuer: 'Google Cloud', year: '2024', category: 'AI/ML', expires: 'Never', icon: '/Certificates/google-cloud.svg' }
   ]
