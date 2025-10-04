@@ -372,12 +372,7 @@ export default function Home() {
                     </p>
                   </div>
                   
-                  {/* Call to Action */}
-                  <div className="bg-gradient-to-r from-pink-50 to-purple-50 p-6 rounded-xl border border-pink-200">
-                    <p className="text-gray-800 font-medium text-center">
-                      Curious to see how I can transform your business? Explore my work and let&apos;s connect!
-                    </p>
-                  </div>
+
                 </motion.div>
               </div>
             </div>
