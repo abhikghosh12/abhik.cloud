@@ -77,9 +77,9 @@ export default function OptimizedHeroSection() {
                     I am ready to tackle your most complex challenges. My certifications in AWS, Azure, GCP, Terraform, and Kubernetes underscore my expertise.
                   </p>
                   
-                  {/* Service Excellence That Delivers Results */}
+                  {/* Services Provided */}
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Service Excellence That Delivers Results:</h4>
+                    <h4 className="text-lg font-semibold text-white mb-3">Services Provided:</h4>
                     <div className="grid grid-cols-1 gap-2 text-sm">
                       <div className="flex items-center text-pink-100">
                         <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>

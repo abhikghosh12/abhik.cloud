@@ -34,7 +34,7 @@ export default function ValuePropositionSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Service Excellence That Delivers Results
+            Services Provided
           </h2>
         </motion.div>
         
