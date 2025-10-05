@@ -12,7 +12,7 @@ export default function OptimizedHeroSection() {
   ]
 
   return (
-    <section id="home" className="navbar-top-gradient py-20 text-white relative overflow-hidden">
+    <section id="home" className="navbar-top-gradient pt-24 md:pt-32 pb-16 md:pb-20 text-white relative overflow-hidden">
       {/* Background Graphics */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full"></div>

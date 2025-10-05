@@ -44,37 +44,52 @@ A clean, modern, and responsive portfolio website showcasing cloud architecture 
 app/
 ├── components/
 │   ├── layout/
-│   │   ├── Navbar.tsx              # Clean navigation with social links
+│   │   ├── Navbar.tsx              # Navigation with social links
 │   │   └── Footer.tsx              # Professional footer
 │   ├── sections/
-│   │   ├── OptimizedHeroSection.tsx     # Value proposition hero
-│   │   ├── ValuePropositionSection.tsx  # What I offer
-│   │   └── OptimizedContactSection.tsx  # Contact form
+│   │   ├── OptimizedHeroSection.tsx     # Hero section with professional summary
+│   │   ├── ValuePropositionSection.tsx  # Service offerings
+│   │   └── OptimizedContactSection.tsx  # Contact CTA section
 │   └── common/
 │       ├── PlaceholderImage.tsx    # Reusable placeholder component
-│       └── DynamicResume.tsx       # Dynamic resume component
+│       ├── DynamicResume.tsx       # Dynamic resume with company logos
+│       └── ProfileImage.tsx        # Profile image component
 ├── pages/
-│   └── OptimizedHomePage.tsx   # Main landing page component
+│   └── OptimizedHomePage.tsx   # Modular home page component
 ├── data/
 │   ├── experience.json         # Professional experience data
-│   ├── projects.json           # Project information
-│   ├── skills.json             # Technical skills
+│   ├── projects.json           # Project portfolio data
+│   ├── skills.json             # Technical skills & certifications
 │   └── siteConfig.json         # Site configuration
 ├── certificates/
-│   └── page.tsx               # Certificates page
+│   └── page.tsx               # Certificates & documents page
 ├── contact/
-│   └── page.tsx               # Contact page
+│   └── page.tsx               # Contact form page
 ├── projects/
-│   └── page.tsx               # Projects page
+│   └── page.tsx               # Projects portfolio page
 ├── resume/
 │   ├── layout.tsx             # Resume layout
-│   └── page.tsx               # Resume page
-├── globals.css                # Global styles with professional theme
-├── layout.tsx                 # Root layout
-└── page.tsx                   # Home page
+│   └── page.tsx               # Interactive resume page
+├── globals.css                # Global styles with pink/purple theme
+├── layout.tsx                 # Root layout with metadata
+└── page.tsx                   # Home page entry point
 public/
-├── Certificates/              # Certificate images and PDFs
-└── images/                    # Profile and other images
+├── Certificates/
+│   ├── logos/                 # Company & university logos
+│   │   ├── capgemini.png      # Capgemini logo
+│   │   ├── rwth.png           # RWTH Aachen University
+│   │   ├── uniklinik.png      # Universitätsklinikum Augsburg
+│   │   ├── otto-von-guericke.png # Otto-von-Guericke University
+│   │   ├── vtu.jpeg           # Visveswaraiah Technological University
+│   │   ├── jsw.jpeg           # JSW Energy
+│   │   ├── Fraunhofer.jpeg    # Fraunhofer IFF
+│   │   └── researchgate.png   # ResearchGate
+│   ├── pdfs/                  # Certificate PDFs
+│   ├── resumes/               # Resume documents
+│   └── [certification badges] # Various certification images
+└── images/
+    └── profile/
+        └── profile.png        # Professional headshot
 ```
 
 ## 🎨 Design System
@@ -141,15 +156,17 @@ npm run build
 # Deploy the `dist` folder to your hosting service
 ```
 
-## 🚀 Improvements Made
+## 🚀 Recent Improvements
 
 The reorganized website now features:
-- ✅ **Cleaner Structure** - Removed duplicate and obsolete files
-- ✅ **Better Navigation** - Streamlined menu with essential pages
-- ✅ **Improved Performance** - Optimized components and lazy loading
-- ✅ **Professional Design** - Clean, modern appearance
-- ✅ **Mobile-First** - Better responsive experience
-- ✅ **Organized Codebase** - Easier to maintain and extend
+- ✅ **Clean Architecture** - Modular components with proper separation of concerns
+- ✅ **Professional Branding** - Company logos integrated throughout resume
+- ✅ **Optimized Performance** - Streamlined components and efficient loading
+- ✅ **Modern Design** - Pink/purple gradient theme with glass morphism
+- ✅ **Mobile-First** - Fully responsive across all devices
+- ✅ **Document Management** - ZIP download functionality for all documents
+- ✅ **Interactive Resume** - Dynamic resume with company logos and project details
+- ✅ **Certification Showcase** - Filterable badges with verification links
 
 ## 📞 Support
 
