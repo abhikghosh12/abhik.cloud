@@ -72,10 +72,29 @@ export default function OptimizedHeroSection() {
                     As a Cloud Architect at Capgemini, I design and shape the future with innovative cloud solutions, 
                     accelerating Cloud transformation through FinOps, Cyber Security, Automation and AI/ML. This allows clients to achieve their goals and optimize their performance.
                   </p>
-                  <p className="text-pink-100 leading-relaxed mb-6">
+                  <p className="text-pink-100 leading-relaxed mb-4">
                     With extensive experience in Cloud Services (AWS, Azure, GCP), Kubernetes, DevSecOps, and Machine Learning, 
                     I am ready to tackle your most complex challenges. My certifications in AWS, Azure, GCP, Terraform, and Kubernetes underscore my expertise.
                   </p>
+                  
+                  {/* Services Provided */}
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Services Provided:</h4>
+                    <div className="grid grid-cols-1 gap-2 text-sm">
+                      <div className="flex items-center text-pink-100">
+                        <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                        Cloud Migration & Modernization
+                      </div>
+                      <div className="flex items-center text-pink-100">
+                        <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                        DevSecOps Implementation
+                      </div>
+                      <div className="flex items-center text-pink-100">
+                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                        AI/ML Platform Development
+                      </div>
+                    </div>
+                  </div>
                   
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
