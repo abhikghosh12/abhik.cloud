@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Calendar, Briefcase, ExternalLink } from 'lucide-react'
+
 
 export default function OptimizedHeroSection() {
   const stats = [
@@ -58,7 +58,7 @@ export default function OptimizedHeroSection() {
                           rel="noopener noreferrer"
                           className="text-pink-200 hover:text-white font-medium flex items-center gap-1"
                         >
-                          Capgemini <ExternalLink size={14} />
+                          Capgemini
                         </a>
                       </div>
                     </div>
@@ -77,9 +77,9 @@ export default function OptimizedHeroSection() {
                     I am ready to tackle your most complex challenges. My certifications in AWS, Azure, GCP, Terraform, and Kubernetes underscore my expertise.
                   </p>
                   
-                  {/* Services Provided */}
+                  {/* Service Excellence That Delivers Results */}
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Services Provided:</h4>
+                    <h4 className="text-lg font-semibold text-white mb-3">Service Excellence That Delivers Results:</h4>
                     <div className="grid grid-cols-1 gap-2 text-sm">
                       <div className="flex items-center text-pink-100">
                         <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
@@ -104,14 +104,12 @@ export default function OptimizedHeroSection() {
                       rel="noopener noreferrer"
                       className="bg-transparent text-white border border-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-white/20 transition-colors justify-center"
                     >
-                      <Calendar size={18} />
                       Schedule Call
                     </a>
                     <a
                       href="/resume"
                       className="bg-transparent text-white border border-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-white/20 transition-colors justify-center"
                     >
-                      <Briefcase size={18} />
                       View Resume
                     </a>
                   </div>
@@ -145,17 +143,14 @@ export default function OptimizedHeroSection() {
                 {/* Contact Info */}
                 <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30 space-y-3">
                   <div className="flex items-center justify-center space-x-2 text-sm text-pink-100">
-                    <MapPin size={16} />
                     <span>Germany</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2 text-sm text-pink-100">
-                    <Mail size={16} />
                     <a href="mailto:abhikghosh@outlook.com" className="hover:text-white">
                       abhikghosh@outlook.com
                     </a>
                   </div>
                   <div className="flex items-center justify-center space-x-2 text-sm text-pink-100">
-                    <Phone size={16} />
                     <a href="tel:+4917665979446" className="hover:text-white">
                       +49 176 65979446
                     </a>
