@@ -5,19 +5,16 @@ import { motion } from 'framer-motion'
 export default function ValuePropositionSection() {
   const services = [
     {
-      icon: '🚀',
       title: 'Cloud Migration & Modernization',
       description: 'Legacy system transformation with minimal downtime',
       outcomes: ['40% cost reduction', '99.9% uptime', '3x faster deployment']
     },
     {
-      icon: '🔒',
       title: 'DevSecOps Implementation',
       description: 'Automated security throughout development lifecycle',
       outcomes: ['Zero security incidents', '80% faster releases', 'Compliance automation']
     },
     {
-      icon: '🤖',
       title: 'AI/ML Platform Development',
       description: 'Scalable ML infrastructure with automated pipelines',
       outcomes: ['Real-time insights', '10x data processing', 'Automated model deployment']
@@ -48,7 +45,7 @@ export default function ValuePropositionSection() {
               whileHover={{ y: -10 }}
               className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             >
-              <div className="text-5xl mb-4">{service.icon}</div>
+
               <h3 className="text-xl font-bold mb-4 text-gray-900">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
               <ul className="space-y-2">
