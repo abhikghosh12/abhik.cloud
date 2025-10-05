@@ -23,7 +23,7 @@ export default function OptimizedHomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Services Provided</h2>
           </motion.div>
           
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
@@ -34,7 +34,6 @@ export default function OptimizedHomePage() {
               transition={{ duration: 0.6 }}
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
             >
-
               <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud Migration & Modernization</h3>
               <p className="text-gray-600 mb-6">Legacy system transformation with minimal downtime</p>
               <div className="space-y-2">
@@ -60,7 +59,6 @@ export default function OptimizedHomePage() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
             >
-
               <h3 className="text-xl font-bold text-gray-900 mb-4">DevSecOps Implementation</h3>
               <p className="text-gray-600 mb-6">Automated security throughout development lifecycle</p>
               <div className="space-y-2">
@@ -86,7 +84,6 @@ export default function OptimizedHomePage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
             >
-
               <h3 className="text-xl font-bold text-gray-900 mb-4">AI/ML Platform Development</h3>
               <p className="text-gray-600 mb-6">Scalable ML infrastructure with automated pipelines</p>
               <div className="space-y-2">
