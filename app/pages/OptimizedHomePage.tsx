@@ -14,6 +14,100 @@ export default function OptimizedHomePage() {
       <OptimizedHeroSection />
       <ValuePropositionSection />
       
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Services</h2>
+          </motion.div>
+          
+          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            {/* Cloud Migration */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+            >
+
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud Migration & Modernization</h3>
+              <p className="text-gray-600 mb-6">Legacy system transformation with minimal downtime</p>
+              <div className="space-y-2">
+                <div className="flex items-center text-sm text-gray-700">
+                  <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                  40% cost reduction
+                </div>
+                <div className="flex items-center text-sm text-gray-700">
+                  <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                  99.9% uptime
+                </div>
+                <div className="flex items-center text-sm text-gray-700">
+                  <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                  3x faster deployment
+                </div>
+              </div>
+            </motion.div>
+
+            {/* DevSecOps */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+            >
+
+              <h3 className="text-xl font-bold text-gray-900 mb-4">DevSecOps Implementation</h3>
+              <p className="text-gray-600 mb-6">Automated security throughout development lifecycle</p>
+              <div className="space-y-2">
+                <div className="flex items-center text-sm text-gray-700">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                  Zero security incidents
+                </div>
+                <div className="flex items-center text-sm text-gray-700">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                  80% faster releases
+                </div>
+                <div className="flex items-center text-sm text-gray-700">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                  Compliance automation
+                </div>
+              </div>
+            </motion.div>
+
+            {/* AI/ML Platform */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+            >
+
+              <h3 className="text-xl font-bold text-gray-900 mb-4">AI/ML Platform Development</h3>
+              <p className="text-gray-600 mb-6">Scalable ML infrastructure with automated pipelines</p>
+              <div className="space-y-2">
+                <div className="flex items-center text-sm text-gray-700">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  Real-time insights
+                </div>
+                <div className="flex items-center text-sm text-gray-700">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  10x data processing
+                </div>
+                <div className="flex items-center text-sm text-gray-700">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  Automated model deployment
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
       {/* About Me Section */}
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-6">
