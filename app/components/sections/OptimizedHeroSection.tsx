@@ -33,8 +33,15 @@ export default function OptimizedHeroSection() {
                 className="space-y-6"
               >
                 <div className="text-center lg:text-left">
-                  <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                    Abhik Ghosh, M.Sc
+                  <h1 className="text-4xl lg:text-5xl font-bold mb-4">
+                    <a 
+                      href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-900 hover:text-blue-600 transition-colors"
+                    >
+                      Abhik Ghosh, M.Sc
+                    </a>
                   </h1>
                   <h2 className="text-2xl lg:text-3xl text-pink-200 font-semibold mb-6">
                     Cloud Architect | AI/ML Expert

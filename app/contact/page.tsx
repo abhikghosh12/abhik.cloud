@@ -132,10 +132,23 @@ export default function ContactPage() {
                 className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
               >
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">AG</span>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden border-2 border-pink-600">
+                    <img 
+                      src="/images/profile/profile.png" 
+                      alt="Abhik Ghosh" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">Abhik Ghosh, M.Sc</h3>
+                  <h3 className="text-2xl font-bold">
+                    <a 
+                      href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-900 hover:text-blue-600 transition-colors"
+                    >
+                      Abhik Ghosh, M.Sc
+                    </a>
+                  </h3>
                   <p className="text-pink-600 font-semibold">Cloud Architect</p>
                   <div className="flex items-center justify-center gap-2 mt-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
@@ -181,7 +194,12 @@ export default function ContactPage() {
                     </div>
                   </div>
                   
-
+                  {/* LinkedIn Badge */}
+                  <div className="flex justify-center items-start">
+                    <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
+                      <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Social Links */}
@@ -203,21 +221,6 @@ export default function ContactPage() {
                        className="w-10 h-10 bg-white rounded-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors">
                       <img src="/Certificates/c.png" alt="Credly" className="w-8 h-8 object-contain" />
                     </a>
-                  </div>
-                </div>
-              </motion.div>
-              
-              {/* LinkedIn Badge Section */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100"
-              >
-                <h4 className="text-lg font-bold text-gray-900 mb-4 text-center">Professional Profile</h4>
-                <div className="flex justify-center">
-                  <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
-                    <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
                   </div>
                 </div>
               </motion.div>
