@@ -53,7 +53,7 @@ export default function Footer() {
             {/* Social Links */}
             <div>
               <h5 className="text-sm font-semibold text-gray-300 mb-3">Connect</h5>
-              <div className="grid grid-cols-3 gap-2 max-w-32">
+              <div className="flex gap-2">
                 <a 
                   href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
                   target="_blank" 
