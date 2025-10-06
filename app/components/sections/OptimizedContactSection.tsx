@@ -24,7 +24,7 @@ export default function OptimizedContactSection() {
           <p className="text-xl text-pink-100 mb-8">
             Let&apos;s discuss how I can help accelerate your cloud transformation journey
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://calendly.com/abhikghosh87"
               target="_blank"
@@ -39,13 +39,6 @@ export default function OptimizedContactSection() {
             >
               Send Email
             </a>
-          </div>
-          
-          {/* LinkedIn Badge */}
-          <div className="flex justify-center">
-            <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
-              <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
-            </div>
           </div>
         </motion.div>
       </div>

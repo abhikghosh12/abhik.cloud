@@ -143,38 +143,48 @@ export default function ContactPage() {
                   </div>
                 </div>
                 
-                <div className="space-y-4 text-sm">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <Mail className="text-blue-600" size={16} />
+                <div className="grid md:grid-cols-2 gap-6">
+                  {/* Contact Details */}
+                  <div className="space-y-4 text-sm">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <Mail className="text-blue-600" size={16} />
+                      </div>
+                      <div>
+                        <p className="font-medium text-gray-900">Email</p>
+                        <a href="mailto:abhikghosh@outlook.com" className="text-blue-600 hover:text-blue-800">
+                          abhikghosh@outlook.com
+                        </a>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Email</p>
-                      <a href="mailto:abhikghosh@outlook.com" className="text-blue-600 hover:text-blue-800">
-                        abhikghosh@outlook.com
-                      </a>
+                    
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                        <Phone className="text-green-600" size={16} />
+                      </div>
+                      <div>
+                        <p className="font-medium text-gray-900">Phone</p>
+                        <a href="tel:+4917665979446" className="text-green-600 hover:text-green-800">
+                          +49 176 65979446
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <MapPin className="text-gray-600" size={16} />
+                      </div>
+                      <div>
+                        <p className="font-medium text-gray-900">Location</p>
+                        <p className="text-gray-600">Germany (CEST)</p>
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-                      <Phone className="text-green-600" size={16} />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Phone</p>
-                      <a href="tel:+4917665979446" className="text-green-600 hover:text-green-800">
-                        +49 176 65979446
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
-                      <MapPin className="text-gray-600" size={16} />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Location</p>
-                      <p className="text-gray-600">Germany (CEST)</p>
+                  {/* LinkedIn Badge */}
+                  <div className="flex justify-center items-start">
+                    <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
+                      <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
                     </div>
                   </div>
                 </div>
@@ -182,7 +192,7 @@ export default function ContactPage() {
                 {/* Social Links */}
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <p className="text-sm font-medium text-gray-900 mb-3">Connect Professionally</p>
-                  <div className="flex gap-3 mb-4">
+                  <div className="flex gap-3">
                     <a href="https://www.linkedin.com/in/abhik-ghosh-msc/" target="_blank" rel="noopener noreferrer" 
                        title="LinkedIn Profile"
                        className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
@@ -198,13 +208,6 @@ export default function ContactPage() {
                        className="w-10 h-10 bg-white rounded-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors">
                       <img src="/Certificates/c.png" alt="Credly" className="w-8 h-8 object-contain" />
                     </a>
-                  </div>
-                  
-                  {/* LinkedIn Badge */}
-                  <div className="flex justify-center">
-                    <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
-                      <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
-                    </div>
                   </div>
                 </div>
               </motion.div>
