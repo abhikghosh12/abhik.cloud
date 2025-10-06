@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <div className="container mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8">
           
           {/* Brand Section */}
           <div className="lg:col-span-1">
@@ -114,6 +114,16 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* LinkedIn Profile */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Professional Profile</h4>
+            <div className="flex justify-center lg:justify-start">
+              <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
+                <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
+              </div>
+            </div>
           </div>
 
           {/* Services */}
