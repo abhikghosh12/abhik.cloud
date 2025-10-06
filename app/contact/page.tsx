@@ -232,14 +232,14 @@ export default function ContactPage() {
             </div>
 
             {/* Quick Contact Methods */}
-            <div className="space-y-8">
+            <div className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-6"
+                className="space-y-4"
               >
-                <h4 className="text-2xl font-bold text-gray-900 mb-6">Quick Contact Options</h4>
+                <h4 className="text-2xl font-bold text-gray-900 mb-4">Quick Contact Options</h4>
                 {contactMethods.map((method, index) => (
                   <a
                     key={method.title}
@@ -262,21 +262,46 @@ export default function ContactPage() {
                 ))}
               </motion.div>
 
-              {/* Benefits */}
+              {/* Professional Profile */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100"
+                className="bg-white p-4 rounded-2xl shadow-xl border border-gray-100"
               >
-                <h4 className="text-lg font-bold text-gray-900 mb-4">What You Get</h4>
-                <div className="space-y-3">
-                  {benefits.map((benefit, index) => (
-                    <div key={benefit.text} className="flex items-start gap-3">
-                      <benefit.icon size={20} className={`${benefit.color} mt-0.5 flex-shrink-0`} />
-                      <span className="text-sm text-gray-700 leading-relaxed">{benefit.text}</span>
-                    </div>
-                  ))}
+                <h4 className="text-lg font-bold text-gray-900 mb-3 text-center">Professional Profile</h4>
+                <div className="flex justify-center">
+                  <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
+                    <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
+                  </div>
+                </div>
+              </motion.div>
+              
+              {/* What You Get */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="bg-white p-4 rounded-2xl shadow-xl border border-gray-100"
+              >
+                <h4 className="text-lg font-bold text-gray-900 mb-3">What You Get</h4>
+                <div className="space-y-2">
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Free 30-minute strategy consultation</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Custom architecture recommendations</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Cost optimization analysis</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">24-hour response guarantee</span>
+                  </div>
                 </div>
               </motion.div>
             </div>

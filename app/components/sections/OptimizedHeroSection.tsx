@@ -38,7 +38,7 @@ export default function OptimizedHeroSection() {
                       href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-900 hover:text-blue-600 transition-colors"
+                      className="text-white hover:text-blue-200 transition-colors underline"
                     >
                       Abhik Ghosh, M.Sc
                     </a>
@@ -161,13 +161,6 @@ export default function OptimizedHeroSection() {
                     <a href="tel:+4917665979446" className="hover:text-white">
                       +49 176 65979446
                     </a>
-                  </div>
-                  
-                  {/* LinkedIn Badge */}
-                  <div className="flex justify-center pt-3 border-t border-white/20">
-                    <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
-                      <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
-                    </div>
                   </div>
                 </div>
               </motion.div>

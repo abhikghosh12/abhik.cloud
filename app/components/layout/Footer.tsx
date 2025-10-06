@@ -41,8 +41,17 @@ export default function Footer() {
               Transforming businesses through innovative technology.
             </p>
             
+            {/* LinkedIn Badge */}
+            <div className="mb-6">
+              <div className="flex justify-center lg:justify-start">
+                <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
+                  <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
+                </div>
+              </div>
+            </div>
+            
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               <a 
                 href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
                 target="_blank" 
@@ -60,17 +69,6 @@ export default function Footer() {
                 className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"
               >
                 <Github size={20} />
-              </a>
-              <a 
-                href="https://www.xing.com/profile/Abhik_Ghosh" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="Xing"
-                className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center hover:bg-teal-700 transition-colors"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536L14.408 14.4s7.649-13.619 7.649-13.619c.095-.191.095-.387.006-.535C22.974.078 22.81 0 22.599 0h-4.411zm-11.19 7.691c-.211 0-.375.078-.463.22-.09.151-.09.346.009.536L9.497 13.3s-4.876 8.209-4.876 8.209c-.095.191-.095.387-.006.535.088.167.252.245.463.245h3.454c.517 0 .741-.325.927-.66 0 0 4.876-8.209 4.876-8.209-.015-.024-2.953-5.418-2.953-5.418-.17-.308-.436-.66-.967-.66H6.998z"/>
-                </svg>
               </a>
               <a 
                 href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" 
@@ -97,24 +95,13 @@ export default function Footer() {
               >
                 <Mail size={20} />
               </a>
-              <a 
-                href="https://medium.com/@abhikghosh" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="Medium"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
-                </svg>
-              </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a 
@@ -131,8 +118,8 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Expertise</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-semibold mb-4">Expertise</h4>
+            <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service} className="text-gray-300 flex items-center group">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
@@ -144,42 +131,42 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Get In Touch</h4>
-            <div className="space-y-4">
+            <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
+            <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
-                <Mail size={18} className="text-blue-400" />
-                <a href="mailto:abhikghosh@outlook.com" className="hover:text-white transition-colors">
+                <Mail size={16} className="text-blue-400" />
+                <a href="mailto:abhikghosh@outlook.com" className="hover:text-white transition-colors text-sm">
                   abhikghosh@outlook.com
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <Phone size={18} className="text-green-400" />
-                <a href="tel:+4917665979446" className="hover:text-white transition-colors">
+                <Phone size={16} className="text-green-400" />
+                <a href="tel:+4917665979446" className="hover:text-white transition-colors text-sm">
                   +49 176 65979446
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin size={18} className="text-orange-400" />
-                <span>Germany</span>
+                <MapPin size={16} className="text-orange-400" />
+                <span className="text-sm">Germany</span>
               </div>
             </div>
             
             {/* CTA */}
-            <div className="mt-6 space-y-3">
+            <div className="mt-4 space-y-2">
               <a 
                 href="https://calendly.com/abhikghosh87"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors w-full justify-center"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors w-full justify-center text-sm"
               >
-                <ExternalLink size={16} />
-                Schedule Consultation
+                <ExternalLink size={14} />
+                Schedule Call
               </a>
               <a 
                 href="mailto:abhikghosh@outlook.com"
-                className="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-400 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-colors w-full justify-center"
+                className="inline-flex items-center gap-2 border border-blue-600 text-blue-400 px-4 py-2 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-colors w-full justify-center text-sm"
               >
-                <Mail size={16} />
+                <Mail size={14} />
                 Send Email
               </a>
             </div>
