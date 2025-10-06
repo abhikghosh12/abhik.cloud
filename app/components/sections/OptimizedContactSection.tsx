@@ -11,7 +11,7 @@ export default function OptimizedContactSection() {
         <div className="absolute bottom-10 left-20 w-32 h-32 bg-white rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full"></div>
       </div>
-      <div className="container mx-auto px-6 text-center">
+      <div className="container mx-auto px-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
