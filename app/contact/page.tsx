@@ -258,7 +258,7 @@ export default function ContactPage() {
               >
                 <h4 className="text-lg font-bold text-gray-900 mb-3 text-center">Professional Profile</h4>
                 <div className="flex justify-center">
-                  <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
+                  <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
                     <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
                   </div>
                 </div>

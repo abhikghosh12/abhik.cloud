@@ -51,50 +51,53 @@ export default function Footer() {
             </div>
             
             {/* Social Links */}
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-              <a 
-                href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="LinkedIn"
-                className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a 
-                href="https://github.com/abhikghosh12" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="GitHub"
-                className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"
-              >
-                <Github size={20} />
-              </a>
-              <a 
-                href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="Credly"
-                className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors"
-              >
-                <img src="/Certificates/c.png" alt="Credly" className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://www.researchgate.net/profile/Abhik-Ghosh-4" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                title="ResearchGate"
-                className="w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center hover:bg-teal-600 transition-colors"
-              >
-                <img src="/Certificates/logos/researchgate.png" alt="ResearchGate" className="w-5 h-5" />
-              </a>
-              <a 
-                href="mailto:abhikghosh@outlook.com" 
-                title="Email"
-                className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors"
-              >
-                <Mail size={20} />
-              </a>
+            <div>
+              <h5 className="text-sm font-semibold text-gray-300 mb-3">Connect</h5>
+              <div className="grid grid-cols-3 gap-2 max-w-32">
+                <a 
+                  href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title="LinkedIn"
+                  className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
+                >
+                  <Linkedin size={18} />
+                </a>
+                <a 
+                  href="https://github.com/abhikghosh12" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title="GitHub"
+                  className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"
+                >
+                  <Github size={18} />
+                </a>
+                <a 
+                  href="mailto:abhikghosh@outlook.com" 
+                  title="Email"
+                  className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors"
+                >
+                  <Mail size={18} />
+                </a>
+                <a 
+                  href="https://www.credly.com/users/abhik-ghosh.941f4a38/badges#credly" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title="Credly"
+                  className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors"
+                >
+                  <img src="/Certificates/c.png" alt="Credly" className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.researchgate.net/profile/Abhik-Ghosh-4" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title="ResearchGate"
+                  className="w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center hover:bg-teal-600 transition-colors"
+                >
+                  <img src="/Certificates/logos/researchgate.png" alt="ResearchGate" className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -120,7 +123,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Professional Profile</h4>
             <div className="flex justify-center lg:justify-start">
-              <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
+              <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
                 <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
               </div>
             </div>
