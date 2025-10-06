@@ -26,7 +26,16 @@ export default function Footer() {
           
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold mb-4">Abhik Ghosh</h3>
+            <h3 className="text-2xl font-bold mb-4">
+              <a 
+                href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-blue-400 transition-colors"
+              >
+                Abhik Ghosh
+              </a>
+            </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Cloud Architect specializing in DevSecOps, AI/ML, and scalable cloud solutions. 
               Transforming businesses through innovative technology.
@@ -183,7 +192,14 @@ export default function Footer() {
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © {currentYear} Abhik Ghosh. All rights reserved.
+              © {currentYear} <a 
+                href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+              >
+                Abhik Ghosh
+              </a>. All rights reserved.
             </div>
 
           </div>

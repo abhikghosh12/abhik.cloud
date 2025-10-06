@@ -124,6 +124,21 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               
+              {/* LinkedIn Badge Section */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100"
+              >
+                <h4 className="text-lg font-bold text-gray-900 mb-4 text-center">Professional Profile</h4>
+                <div className="flex justify-center">
+                  <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
+                    <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
+                  </div>
+                </div>
+              </motion.div>
+              
               {/* Professional Info Card */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -156,48 +171,38 @@ export default function ContactPage() {
                   </div>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-6">
-                  {/* Contact Details */}
-                  <div className="space-y-4 text-sm">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <Mail className="text-blue-600" size={16} />
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-900">Email</p>
-                        <a href="mailto:abhikghosh@outlook.com" className="text-blue-600 hover:text-blue-800">
-                          abhikghosh@outlook.com
-                        </a>
-                      </div>
+                <div className="space-y-4 text-sm">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <Mail className="text-blue-600" size={16} />
                     </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-                        <Phone className="text-green-600" size={16} />
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-900">Phone</p>
-                        <a href="tel:+4917665979446" className="text-green-600 hover:text-green-800">
-                          +49 176 65979446
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
-                        <MapPin className="text-gray-600" size={16} />
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-900">Location</p>
-                        <p className="text-gray-600">Germany (CEST)</p>
-                      </div>
+                    <div>
+                      <p className="font-medium text-gray-900">Email</p>
+                      <a href="mailto:abhikghosh@outlook.com" className="text-blue-600 hover:text-blue-800">
+                        abhikghosh@outlook.com
+                      </a>
                     </div>
                   </div>
                   
-                  {/* LinkedIn Badge */}
-                  <div className="flex justify-center items-start">
-                    <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="abhik-ghosh-msc" data-version="v1">
-                      <a className="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/abhik-ghosh-msc?trk=profile-badge">Abhik Ghosh, M.Sc</a>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                      <Phone className="text-green-600" size={16} />
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900">Phone</p>
+                      <a href="tel:+4917665979446" className="text-green-600 hover:text-green-800">
+                        +49 176 65979446
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                      <MapPin className="text-gray-600" size={16} />
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900">Location</p>
+                      <p className="text-gray-600">Germany (CEST)</p>
                     </div>
                   </div>
                 </div>
