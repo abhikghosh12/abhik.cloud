@@ -38,7 +38,7 @@ export default function OptimizedHeroSection() {
                       href="https://www.linkedin.com/in/abhik-ghosh-msc/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-white hover:text-blue-200 transition-colors underline"
+                      className="text-white hover:text-blue-400 transition-colors no-underline"
                     >
                       Abhik Ghosh, M.Sc
                     </a>
